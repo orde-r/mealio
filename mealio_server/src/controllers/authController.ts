@@ -2,6 +2,7 @@ import "dotenv/config";
 import { Request, Response } from "express";
 import { PrismaClient } from "@prisma/client";
 import bcrypt from "bcrypt";
+import jwt from "jsonwebtoken";
 
 const prisma = new PrismaClient();
 
@@ -37,6 +38,48 @@ export const registerUser = async (
         id: newUser.id,
         name: newUser.name,
         email: newUser.email,
+      },
+    });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: "Internal Server Error" });
+  }
+};
+
+export const loginUser = async (req: Request, res: Response): Promise<void> => {
+  try {
+    const { email, password } = req.body;
+
+    const user = await prisma.user.findUnique({
+      where: {
+        email: email,
+      },
+    });
+    if (!user) {
+      res.status(401).json({
+        error: "Invalid Credentials",
+      });
+      return;
+    }
+
+    const authUser = await bcrypt.compare(password, user.password);
+    if (!authUser) {
+      res.status(401).json({ error: "Invalid Credentials" });
+      return;
+    }
+
+    const jwtSecret = process.env.JWT_SECRET || "mealioprojectsesunibcomscise";
+    const token = jwt.sign({ userId: user.id }, jwtSecret as string, {
+      expiresIn: "14d",
+    });
+
+    res.status(200).json({
+      message: "Authorized Access",
+      token: token,
+      customer: {
+        id: user.id,
+        name: user.name,
+        email: user.email,
       },
     });
   } catch (error) {
