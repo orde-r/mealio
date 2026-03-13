@@ -57,5 +57,8 @@ export async function getUserFavorites(userId: string) {
       favorites: true,
     },
   });
+  if (!user) {
+    throw new Error("User not found");
+  }
   return user?.favorites ?? [];
 }

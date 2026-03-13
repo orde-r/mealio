@@ -12,6 +12,7 @@ export const changeUsername = async (
     const user = await findUserById(userId);
     if (!user) {
       res.status(401).json({ error: "User not found" });
+      return;
     }
 
     const updatedUser = await updateUsername(userId, newName);
