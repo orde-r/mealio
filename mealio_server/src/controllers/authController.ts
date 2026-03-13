@@ -3,8 +3,8 @@ import { Request, Response } from "express";
 import { PrismaClient } from "@prisma/client";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
-
-const prisma = new PrismaClient();
+import prisma from "../prisma";
+import { createUser, findExistingUser } from "../repository/userRepository";
 
 export const registerUser = async (
   req: Request,
@@ -13,24 +13,16 @@ export const registerUser = async (
   try {
     const { name, email, password } = req.body;
 
-    const existingCustomer = await prisma.user.findUnique({
-      where: { email: email },
-    });
+    const existingUser = await findExistingUser(email);
 
-    if (existingCustomer) {
+    if (existingUser) {
       res.status(400).json({ error: "Email is already in use." });
       return;
     }
 
     const hashedPassword = await bcrypt.hash(password, 10);
 
-    const newUser = await prisma.user.create({
-      data: {
-        email: email,
-        password: hashedPassword,
-        name: name,
-      },
-    });
+    const newUser = await createUser({ email, password: hashedPassword, name });
 
     res.status(201).json({
       message: "User registered successfully",
@@ -50,11 +42,8 @@ export const loginUser = async (req: Request, res: Response): Promise<void> => {
   try {
     const { email, password } = req.body;
 
-    const user = await prisma.user.findUnique({
-      where: {
-        email: email,
-      },
-    });
+    const user = await findExistingUser(email);
+    
     if (!user) {
       res.status(401).json({
         error: "Invalid Credentials",
@@ -87,3 +76,4 @@ export const loginUser = async (req: Request, res: Response): Promise<void> => {
     res.status(500).json({ error: "Internal Server Error" });
   }
 };
+
