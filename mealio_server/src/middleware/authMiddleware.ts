@@ -18,9 +18,17 @@ export const protectRoute = (
       return;
     }
 
-    const token = authHeader
+    const [scheme, token] = authHeader.split(" ");
+    if (scheme !== "Bearer" || !token) {
+      res.status(401).json({ error: "Invalid authorization header format" });
+      return;
+    }
 
-    const secret = process.env.JWT_SECRET || "fallback_secret";
+    const secret = process.env.JWT_SECRET;
+    if (!secret) {
+      res.status(500).json({ error: "JWT_SECRET is not configured" });
+      return;
+    }
 
     const decoded = jwt.verify(token, secret) as { userId: string };
 

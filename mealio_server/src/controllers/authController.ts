@@ -1,9 +1,7 @@
 import "dotenv/config";
 import { Request, Response } from "express";
-import { PrismaClient } from "@prisma/client";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
-import prisma from "../prisma";
 import { createUser, findExistingUser } from "../repository/userRepository";
 
 export const registerUser = async (
@@ -57,8 +55,13 @@ export const loginUser = async (req: Request, res: Response): Promise<void> => {
       return;
     }
 
-    const jwtSecret = process.env.JWT_SECRET || "mealioprojectsesunibcomscise";
-    const token = jwt.sign({ userId: user.id }, jwtSecret as string, {
+    const jwtSecret = process.env.JWT_SECRET;
+    if (!jwtSecret) {
+      res.status(500).json({ error: "JWT_SECRET is not configured" });
+      return;
+    }
+
+    const token = jwt.sign({ userId: user.id }, jwtSecret, {
       expiresIn: "14d",
     });
 
