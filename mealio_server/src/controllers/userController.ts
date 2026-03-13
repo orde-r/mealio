@@ -1,6 +1,11 @@
 import { Request, Response } from "express";
 import bcrypt from "bcrypt";
-import { findUserById, updatePassword, updateUsername } from "../repository/userRepository";
+import {
+  findUserById,
+  updatePassword,
+  updatePreferences,
+  updateUsername,
+} from "../repository/userRepository";
 
 export const changeUsername = async (
   req: Request,
@@ -59,6 +64,35 @@ export const changePassword = async (
         name: updatedUser.name,
         email: updatedUser.email,
       },
+    });
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ error: "Internal Server Error" });
+  }
+};
+
+export const updateUserPreferences = async (
+  req: Request,
+  res: Response,
+): Promise<void> => {
+  try {
+    const { userId, requiresHalal, requiresVegan, allergies } = req.body;
+    const user = await findUserById(userId);
+
+    if (!user) {
+      res.status(404).json({ error: "User not found" });
+      return;
+    }
+
+    const updatedUser = await updatePreferences(
+      userId,
+      requiresHalal,
+      requiresVegan,
+      allergies,
+    );
+    res.status(200).json({
+      message: "User preferences updated successfully",
+      user: updatedUser,
     });
   } catch (error) {
     console.log(error);
