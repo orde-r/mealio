@@ -3,6 +3,7 @@ import { Response, Request } from "express";
 import prisma from "./prisma";
 
 import { authRouter } from "./routes/authRoute";
+import { userRouter } from "./routes/userRoute";
 
 const app = express();
 const port = 3000;
@@ -10,6 +11,8 @@ const port = 3000;
 app.use(express.json());
 
 app.use("/api/auth", authRouter);
+app.use("/api/user", userRouter);
+
 app.get("/api/health", async (req: Request, res: Response) => {
   try {
     await prisma.$queryRaw`SELECT 1`;
