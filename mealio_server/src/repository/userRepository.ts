@@ -1,4 +1,3 @@
-import type { User } from "@prisma/client";
 import prisma from "../prisma";
 
 export async function findExistingUser(email: string) {
@@ -66,15 +65,16 @@ export async function updatePreferences(
   requiresHalal: boolean,
   requiresVegan: boolean,
   allergies: string[],
-){
+) {
   const user = await prisma.user.update({
     where: {
       id: userId,
     },
     data: {
-      requiresHalal: requiresHalal,
-      requiresVegan: requiresVegan,
-      allergies: allergies,
+      hasCompletedOnboarding: true,
+      requiresHalal,
+      requiresVegan,
+      allergies,
     },
   });
   return user;

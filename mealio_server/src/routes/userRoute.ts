@@ -5,8 +5,8 @@ import { protectRoute } from "../middleware/authMiddleware";
 
 const router = Router();
 
-router.post("/change-password", protectRoute, changePassword);
-router.put("/change-username", protectRoute, changeUsername);
-router.put("/update-preferences", protectRoute, updateUserPreferences);
+router.put("/password", protectRoute, changePassword);
+router.put("/name", protectRoute, changeUsername);
+router.put("/preferences", protectRoute, updateUserPreferences);
 
 export {router as userRouter};

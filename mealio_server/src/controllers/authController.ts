@@ -2,19 +2,47 @@ import "dotenv/config";
 import { Request, Response } from "express";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
+import { z } from "zod";
 import { createUser, findExistingUser } from "../repository/userRepository";
+
+const registerSchema = z.object({
+  name: z.string().trim().min(2, "Name must be at least 2 characters"),
+  email: z.string().trim().email("Invalid email format"),
+  password: z.string().min(8, "Password must be at least 8 characters"),
+});
+
+const loginSchema = z.object({
+  email: z.string().trim().email("Invalid email format"),
+  password: z.string().min(1, "Password is required"),
+});
+
+function validationErrorResponse(error: z.ZodError) {
+  return error.issues.map((issue) => ({
+    field: issue.path.join("."),
+    message: issue.message,
+  }));
+}
 
 export const registerUser = async (
   req: Request,
   res: Response,
 ): Promise<void> => {
   try {
-    const { name, email, password } = req.body;
+    const parsedBody = registerSchema.safeParse(req.body);
+    if (!parsedBody.success) {
+      res.status(400).json({
+        error: "Validation failed",
+        details: validationErrorResponse(parsedBody.error),
+      });
+      return;
+    }
+
+    const { name, email, password } = parsedBody.data;
 
     const existingUser = await findExistingUser(email);
 
     if (existingUser) {
-      res.status(400).json({ error: "Email is already in use." });
+      res.status(409).json({ error: "Email is already in use." });
       return;
     }
 
@@ -38,7 +66,16 @@ export const registerUser = async (
 
 export const loginUser = async (req: Request, res: Response): Promise<void> => {
   try {
-    const { email, password } = req.body;
+    const parsedBody = loginSchema.safeParse(req.body);
+    if (!parsedBody.success) {
+      res.status(400).json({
+        error: "Validation failed",
+        details: validationErrorResponse(parsedBody.error),
+      });
+      return;
+    }
+
+    const { email, password } = parsedBody.data;
 
     const user = await findExistingUser(email);
     
@@ -66,9 +103,9 @@ export const loginUser = async (req: Request, res: Response): Promise<void> => {
     });
 
     res.status(200).json({
-      message: "Authorized Access",
-      token: token,
-      customer: {
+      message: "Login successful",
+      token,
+      user: {
         id: user.id,
         name: user.name,
         email: user.email,
