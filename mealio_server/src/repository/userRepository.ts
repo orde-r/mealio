@@ -79,3 +79,18 @@ export async function updatePreferences(
   });
   return user;
 }
+
+export async function updateOnboardingStatus(
+  userId: string,
+  hasCompletedOnboarding: boolean,
+) {
+  const user = await prisma.user.update({
+    where: {
+      id: userId,
+    },
+    data: {
+      hasCompletedOnboarding,
+    },
+  });
+  return user;
+}

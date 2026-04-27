@@ -3,6 +3,7 @@ import bcrypt from "bcrypt";
 import { z } from "zod";
 import {
   findUserById,
+  updateOnboardingStatus,
   updatePassword,
   updatePreferences,
   updateUsername,
@@ -26,7 +27,13 @@ const updatePasswordSchema = z
 const updatePreferencesSchema = z.object({
   requiresHalal: z.boolean(),
   requiresVegan: z.boolean(),
-  allergies: z.array(z.string().trim().min(1, "Allergy values cannot be empty")),
+  allergies: z.array(
+    z.string().trim().min(1, "Allergy values cannot be empty"),
+  ),
+});
+
+const patchOnboardingSchema = z.object({
+  hasCompletedOnboarding: z.boolean(),
 });
 
 function validationErrorResponse(error: z.ZodError) {
@@ -176,6 +183,88 @@ export const updateUserPreferences = async (
         requiresHalal: updatedUser.requiresHalal,
         requiresVegan: updatedUser.requiresVegan,
         allergies: updatedUser.allergies,
+      },
+    });
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ error: "Internal Server Error" });
+  }
+};
+
+export const getUserPreferences = async (
+  req: AuthRequest,
+  res: Response,
+): Promise<void> => {
+  try {
+    const userId = req.userId;
+    if (!userId) {
+      res.status(401).json({ error: "Unauthorized" });
+      return;
+    }
+
+    const user = await findUserById(userId);
+    if (!user) {
+      res.status(404).json({ error: "User not found" });
+      return;
+    }
+
+    res.status(200).json({
+      message: "User preferences fetched successfully",
+      user: {
+        id: user.id,
+        requiresHalal: user.requiresHalal,
+        requiresVegan: user.requiresVegan,
+        allergies: user.allergies,
+        hasCompletedOnboarding: user.hasCompletedOnboarding,
+      },
+    });
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ error: "Internal Server Error" });
+  }
+};
+
+export const patchUserOnboarding = async (
+  req: AuthRequest,
+  res: Response,
+): Promise<void> => {
+  try {
+    console.log("HIT CONTROLLER");
+    console.log("BODY:", req.body);
+    
+    const userId = req.userId;
+    if (!userId) {
+      res.status(401).json({ error: "Unauthorized" });
+      return;
+    }
+
+    const parsedBody = patchOnboardingSchema.safeParse(req.body);
+    if (!parsedBody.success) {
+      res.status(400).json({
+        error: "Validation failed",
+        details: validationErrorResponse(parsedBody.error),
+      });
+      return;
+    }
+
+    const { hasCompletedOnboarding } = parsedBody.data;
+
+    const user = await findUserById(userId);
+    if (!user) {
+      res.status(404).json({ error: "User not found" });
+      return;
+    }
+
+    const updatedUser = await updateOnboardingStatus(
+      userId,
+      hasCompletedOnboarding,
+    );
+
+    res.status(200).json({
+      message: "Onboarding status updated successfully",
+      user: {
+        id: updatedUser.id,
+        hasCompletedOnboarding: updatedUser.hasCompletedOnboarding,
       },
     });
   } catch (error) {

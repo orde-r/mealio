@@ -109,6 +109,7 @@ export const loginUser = async (req: Request, res: Response): Promise<void> => {
         id: user.id,
         name: user.name,
         email: user.email,
+        hasCompletedOnboarding: user.hasCompletedOnboarding
       },
     });
   } catch (error) {
