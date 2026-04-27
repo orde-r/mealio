@@ -229,9 +229,6 @@ export const patchUserOnboarding = async (
   res: Response,
 ): Promise<void> => {
   try {
-    console.log("HIT CONTROLLER");
-    console.log("BODY:", req.body);
-    
     const userId = req.userId;
     if (!userId) {
       res.status(401).json({ error: "Unauthorized" });
