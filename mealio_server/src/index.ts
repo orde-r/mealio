@@ -4,6 +4,7 @@ import prisma from "./prisma";
 
 import { authRouter } from "./routes/authRoute";
 import { userRouter } from "./routes/userRoute";
+import { foodRouter } from "./routes/foodRoute";
 
 const app = express();
 const port = 3000;
@@ -12,6 +13,7 @@ app.use(express.json());
 
 app.use("/api/auth", authRouter);
 app.use("/api/user", userRouter);
+app.use("/api/food", foodRouter);
 
 app.get("/api/health", async (req: Request, res: Response) => {
   try {
