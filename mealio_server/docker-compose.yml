@@ -1,0 +1,27 @@
+version: "3.9"
+
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: mealio
+      POSTGRES_PASSWORD: mealio
+      POSTGRES_DB: mealio
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  api:
+    build: .
+    depends_on:
+      - db
+    environment:
+      DATABASE_URL: postgresql://mealio:mealio@db:5432/mealio?schema=public
+      JWT_SECRET: ${JWT_SECRET:-change_me}
+    ports:
+      - "3000:3000"
+    command: ["sh", "-c", "npx prisma migrate deploy && npx prisma db seed && npm start"]
+
+volumes:
+  db_data:
