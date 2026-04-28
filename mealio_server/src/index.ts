@@ -3,6 +3,7 @@ import { Response, Request } from "express";
 import prisma from "./prisma";
 
 import { authRouter } from "./routes/authRoute";
+import { favoriteRouter } from "./routes/favoriteRoute";
 import { userRouter } from "./routes/userRoute";
 import { foodRouter } from "./routes/foodRoute";
 
@@ -14,6 +15,7 @@ app.use(express.json());
 app.use("/api/auth", authRouter);
 app.use("/api/user", userRouter);
 app.use("/api/food", foodRouter);
+app.use("/api/favorites", favoriteRouter);
 
 app.get("/api/health", async (req: Request, res: Response) => {
   try {

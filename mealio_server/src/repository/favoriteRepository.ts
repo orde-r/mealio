@@ -13,6 +13,15 @@ export async function addFavorite(userId: string, restaurantId: string) {
     throw new Error("Restaurant not found");
   }
 
+  const currentFavorites = await getUserFavorites(userId);
+  const alreadyFavorited = currentFavorites.some(
+    (favorite) => favorite.id === restaurantId,
+  );
+
+  if (alreadyFavorited) {
+    return currentFavorites;
+  }
+
   const updatedUser = await prisma.user.update({
     where: { id: userId },
     data: {
@@ -22,7 +31,8 @@ export async function addFavorite(userId: string, restaurantId: string) {
     },
     include: { favorites: true },
   });
-  return updatedUser;
+
+  return updatedUser.favorites;
 }
 
 export async function removeFavorite(userId: string, restaurantId: string) {
@@ -36,6 +46,15 @@ export async function removeFavorite(userId: string, restaurantId: string) {
     throw new Error("Restaurant not found");
   }
 
+  const currentFavorites = await getUserFavorites(userId);
+  const alreadyRemoved = !currentFavorites.some(
+    (favorite) => favorite.id === restaurantId,
+  );
+
+  if (alreadyRemoved) {
+    return currentFavorites;
+  }
+
   const updatedUser = await prisma.user.update({
     where: { id: userId },
     data: {
@@ -45,7 +64,8 @@ export async function removeFavorite(userId: string, restaurantId: string) {
     },
     include: { favorites: true },
   });
-  return updatedUser;
+
+  return updatedUser.favorites;
 }
 
 export async function getUserFavorites(userId: string) {
