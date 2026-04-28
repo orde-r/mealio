@@ -1,16 +1,24 @@
 import express from "express";
 import { Response, Request } from "express";
+import swaggerUi from "swagger-ui-express";
 import prisma from "./prisma";
 
 import { authRouter } from "./routes/authRoute";
 import { favoriteRouter } from "./routes/favoriteRoute";
 import { userRouter } from "./routes/userRoute";
 import { foodRouter } from "./routes/foodRoute";
+import { openApiDocument, openApiSpecPath } from "./docs/swagger";
 
 const app = express();
 const port = 3000;
 
 app.use(express.json());
+
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(openApiDocument));
+app.get("/api-docs/openapi.yaml", (req: Request, res: Response) => {
+  res.type("text/yaml");
+  res.sendFile(openApiSpecPath);
+});
 
 app.use("/api/auth", authRouter);
 app.use("/api/user", userRouter);

@@ -1,0 +1,1041 @@
+openapi: 3.0.3
+info:
+  title: Mealio Backend API
+  version: 1.0.0
+  description: |
+    Swagger-compatible API documentation for the Mealio backend.
+
+    Testing notes are included in each endpoint description so you can use this file as both a reference and a Postman/Swagger testing guide.
+servers:
+  - url: http://localhost:3000
+    description: Local development server
+tags:
+  - name: Health
+  - name: Auth
+  - name: User
+  - name: Food
+  - name: Favorites
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+  schemas:
+    ValidationErrorItem:
+      type: object
+      properties:
+        field:
+          type: string
+          example: email
+        message:
+          type: string
+          example: Invalid email format
+      required:
+        - field
+        - message
+    ErrorResponse:
+      type: object
+      properties:
+        error:
+          type: string
+          example: Internal Server Error
+        details:
+          type: array
+          items:
+            $ref: "#/components/schemas/ValidationErrorItem"
+      required:
+        - error
+    HealthResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          example: true
+        message:
+          type: string
+          example: Mealio Server is up and Database is connected
+      required:
+        - success
+        - message
+    RegisterRequest:
+      type: object
+      properties:
+        name:
+          type: string
+          minLength: 2
+          example: Danie
+        email:
+          type: string
+          format: email
+          example: danie@example.com
+        password:
+          type: string
+          minLength: 8
+          example: StrongPass123
+      required:
+        - name
+        - email
+        - password
+    LoginRequest:
+      type: object
+      properties:
+        email:
+          type: string
+          format: email
+          example: danie@example.com
+        password:
+          type: string
+          minLength: 1
+          example: StrongPass123
+      required:
+        - email
+        - password
+    AuthUserRegister:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        name:
+          type: string
+        email:
+          type: string
+          format: email
+      required:
+        - id
+        - name
+        - email
+    AuthUserLogin:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        name:
+          type: string
+        email:
+          type: string
+          format: email
+        hasCompletedOnboarding:
+          type: boolean
+      required:
+        - id
+        - name
+        - email
+        - hasCompletedOnboarding
+    RegisterResponse:
+      type: object
+      properties:
+        message:
+          type: string
+          example: User registered successfully
+        user:
+          $ref: "#/components/schemas/AuthUserRegister"
+      required:
+        - message
+        - user
+    LoginResponse:
+      type: object
+      properties:
+        message:
+          type: string
+          example: Login successful
+        token:
+          type: string
+          example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
+        user:
+          $ref: "#/components/schemas/AuthUserLogin"
+      required:
+        - message
+        - token
+        - user
+    UserPreferencesUpdateRequest:
+      type: object
+      properties:
+        requiresHalal:
+          type: boolean
+          example: true
+        requiresVegan:
+          type: boolean
+          example: false
+        allergies:
+          type: array
+          items:
+            type: string
+            minLength: 1
+          example:
+            - peanuts
+            - shellfish
+      required:
+        - requiresHalal
+        - requiresVegan
+        - allergies
+    UserNameUpdateRequest:
+      type: object
+      properties:
+        name:
+          type: string
+          minLength: 2
+          example: Danie Ali
+      required:
+        - name
+    UserPasswordUpdateRequest:
+      type: object
+      properties:
+        oldPassword:
+          type: string
+          minLength: 1
+          example: StrongPass123
+        newPassword:
+          type: string
+          minLength: 8
+          example: NewStrongPass456
+      required:
+        - oldPassword
+        - newPassword
+    UserOnboardingPatchRequest:
+      type: object
+      properties:
+        hasCompletedOnboarding:
+          type: boolean
+          example: true
+      required:
+        - hasCompletedOnboarding
+    UserPreferencesView:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        requiresHalal:
+          type: boolean
+        requiresVegan:
+          type: boolean
+        allergies:
+          type: array
+          items:
+            type: string
+        hasCompletedOnboarding:
+          type: boolean
+      required:
+        - id
+        - requiresHalal
+        - requiresVegan
+        - allergies
+        - hasCompletedOnboarding
+    UserNameResponse:
+      type: object
+      properties:
+        message:
+          type: string
+          example: Username updated successfully
+        user:
+          type: object
+          properties:
+            id:
+              type: string
+              format: uuid
+            name:
+              type: string
+          required:
+            - id
+            - name
+      required:
+        - message
+        - user
+    UserPasswordResponse:
+      type: object
+      properties:
+        message:
+          type: string
+          example: Password updated successfully
+        user:
+          type: object
+          properties:
+            id:
+              type: string
+              format: uuid
+            name:
+              type: string
+            email:
+              type: string
+              format: email
+          required:
+            - id
+            - name
+            - email
+      required:
+        - message
+        - user
+    UserPreferencesResponse:
+      type: object
+      properties:
+        message:
+          type: string
+          example: User preferences updated successfully
+        user:
+          type: object
+          properties:
+            id:
+              type: string
+              format: uuid
+            name:
+              type: string
+            email:
+              type: string
+              format: email
+            hasCompletedOnboarding:
+              type: boolean
+            requiresHalal:
+              type: boolean
+            requiresVegan:
+              type: boolean
+            allergies:
+              type: array
+              items:
+                type: string
+          required:
+            - id
+            - name
+            - email
+            - hasCompletedOnboarding
+            - requiresHalal
+            - requiresVegan
+            - allergies
+      required:
+        - message
+        - user
+    OnboardingResponse:
+      type: object
+      properties:
+        message:
+          type: string
+          example: Onboarding status updated successfully
+        user:
+          type: object
+          properties:
+            id:
+              type: string
+              format: uuid
+            hasCompletedOnboarding:
+              type: boolean
+          required:
+            - id
+            - hasCompletedOnboarding
+      required:
+        - message
+        - user
+    Restaurant:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        name:
+          type: string
+        address:
+          type: string
+        latitude:
+          type: number
+        longitude:
+          type: number
+        locationUrl:
+          type: string
+          nullable: true
+        isHalal:
+          type: boolean
+        isVegan:
+          type: boolean
+        startingPrice:
+          type: integer
+        rating:
+          type: number
+        ratingCount:
+          type: integer
+        tags:
+          type: array
+          nullable: true
+          items:
+            type: string
+        signatureDishes:
+          type: array
+          nullable: true
+          items:
+            type: string
+        imageUrl:
+          type: string
+          nullable: true
+        createdAt:
+          type: string
+          format: date-time
+      required:
+        - id
+        - name
+        - address
+        - latitude
+        - longitude
+        - locationUrl
+        - isHalal
+        - isVegan
+        - startingPrice
+        - rating
+        - ratingCount
+        - tags
+        - signatureDishes
+        - imageUrl
+        - createdAt
+    RecommendationRequest:
+      type: object
+      properties:
+        latitude:
+          type: number
+          example: 3.139
+        longitude:
+          type: number
+          example: 101.6869
+        radiusKm:
+          type: number
+          exclusiveMinimum: true
+          example: 5
+        maxStartingPrice:
+          type: number
+          exclusiveMinimum: true
+          example: 25
+        mood:
+          type: string
+          minLength: 1
+          example: cheap and comforting
+      required:
+        - latitude
+        - longitude
+        - radiusKm
+        - maxStartingPrice
+        - mood
+    RecommendationCandidate:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        name:
+          type: string
+        address:
+          type: string
+        latitude:
+          type: number
+        longitude:
+          type: number
+        locationUrl:
+          type: string
+          nullable: true
+        isHalal:
+          type: boolean
+        isVegan:
+          type: boolean
+        startingPrice:
+          type: integer
+        rating:
+          type: number
+        ratingCount:
+          type: integer
+        tags:
+          type: array
+          nullable: true
+          items:
+            type: string
+        signatureDishes:
+          type: array
+          nullable: true
+          items:
+            type: string
+        imageUrl:
+          type: string
+          nullable: true
+        distanceKm:
+          type: number
+      required:
+        - id
+        - name
+        - address
+        - latitude
+        - longitude
+        - locationUrl
+        - isHalal
+        - isVegan
+        - startingPrice
+        - rating
+        - ratingCount
+        - tags
+        - signatureDishes
+        - imageUrl
+        - distanceKm
+    RecommendationResponse:
+      type: object
+      properties:
+        message:
+          type: string
+          example: Recommendations fetched successfully
+        mood:
+          type: string
+          example: cheap and comforting
+        candidates:
+          type: array
+          items:
+            $ref: "#/components/schemas/RecommendationCandidate"
+      required:
+        - message
+        - mood
+        - candidates
+paths:
+  /api/health:
+    get:
+      tags:
+        - Health
+      summary: Check server and database health
+      description: |
+        Public endpoint used to confirm the server is running and the database is reachable.
+
+        How to test:
+        1. Send a GET request with no headers.
+        2. Expect `200` when the database is healthy.
+        3. Expect `500` if the database connection fails.
+      responses:
+        "200":
+          description: Database is reachable
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/HealthResponse"
+        "500":
+          description: Database connection failed
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+  /api/auth/register:
+    post:
+      tags:
+        - Auth
+      summary: Register a new user
+      description: |
+        Creates a user account after validating name, email, and password.
+
+        How to test:
+        1. Send a POST request with `name`, `email`, and `password`.
+        2. Use a new email for the happy path.
+        3. Try the same email again to verify the `409` duplicate check.
+        4. Remove fields or use a short password to verify validation.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/RegisterRequest"
+            example:
+              name: Danie
+              email: danie@example.com
+              password: StrongPass123
+      responses:
+        "201":
+          description: User created successfully
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/RegisterResponse"
+        "400":
+          description: Validation failed
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+              example:
+                error: Validation failed
+                details:
+                  - field: email
+                    message: Invalid email format
+        "409":
+          description: Email already in use
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+              example:
+                error: Email is already in use.
+        "500":
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+  /api/auth/login:
+    post:
+      tags:
+        - Auth
+      summary: Login and receive JWT
+      description: |
+        Validates credentials and returns a JWT token.
+
+        How to test:
+        1. Use the email and password created by `/api/auth/register`.
+        2. Save the returned `token` value.
+        3. Reuse that token in the `Authorization: Bearer <token>` header for protected routes.
+        4. Test wrong password and unknown email to verify `401`.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/LoginRequest"
+            example:
+              email: danie@example.com
+              password: StrongPass123
+      responses:
+        "200":
+          description: Login successful
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/LoginResponse"
+        "400":
+          description: Validation failed
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "401":
+          description: Invalid credentials
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+              example:
+                error: Invalid Credentials
+        "500":
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+  /api/user/preferences:
+    get:
+      tags:
+        - User
+      security:
+        - bearerAuth: []
+      summary: Read the current user preferences
+      description: |
+        Returns the authenticated user's halal, vegan, allergy, and onboarding settings.
+
+        How to test:
+        1. Log in and copy the JWT token.
+        2. Set `Authorization: Bearer <token>`.
+        3. Send a GET request.
+        4. Expect `401` if the header is missing or invalid.
+      responses:
+        "200":
+          description: Preferences fetched successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                  user:
+                    $ref: "#/components/schemas/UserPreferencesView"
+                required:
+                  - message
+                  - user
+        "401":
+          description: Missing or invalid token
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "404":
+          description: User not found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+    put:
+      tags:
+        - User
+      security:
+        - bearerAuth: []
+      summary: Update user preferences
+      description: |
+        Updates halal/vegan flags and allergy list, and marks onboarding as complete.
+
+        How to test:
+        1. Log in and copy the JWT token.
+        2. Send a PUT request with boolean values and an allergy array.
+        3. Verify the response shows `hasCompletedOnboarding: true`.
+        4. Send a malformed body to confirm validation errors.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/UserPreferencesUpdateRequest"
+            example:
+              requiresHalal: true
+              requiresVegan: false
+              allergies:
+                - peanuts
+                - shellfish
+      responses:
+        "200":
+          description: Preferences updated successfully
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/UserPreferencesResponse"
+        "400":
+          description: Validation failed
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "401":
+          description: Missing or invalid token
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "404":
+          description: User not found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+  /api/user/password:
+    put:
+      tags:
+        - User
+      security:
+        - bearerAuth: []
+      summary: Change the current user's password
+      description: |
+        Verifies the old password before setting a new one.
+
+        How to test:
+        1. Log in and set the bearer token.
+        2. Send `oldPassword` and `newPassword`.
+        3. Re-login with the old password to confirm it fails.
+        4. Re-login with the new password to confirm it succeeds.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/UserPasswordUpdateRequest"
+            example:
+              oldPassword: StrongPass123
+              newPassword: NewStrongPass456
+      responses:
+        "200":
+          description: Password updated successfully
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/UserPasswordResponse"
+        "400":
+          description: Validation failed or old password is wrong
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+              example:
+                error: Invalid old password
+        "401":
+          description: Missing or invalid token
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "404":
+          description: User not found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+  /api/user/name:
+    put:
+      tags:
+        - User
+      security:
+        - bearerAuth: []
+      summary: Change the current user's name
+      description: |
+        Updates the display name for the authenticated user.
+
+        How to test:
+        1. Set the bearer token.
+        2. Send a new name with at least 2 characters.
+        3. Confirm the response returns the updated name.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/UserNameUpdateRequest"
+            example:
+              name: Danie Ali
+      responses:
+        "200":
+          description: Username updated successfully
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/UserNameResponse"
+        "400":
+          description: Validation failed
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "401":
+          description: Missing or invalid token
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "404":
+          description: User not found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+  /api/user/onboarding:
+    patch:
+      tags:
+        - User
+      security:
+        - bearerAuth: []
+      summary: Update onboarding completion status
+      description: |
+        Allows the client to mark onboarding complete or incomplete.
+
+        How to test:
+        1. Set the bearer token.
+        2. Send `hasCompletedOnboarding: true`.
+        3. Re-fetch `/api/user/preferences` to confirm the value changed.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/UserOnboardingPatchRequest"
+            example:
+              hasCompletedOnboarding: true
+      responses:
+        "200":
+          description: Onboarding status updated successfully
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/OnboardingResponse"
+        "400":
+          description: Validation failed
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "401":
+          description: Missing or invalid token
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "404":
+          description: User not found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+  /api/food/recommend:
+    post:
+      tags:
+        - Food
+      security:
+        - bearerAuth: []
+      summary: Get hard-filtered restaurant recommendations
+      description: |
+        This is the hard-filter step of the recommendation flow.
+        It checks the authenticated user's preferences, applies radius, halal, vegan, and allergy filters, and returns candidate restaurants with distances.
+
+        How to test:
+        1. Log in and set the bearer token.
+        2. Use coordinates near your seeded restaurants.
+        3. Start with `radiusKm: 5` and `maxStartingPrice: 25`.
+        4. Compare results with and without `requiresHalal` / `requiresVegan` user settings.
+        5. Use different `mood` values to confirm the request is accepted for the future AI step.
+
+        Note:
+        - The current implementation accepts `mood` but does not use AI ranking yet.
+        - Values like `25` are interpreted against the seeded price scale used in this project.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/RecommendationRequest"
+            example:
+              latitude: 3.139
+              longitude: 101.6869
+              radiusKm: 5
+              maxStartingPrice: 25
+              mood: cheap and comforting
+      responses:
+        "200":
+          description: Recommendations fetched successfully
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/RecommendationResponse"
+        "400":
+          description: Validation failed
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "401":
+          description: Missing or invalid token
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "404":
+          description: User not found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+  /api/favorites:
+    get:
+      tags:
+        - Favorites
+      security:
+        - bearerAuth: []
+      summary: List the authenticated user's favorite restaurants
+      description: |
+        Returns the current favorites for the logged-in user.
+
+        How to test:
+        1. Add at least one favorite first.
+        2. Send a GET request with the bearer token.
+        3. Confirm the response is an array of restaurant objects.
+      responses:
+        "200":
+          description: Favorites returned successfully
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Restaurant"
+        "401":
+          description: Missing or invalid token
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "404":
+          description: User not found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+  /api/favorites/{restaurantId}:
+    parameters:
+      - name: restaurantId
+        in: path
+        required: true
+        description: UUID of the restaurant to add or remove
+        schema:
+          type: string
+          format: uuid
+    post:
+      tags:
+        - Favorites
+      security:
+        - bearerAuth: []
+      summary: Add a restaurant to favorites
+      description: |
+        Adds the restaurant to the authenticated user's favorites.
+
+        How to test:
+        1. Get a valid restaurant UUID from `/api/food/recommend` or from seeded data.
+        2. Set the bearer token.
+        3. Send a POST request with no body.
+        4. If the restaurant is already a favorite, the current implementation returns the existing favorites list.
+      responses:
+        "200":
+          description: Favorites list returned after add
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Restaurant"
+        "400":
+          description: Invalid restaurantId format
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "401":
+          description: Missing or invalid token
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "404":
+          description: User or restaurant not found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+    delete:
+      tags:
+        - Favorites
+      security:
+        - bearerAuth: []
+      summary: Remove a restaurant from favorites
+      description: |
+        Removes the restaurant from the authenticated user's favorites.
+
+        How to test:
+        1. Add the restaurant first.
+        2. Send a DELETE request to the same endpoint.
+        3. Re-check `/api/favorites` to confirm it is gone.
+        4. Deleting again should be handled gracefully by the current implementation.
+      responses:
+        "200":
+          description: Favorites list returned after delete
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Restaurant"
+        "400":
+          description: Invalid restaurantId format
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "401":
+          description: Missing or invalid token
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "404":
+          description: User or restaurant not found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
