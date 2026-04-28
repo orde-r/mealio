@@ -59,7 +59,10 @@ export const addFavoriteRestaurant = async (
     const { restaurantId } = parsedParams.data;
     const favorites = await addFavorite(userId, restaurantId);
 
-    res.status(200).json(favorites);
+    res.status(200).json({
+      status: "Successfully added to favorite",
+      favorites: favorites,
+    });
   } catch (error) {
     if (mapRepositoryError(error, res)) {
       return;
@@ -93,7 +96,10 @@ export const deleteFavoriteRestaurant = async (
     const { restaurantId } = parsedParams.data;
     const favorites = await removeFavorite(userId, restaurantId);
 
-    res.status(200).json(favorites);
+    res.status(200).json({
+      status: "Successfully removed from favorite",
+      favorites: favorites,
+    });
   } catch (error) {
     if (mapRepositoryError(error, res)) {
       return;
