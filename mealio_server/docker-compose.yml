@@ -20,7 +20,7 @@ services:
       DATABASE_URL: postgresql://mealio:mealio@db:5432/mealio?schema=public
       JWT_SECRET: ${JWT_SECRET:-change_me}
       GEMINI_API_KEY: ${GEMINI_API_KEY:-}
-      GEMINI_MODEL: ${GEMINI_MODEL:-gemini-1.5-flash}
+      GEMINI_MODEL: ${GEMINI_MODEL:-gemini-3-flash-preview}
     ports:
       - "3000:3000"
     command: ["sh", "-c", "npx prisma migrate deploy && npx prisma db seed && npm start"]
