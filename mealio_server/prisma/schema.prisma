@@ -8,40 +8,42 @@ datasource db {
 }
 
 model User {
-  id                     String       @id @default(uuid())
-  email                  String       @unique
-  password               String
-  name                   String
+  id       String @id @default(uuid())
+  email    String @unique
+  password String
+  name     String
 
-  hasCompletedOnboarding Boolean      @default(false)
-  requiresHalal          Boolean      @default(false)
-  requiresVegan          Boolean      @default(false)
+  hasCompletedOnboarding Boolean  @default(false)
+  requiresHalal          Boolean  @default(false)
+  requiresVegan          Boolean  @default(false)
   allergies              String[]
-  
-  createdAt              DateTime     @default(now())
-  favorites              Restaurant[] @relation("UserFavorites")
+
+  createdAt DateTime     @default(now())
+  favorites Restaurant[] @relation("UserFavorites")
 }
 
 model Restaurant {
-  id              String   @id @default(uuid())
-  name            String
+  id   String @id @default(uuid())
+  name String
 
-  address         String
-  latitude        Float
-  longitude       Float
-  locationUrl     String?
+  address     String
+  latitude    Float
+  longitude   Float
+  locationUrl String?
 
-  isHalal         Boolean  @default(false)
-  isVegan         Boolean  @default(false)
-  startingPrice   Int      @default(0)
+  isHalal       Boolean @default(false)
+  isVegan       Boolean @default(false)
+  startingPrice Int     @default(0)
 
-  rating          Float    @default(0.0)
-  ratingCount     Int      @default(0)
+  rating      Float @default(0.0)
+  ratingCount Int   @default(0)
 
   tags            String[]
   signatureDishes String[]
   imageUrl        String?
 
-  createdAt       DateTime @default(now())
-  favoritedBy     User[]   @relation("UserFavorites")
+  createdAt   DateTime @default(now())
+  favoritedBy User[]   @relation("UserFavorites")
+
+  @@unique([name, address])
 }
