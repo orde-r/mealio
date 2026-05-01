@@ -59,3 +59,38 @@ Push your branch.
 ## Rules of Thumb
 1.  **One Feature per Branch:** Don't fix a bug in the navbar while working on the database. Create a separate branch.
 2.  **Delete after Merge:** Once your PR is merged, delete the branch to keep the repo clean.
+
+---
+
+## Backend Start Guide (mealio_server)
+
+### Software needed
+- Node.js 22+ (includes npm)
+- PostgreSQL 14+ (for manual/local run)
+- Docker Desktop (for compose run)
+
+### Manual start (local)
+1. `cd mealio_server`
+2. Create your env file: `copy .env.example .env` and fill in values.
+3. Ensure Postgres is running and `DATABASE_URL` points to it.
+4. Install deps: `npm install`
+5. Generate Prisma client: `npx prisma generate`
+6. Apply migrations: `npx prisma migrate dev`
+7. Seed data: `npm run seed`
+8. Run the server:
+    - Dev: `npm run dev`
+    - Prod: `npm run build` then `npm start`
+
+Useful endpoints:
+- `GET http://localhost:3000/api/health`
+- `GET http://localhost:3000/api-docs`
+
+### Docker start (compose)
+1. `cd mealio_server`
+2. (Optional) set `JWT_SECRET`, `GEMINI_API_KEY`, and `GEMINI_MODEL` in `.env`.
+3. Build and start: `docker compose up --build`
+4. Stop services: `docker compose down -v`
+
+Notes:
+- The compose file runs migrations and seeds automatically before `npm start`.
+- The API is exposed on `http://localhost:3000` and Postgres on `5432`.

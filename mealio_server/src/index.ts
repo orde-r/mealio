@@ -1,0 +1,47 @@
+import express from "express";
+import { Response, Request } from "express";
+import swaggerUi from "swagger-ui-express";
+import prisma from "./prisma";
+
+import { authRouter } from "./routes/authRoute";
+import { favoriteRouter } from "./routes/favoriteRoute";
+import { userRouter } from "./routes/userRoute";
+import { foodRouter } from "./routes/foodRoute";
+import { openApiDocument, openApiSpecPath } from "./docs/swagger";
+
+const app = express();
+const port = 3000;
+
+app.use(express.json());
+
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(openApiDocument));
+app.get("/api-docs/openapi.yaml", (req: Request, res: Response) => {
+  res.type("text/yaml");
+  res.sendFile(openApiSpecPath);
+});
+
+app.use("/api/auth", authRouter);
+app.use("/api/user", userRouter);
+app.use("/api/food", foodRouter);
+app.use("/api/favorites", favoriteRouter);
+
+app.get("/api/health", async (req: Request, res: Response) => {
+  try {
+    await prisma.$queryRaw`SELECT 1`;
+
+    res.status(200).json({
+      success: true,
+      message: `Mealio Server is up and Database is connected`,
+    });
+  } catch (error) {
+    console.error(`Failed to connect database:`, error);
+    res.status(500).json({
+      success: false,
+      message: "Database Connection Failed",
+    });
+  }
+});
+
+app.listen(port, () => {
+  console.log(`App Listening on port ${3000}`);
+});

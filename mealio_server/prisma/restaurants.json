@@ -1,0 +1,6643 @@
+[
+  {
+    "name": "Bebek Kaleyo Express",
+    "address": "Jl. MH Thamrin, Gading Serpong, Tangerang",
+    "latitude": -6.229405,
+    "longitude": 106.616091,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 142000,
+    "rating": 4.4,
+    "ratingCount": 3045,
+    "tags": [
+      "Duck",
+      "Indonesian",
+      "Family"
+    ],
+    "signatureDishes": [
+      "Special Bebek",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.229405,106.616091"
+  },
+  {
+    "name": "Nasi Goreng Kambing Kebon Sirih Jakarta Selatan",
+    "address": "Jl. Boulevard Raya, Jakarta Selatan",
+    "latitude": -6.27042,
+    "longitude": 106.804878,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 147000,
+    "rating": 4.6,
+    "ratingCount": 5265,
+    "tags": [
+      "Indonesian",
+      "Street Food",
+      "Dinner"
+    ],
+    "signatureDishes": [
+      "Special Nasi",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.27042,106.804878"
+  },
+  {
+    "name": "Mie Gacoan Pusat",
+    "address": "Ruko Paramount, Alam Sutera, Tangerang",
+    "latitude": -6.231418,
+    "longitude": 106.673713,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 90000,
+    "rating": 4.2,
+    "ratingCount": 2368,
+    "tags": [
+      "Noodles",
+      "Spicy",
+      "Cheap"
+    ],
+    "signatureDishes": [
+      "Special Mie",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.231418,106.673713"
+  },
+  {
+    "name": "Sate Khas Senayan Pusat",
+    "address": "Pasar Modern, BSD City, Tangerang",
+    "latitude": -6.32121,
+    "longitude": 106.652746,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 86000,
+    "rating": 4.8,
+    "ratingCount": 5292,
+    "tags": [
+      "Indonesian",
+      "Sate",
+      "Premium"
+    ],
+    "signatureDishes": [
+      "Special Sate",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.32121,106.652746"
+  },
+  {
+    "name": "Sari Kuring Pusat",
+    "address": "Ruko Golden 8, Jakarta Pusat",
+    "latitude": -6.160795,
+    "longitude": 106.847002,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 58000,
+    "rating": 4.2,
+    "ratingCount": 1066,
+    "tags": [
+      "Sunda",
+      "Family",
+      "Indonesian"
+    ],
+    "signatureDishes": [
+      "Special Sari",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.160795,106.847002"
+  },
+  {
+    "name": "Burgreens Pusat",
+    "address": "Ruko Golden 8, Bintaro Jaya",
+    "latitude": -6.267618,
+    "longitude": 106.71604,
+    "isHalal": true,
+    "isVegan": true,
+    "startingPrice": 107000,
+    "rating": 4.3,
+    "ratingCount": 4014,
+    "tags": [
+      "Vegan",
+      "Burger",
+      "Healthy"
+    ],
+    "signatureDishes": [
+      "Special Burgreens",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.267618,106.71604"
+  },
+  {
+    "name": "Sate Babi Kunciran Signature",
+    "address": "Pasar Modern, Jakarta Selatan",
+    "latitude": -6.241917,
+    "longitude": 106.81603,
+    "isHalal": false,
+    "isVegan": false,
+    "startingPrice": 93000,
+    "rating": 4.2,
+    "ratingCount": 841,
+    "tags": [
+      "Pork",
+      "Non-Halal",
+      "Dinner"
+    ],
+    "signatureDishes": [
+      "Special Sate",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.241917,106.81603"
+  },
+  {
+    "name": "Nasi Goreng Kambing Kebon Sirih Express",
+    "address": "Jl. Sudirman, Bintaro Jaya",
+    "latitude": -6.293346,
+    "longitude": 106.727529,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 39000,
+    "rating": 4.3,
+    "ratingCount": 5003,
+    "tags": [
+      "Indonesian",
+      "Street Food",
+      "Dinner"
+    ],
+    "signatureDishes": [
+      "Special Nasi",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.293346,106.727529"
+  },
+  {
+    "name": "Bandar Djakarta Pusat",
+    "address": "Jl. Boulevard Raya, Alam Sutera, Tangerang",
+    "latitude": -6.233255,
+    "longitude": 106.676138,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 28000,
+    "rating": 4.5,
+    "ratingCount": 3144,
+    "tags": [
+      "Seafood",
+      "Dinner",
+      "Family"
+    ],
+    "signatureDishes": [
+      "Special Bandar",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.233255,106.676138"
+  },
+  {
+    "name": "Sate Khas Senayan Express",
+    "address": "Ruko Golden 8, BSD City, Tangerang",
+    "latitude": -6.287154,
+    "longitude": 106.655365,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 61000,
+    "rating": 4.1,
+    "ratingCount": 3385,
+    "tags": [
+      "Indonesian",
+      "Sate",
+      "Premium"
+    ],
+    "signatureDishes": [
+      "Special Sate",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.287154,106.655365"
+  },
+  {
+    "name": "Ikkudo Ichi (Non-Halal) Signature",
+    "address": "Jl. Alam Utama, Bintaro Jaya",
+    "latitude": -6.267574,
+    "longitude": 106.71491,
+    "isHalal": false,
+    "isVegan": false,
+    "startingPrice": 20000,
+    "rating": 4.8,
+    "ratingCount": 2451,
+    "tags": [
+      "Ramen",
+      "Japanese",
+      "Non-Halal",
+      "Pork"
+    ],
+    "signatureDishes": [
+      "Special Ikkudo",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.267574,106.71491"
+  },
+  {
+    "name": "Bakmi Babi Aloi Signature",
+    "address": "Flavor Bliss, Jakarta Pusat",
+    "latitude": -6.167059,
+    "longitude": 106.830932,
+    "isHalal": false,
+    "isVegan": false,
+    "startingPrice": 59000,
+    "rating": 4.5,
+    "ratingCount": 1207,
+    "tags": [
+      "Noodles",
+      "Non-Halal",
+      "Pork"
+    ],
+    "signatureDishes": [
+      "Special Bakmi",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.167059,106.830932"
+  },
+  {
+    "name": "Soto Betawi H. Mamat Alam Sutera",
+    "address": "Jl. Boulevard Raya, Alam Sutera, Tangerang",
+    "latitude": -6.24258,
+    "longitude": 106.673483,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 147000,
+    "rating": 4.9,
+    "ratingCount": 2805,
+    "tags": [
+      "Indonesian",
+      "Soup",
+      "Meat"
+    ],
+    "signatureDishes": [
+      "Special Soto",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.24258,106.673483"
+  },
+  {
+    "name": "Babi Panggang Tondano Signature",
+    "address": "Jl. Sudirman, Alam Sutera, Tangerang",
+    "latitude": -6.204843,
+    "longitude": 106.653919,
+    "isHalal": false,
+    "isVegan": false,
+    "startingPrice": 118000,
+    "rating": 4.5,
+    "ratingCount": 4859,
+    "tags": [
+      "Pork",
+      "Manado",
+      "Spicy"
+    ],
+    "signatureDishes": [
+      "Special Babi",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.204843,106.653919"
+  },
+  {
+    "name": "Sate Khas Senayan Jakarta Pusat",
+    "address": "Ruko Golden 8, Jakarta Pusat",
+    "latitude": -6.180986,
+    "longitude": 106.824199,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 124000,
+    "rating": 4.9,
+    "ratingCount": 7878,
+    "tags": [
+      "Indonesian",
+      "Sate",
+      "Premium"
+    ],
+    "signatureDishes": [
+      "Special Sate",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.180986,106.824199"
+  },
+  {
+    "name": "Bakmi Babi Aloi Jakarta Selatan",
+    "address": "Flavor Bliss, Jakarta Selatan",
+    "latitude": -6.24847,
+    "longitude": 106.815305,
+    "isHalal": false,
+    "isVegan": false,
+    "startingPrice": 94000,
+    "rating": 4.7,
+    "ratingCount": 5902,
+    "tags": [
+      "Noodles",
+      "Non-Halal",
+      "Pork"
+    ],
+    "signatureDishes": [
+      "Special Bakmi",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.24847,106.815305"
+  },
+  {
+    "name": "Burgreens Express",
+    "address": "Ruko Paramount, Gading Serpong, Tangerang",
+    "latitude": -6.226721,
+    "longitude": 106.639016,
+    "isHalal": true,
+    "isVegan": true,
+    "startingPrice": 116000,
+    "rating": 4.3,
+    "ratingCount": 2949,
+    "tags": [
+      "Vegan",
+      "Burger",
+      "Healthy"
+    ],
+    "signatureDishes": [
+      "Special Burgreens",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.226721,106.639016"
+  },
+  {
+    "name": "HokBen Pusat",
+    "address": "Jl. Boulevard Raya, Jakarta Selatan",
+    "latitude": -6.241974,
+    "longitude": 106.793734,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 65000,
+    "rating": 4.2,
+    "ratingCount": 1390,
+    "tags": [
+      "Japanese",
+      "Fast Food",
+      "Bento"
+    ],
+    "signatureDishes": [
+      "Special HokBen",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.241974,106.793734"
+  },
+  {
+    "name": "Ikkudo Ichi (Non-Halal) Pusat",
+    "address": "Jl. MH Thamrin, Bintaro Jaya",
+    "latitude": -6.30234,
+    "longitude": 106.744124,
+    "isHalal": false,
+    "isVegan": false,
+    "startingPrice": 58000,
+    "rating": 4.7,
+    "ratingCount": 6099,
+    "tags": [
+      "Ramen",
+      "Japanese",
+      "Non-Halal",
+      "Pork"
+    ],
+    "signatureDishes": [
+      "Special Ikkudo",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.30234,106.744124"
+  },
+  {
+    "name": "Sate Khas Senayan Express Blok B9",
+    "address": "Ruko Golden 8, Gading Serpong, Tangerang",
+    "latitude": -6.251687,
+    "longitude": 106.620341,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 103000,
+    "rating": 4.5,
+    "ratingCount": 126,
+    "tags": [
+      "Indonesian",
+      "Sate",
+      "Premium"
+    ],
+    "signatureDishes": [
+      "Special Sate",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.251687,106.620341"
+  },
+  {
+    "name": "Nasi Goreng Kambing Kebon Sirih Gading Serpong",
+    "address": "Jl. Scientia Square, Gading Serpong, Tangerang",
+    "latitude": -6.256324,
+    "longitude": 106.605358,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 41000,
+    "rating": 4.7,
+    "ratingCount": 4349,
+    "tags": [
+      "Indonesian",
+      "Street Food",
+      "Dinner"
+    ],
+    "signatureDishes": [
+      "Special Nasi",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.256324,106.605358"
+  },
+  {
+    "name": "Bandar Djakarta Pusat Blok G6",
+    "address": "Jl. Alam Utama, Gading Serpong, Tangerang",
+    "latitude": -6.250303,
+    "longitude": 106.633481,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 124000,
+    "rating": 4.5,
+    "ratingCount": 2036,
+    "tags": [
+      "Seafood",
+      "Dinner",
+      "Family"
+    ],
+    "signatureDishes": [
+      "Special Bandar",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.250303,106.633481"
+  },
+  {
+    "name": "Lawless Burgerbar Express",
+    "address": "Flavor Bliss, Jakarta Pusat",
+    "latitude": -6.174946,
+    "longitude": 106.810324,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 22000,
+    "rating": 4.7,
+    "ratingCount": 7018,
+    "tags": [
+      "Burger",
+      "Western",
+      "Heavy Meal"
+    ],
+    "signatureDishes": [
+      "Special Lawless",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.174946,106.810324"
+  },
+  {
+    "name": "Bakmi Babi Aloi Signature Blok J20",
+    "address": "Jl. Alam Utama, Gading Serpong, Tangerang",
+    "latitude": -6.231618,
+    "longitude": 106.633385,
+    "isHalal": false,
+    "isVegan": false,
+    "startingPrice": 89000,
+    "rating": 4.3,
+    "ratingCount": 5837,
+    "tags": [
+      "Noodles",
+      "Non-Halal",
+      "Pork"
+    ],
+    "signatureDishes": [
+      "Special Bakmi",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.231618,106.633385"
+  },
+  {
+    "name": "Ramen Seirock-ya Signature",
+    "address": "Jl. Pahlawan Seribu, Gading Serpong, Tangerang",
+    "latitude": -6.241926,
+    "longitude": 106.600869,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 119000,
+    "rating": 4.7,
+    "ratingCount": 7910,
+    "tags": [
+      "Ramen",
+      "Japanese",
+      "Noodles",
+      "Halal"
+    ],
+    "signatureDishes": [
+      "Special Ramen",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.241926,106.600869"
+  },
+  {
+    "name": "Bebek Kaleyo Express Blok C14",
+    "address": "Jl. Pahlawan Seribu, Bintaro Jaya",
+    "latitude": -6.269571,
+    "longitude": 106.711549,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 50000,
+    "rating": 4.3,
+    "ratingCount": 4108,
+    "tags": [
+      "Duck",
+      "Indonesian",
+      "Family"
+    ],
+    "signatureDishes": [
+      "Special Bebek",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.269571,106.711549"
+  },
+  {
+    "name": "Bandar Djakarta Express",
+    "address": "Jl. Senopati, BSD City, Tangerang",
+    "latitude": -6.282238,
+    "longitude": 106.6408,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 111000,
+    "rating": 4.1,
+    "ratingCount": 2493,
+    "tags": [
+      "Seafood",
+      "Dinner",
+      "Family"
+    ],
+    "signatureDishes": [
+      "Special Bandar",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.282238,106.6408"
+  },
+  {
+    "name": "HokBen Express",
+    "address": "Jl. Pahlawan Seribu, Gading Serpong, Tangerang",
+    "latitude": -6.262736,
+    "longitude": 106.632421,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 125000,
+    "rating": 4.7,
+    "ratingCount": 5501,
+    "tags": [
+      "Japanese",
+      "Fast Food",
+      "Bento"
+    ],
+    "signatureDishes": [
+      "Special HokBen",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.262736,106.632421"
+  },
+  {
+    "name": "Sate Babi Kunciran Signature Blok B11",
+    "address": "Jl. Sudirman, Jakarta Pusat",
+    "latitude": -6.19686,
+    "longitude": 106.841734,
+    "isHalal": false,
+    "isVegan": false,
+    "startingPrice": 149000,
+    "rating": 4.4,
+    "ratingCount": 8366,
+    "tags": [
+      "Pork",
+      "Non-Halal",
+      "Dinner"
+    ],
+    "signatureDishes": [
+      "Special Sate",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.19686,106.841734"
+  },
+  {
+    "name": "Ikkudo Ichi (Non-Halal) Express",
+    "address": "Jl. Kemang Raya, Gading Serpong, Tangerang",
+    "latitude": -6.231483,
+    "longitude": 106.601006,
+    "isHalal": false,
+    "isVegan": false,
+    "startingPrice": 134000,
+    "rating": 4.8,
+    "ratingCount": 8342,
+    "tags": [
+      "Ramen",
+      "Japanese",
+      "Non-Halal",
+      "Pork"
+    ],
+    "signatureDishes": [
+      "Special Ikkudo",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.231483,106.601006"
+  },
+  {
+    "name": "Babi Panggang Tondano Signature Blok B11",
+    "address": "Jl. MH Thamrin, BSD City, Tangerang",
+    "latitude": -6.293704,
+    "longitude": 106.640108,
+    "isHalal": false,
+    "isVegan": false,
+    "startingPrice": 111000,
+    "rating": 4.4,
+    "ratingCount": 5766,
+    "tags": [
+      "Pork",
+      "Manado",
+      "Spicy"
+    ],
+    "signatureDishes": [
+      "Special Babi",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.293704,106.640108"
+  },
+  {
+    "name": "Mie Gacoan Bintaro Jaya",
+    "address": "Jl. Pahlawan Seribu, Bintaro Jaya",
+    "latitude": -6.291317,
+    "longitude": 106.701038,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 128000,
+    "rating": 4.4,
+    "ratingCount": 680,
+    "tags": [
+      "Noodles",
+      "Spicy",
+      "Cheap"
+    ],
+    "signatureDishes": [
+      "Special Mie",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.291317,106.701038"
+  },
+  {
+    "name": "Sate Khas Senayan Pusat Blok G5",
+    "address": "Jl. Pahlawan Seribu, Alam Sutera, Tangerang",
+    "latitude": -6.243073,
+    "longitude": 106.634509,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 23000,
+    "rating": 4.4,
+    "ratingCount": 1657,
+    "tags": [
+      "Indonesian",
+      "Sate",
+      "Premium"
+    ],
+    "signatureDishes": [
+      "Special Sate",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.243073,106.634509"
+  },
+  {
+    "name": "Ayam Geprek Gold Chick Signature",
+    "address": "Jl. Sudirman, Jakarta Selatan",
+    "latitude": -6.261354,
+    "longitude": 106.784629,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 94000,
+    "rating": 4.4,
+    "ratingCount": 6295,
+    "tags": [
+      "Spicy",
+      "Chicken",
+      "Cheap"
+    ],
+    "signatureDishes": [
+      "Special Ayam",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.261354,106.784629"
+  },
+  {
+    "name": "Bandar Djakarta Pusat Blok B12",
+    "address": "Ruko Golden 8, Jakarta Pusat",
+    "latitude": -6.163339,
+    "longitude": 106.854818,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 62000,
+    "rating": 4.6,
+    "ratingCount": 2640,
+    "tags": [
+      "Seafood",
+      "Dinner",
+      "Family"
+    ],
+    "signatureDishes": [
+      "Special Bandar",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.163339,106.854818"
+  },
+  {
+    "name": "Burgreens Pusat Blok F19",
+    "address": "Jl. Kemang Raya, Gading Serpong, Tangerang",
+    "latitude": -6.219515,
+    "longitude": 106.628256,
+    "isHalal": true,
+    "isVegan": true,
+    "startingPrice": 76000,
+    "rating": 4.2,
+    "ratingCount": 4604,
+    "tags": [
+      "Vegan",
+      "Burger",
+      "Healthy"
+    ],
+    "signatureDishes": [
+      "Special Burgreens",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.219515,106.628256"
+  },
+  {
+    "name": "Sate Khas Senayan Bintaro Jaya",
+    "address": "Jl. Alam Utama, Bintaro Jaya",
+    "latitude": -6.267149,
+    "longitude": 106.731359,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 150000,
+    "rating": 4.6,
+    "ratingCount": 2838,
+    "tags": [
+      "Indonesian",
+      "Sate",
+      "Premium"
+    ],
+    "signatureDishes": [
+      "Special Sate",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.267149,106.731359"
+  },
+  {
+    "name": "Ramen Seirock-ya Express",
+    "address": "Jl. Boulevard Raya, Bintaro Jaya",
+    "latitude": -6.288608,
+    "longitude": 106.702705,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 73000,
+    "rating": 4.1,
+    "ratingCount": 1957,
+    "tags": [
+      "Ramen",
+      "Japanese",
+      "Noodles",
+      "Halal"
+    ],
+    "signatureDishes": [
+      "Special Ramen",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.288608,106.702705"
+  },
+  {
+    "name": "Kopi Nako Alam Sutera",
+    "address": "Jl. Senopati, Alam Sutera, Tangerang",
+    "latitude": -6.230042,
+    "longitude": 106.641581,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 140000,
+    "rating": 4.4,
+    "ratingCount": 4104,
+    "tags": [
+      "Coffee",
+      "Cafe",
+      "Snacks"
+    ],
+    "signatureDishes": [
+      "Special Kopi",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.230042,106.641581"
+  },
+  {
+    "name": "Sate Taichan Goreng Pusat",
+    "address": "Jl. Senopati, BSD City, Tangerang",
+    "latitude": -6.27977,
+    "longitude": 106.629112,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 105000,
+    "rating": 4.5,
+    "ratingCount": 3723,
+    "tags": [
+      "Spicy",
+      "Street Food",
+      "Late Night"
+    ],
+    "signatureDishes": [
+      "Special Sate",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.27977,106.629112"
+  },
+  {
+    "name": "Nasi Goreng Kambing Kebon Sirih Pusat",
+    "address": "Ruko Paramount, Bintaro Jaya",
+    "latitude": -6.281458,
+    "longitude": 106.735536,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 53000,
+    "rating": 4.1,
+    "ratingCount": 5496,
+    "tags": [
+      "Indonesian",
+      "Street Food",
+      "Dinner"
+    ],
+    "signatureDishes": [
+      "Special Nasi",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.281458,106.735536"
+  },
+  {
+    "name": "Lawless Burgerbar Signature",
+    "address": "Jl. MH Thamrin, Jakarta Pusat",
+    "latitude": -6.192622,
+    "longitude": 106.841418,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 82000,
+    "rating": 4.3,
+    "ratingCount": 5900,
+    "tags": [
+      "Burger",
+      "Western",
+      "Heavy Meal"
+    ],
+    "signatureDishes": [
+      "Special Lawless",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.192622,106.841418"
+  },
+  {
+    "name": "Nasi Goreng Kambing Kebon Sirih Pusat Blok H6",
+    "address": "Ruko Paramount, Jakarta Pusat",
+    "latitude": -6.18374,
+    "longitude": 106.844168,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 44000,
+    "rating": 4.4,
+    "ratingCount": 7237,
+    "tags": [
+      "Indonesian",
+      "Street Food",
+      "Dinner"
+    ],
+    "signatureDishes": [
+      "Special Nasi",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.18374,106.844168"
+  },
+  {
+    "name": "Bandar Djakarta Express Blok B17",
+    "address": "Pasar Modern, Gading Serpong, Tangerang",
+    "latitude": -6.242462,
+    "longitude": 106.61759,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 115000,
+    "rating": 4.2,
+    "ratingCount": 2583,
+    "tags": [
+      "Seafood",
+      "Dinner",
+      "Family"
+    ],
+    "signatureDishes": [
+      "Special Bandar",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.242462,106.61759"
+  },
+  {
+    "name": "Nasi Goreng Kambing Kebon Sirih Bintaro Jaya",
+    "address": "Jl. Senopati, Bintaro Jaya",
+    "latitude": -6.285989,
+    "longitude": 106.712225,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 110000,
+    "rating": 4.3,
+    "ratingCount": 4566,
+    "tags": [
+      "Indonesian",
+      "Street Food",
+      "Dinner"
+    ],
+    "signatureDishes": [
+      "Special Nasi",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.285989,106.712225"
+  },
+  {
+    "name": "Ikkudo Ichi (Non-Halal) Pusat Blok I2",
+    "address": "Jl. Alam Utama, Bintaro Jaya",
+    "latitude": -6.29273,
+    "longitude": 106.729566,
+    "isHalal": false,
+    "isVegan": false,
+    "startingPrice": 112000,
+    "rating": 4.5,
+    "ratingCount": 472,
+    "tags": [
+      "Ramen",
+      "Japanese",
+      "Non-Halal",
+      "Pork"
+    ],
+    "signatureDishes": [
+      "Special Ikkudo",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.29273,106.729566"
+  },
+  {
+    "name": "Sate Taichan Goreng Pusat Blok F9",
+    "address": "Jl. Boulevard Raya, Alam Sutera, Tangerang",
+    "latitude": -6.249304,
+    "longitude": 106.66841,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 85000,
+    "rating": 4.2,
+    "ratingCount": 2378,
+    "tags": [
+      "Spicy",
+      "Street Food",
+      "Late Night"
+    ],
+    "signatureDishes": [
+      "Special Sate",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.249304,106.66841"
+  },
+  {
+    "name": "Ayam Geprek Gold Chick Signature Blok J5",
+    "address": "Ruko Golden 8, Alam Sutera, Tangerang",
+    "latitude": -6.235417,
+    "longitude": 106.661886,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 105000,
+    "rating": 4.7,
+    "ratingCount": 888,
+    "tags": [
+      "Spicy",
+      "Chicken",
+      "Cheap"
+    ],
+    "signatureDishes": [
+      "Special Ayam",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.235417,106.661886"
+  },
+  {
+    "name": "Sari Kuring Pusat Blok D9",
+    "address": "Flavor Bliss, Gading Serpong, Tangerang",
+    "latitude": -6.222119,
+    "longitude": 106.633916,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 128000,
+    "rating": 4.5,
+    "ratingCount": 6487,
+    "tags": [
+      "Sunda",
+      "Family",
+      "Indonesian"
+    ],
+    "signatureDishes": [
+      "Special Sari",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.222119,106.633916"
+  },
+  {
+    "name": "Nasi Goreng Kambing Kebon Sirih Jakarta Pusat",
+    "address": "Jl. Pahlawan Seribu, Jakarta Pusat",
+    "latitude": -6.172439,
+    "longitude": 106.814366,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 146000,
+    "rating": 4.3,
+    "ratingCount": 2804,
+    "tags": [
+      "Indonesian",
+      "Street Food",
+      "Dinner"
+    ],
+    "signatureDishes": [
+      "Special Nasi",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.172439,106.814366"
+  },
+  {
+    "name": "HokBen Signature",
+    "address": "Flavor Bliss, Alam Sutera, Tangerang",
+    "latitude": -6.242388,
+    "longitude": 106.633554,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 29000,
+    "rating": 4.5,
+    "ratingCount": 464,
+    "tags": [
+      "Japanese",
+      "Fast Food",
+      "Bento"
+    ],
+    "signatureDishes": [
+      "Special HokBen",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.242388,106.633554"
+  },
+  {
+    "name": "Babi Panggang Tondano Signature Blok B10",
+    "address": "Pasar Modern, Bintaro Jaya",
+    "latitude": -6.290788,
+    "longitude": 106.711003,
+    "isHalal": false,
+    "isVegan": false,
+    "startingPrice": 53000,
+    "rating": 4.9,
+    "ratingCount": 2659,
+    "tags": [
+      "Pork",
+      "Manado",
+      "Spicy"
+    ],
+    "signatureDishes": [
+      "Special Babi",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.290788,106.711003"
+  },
+  {
+    "name": "Sate Khas Senayan Jakarta Selatan",
+    "address": "Ruko Golden 8, Jakarta Selatan",
+    "latitude": -6.240338,
+    "longitude": 106.782877,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 123000,
+    "rating": 4.5,
+    "ratingCount": 4187,
+    "tags": [
+      "Indonesian",
+      "Sate",
+      "Premium"
+    ],
+    "signatureDishes": [
+      "Special Sate",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.240338,106.782877"
+  },
+  {
+    "name": "Bandar Djakarta Jakarta Selatan",
+    "address": "Jl. Senopati, Jakarta Selatan",
+    "latitude": -6.270437,
+    "longitude": 106.7752,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 94000,
+    "rating": 4.1,
+    "ratingCount": 1995,
+    "tags": [
+      "Seafood",
+      "Dinner",
+      "Family"
+    ],
+    "signatureDishes": [
+      "Special Bandar",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.270437,106.7752"
+  },
+  {
+    "name": "Kopi Nako Express",
+    "address": "Jl. Alam Utama, Alam Sutera, Tangerang",
+    "latitude": -6.211166,
+    "longitude": 106.633746,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 113000,
+    "rating": 4.4,
+    "ratingCount": 8143,
+    "tags": [
+      "Coffee",
+      "Cafe",
+      "Snacks"
+    ],
+    "signatureDishes": [
+      "Special Kopi",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.211166,106.633746"
+  },
+  {
+    "name": "Soto Betawi H. Mamat Bintaro Jaya",
+    "address": "Pasar Modern, Bintaro Jaya",
+    "latitude": -6.278085,
+    "longitude": 106.718475,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 46000,
+    "rating": 4.3,
+    "ratingCount": 2695,
+    "tags": [
+      "Indonesian",
+      "Soup",
+      "Meat"
+    ],
+    "signatureDishes": [
+      "Special Soto",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.278085,106.718475"
+  },
+  {
+    "name": "Kopi Nako Pusat",
+    "address": "Jl. Alam Utama, BSD City, Tangerang",
+    "latitude": -6.318486,
+    "longitude": 106.646535,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 54000,
+    "rating": 4.2,
+    "ratingCount": 8208,
+    "tags": [
+      "Coffee",
+      "Cafe",
+      "Snacks"
+    ],
+    "signatureDishes": [
+      "Special Kopi",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.318486,106.646535"
+  },
+  {
+    "name": "HokBen Pusat Blok D20",
+    "address": "Jl. Senopati, Jakarta Pusat",
+    "latitude": -6.19616,
+    "longitude": 106.809505,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 102000,
+    "rating": 4.1,
+    "ratingCount": 7272,
+    "tags": [
+      "Japanese",
+      "Fast Food",
+      "Bento"
+    ],
+    "signatureDishes": [
+      "Special HokBen",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.19616,106.809505"
+  },
+  {
+    "name": "Nasi Goreng Kambing Kebon Sirih Signature",
+    "address": "Jl. Alam Utama, Alam Sutera, Tangerang",
+    "latitude": -6.239264,
+    "longitude": 106.654874,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 82000,
+    "rating": 4.8,
+    "ratingCount": 6790,
+    "tags": [
+      "Indonesian",
+      "Street Food",
+      "Dinner"
+    ],
+    "signatureDishes": [
+      "Special Nasi",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.239264,106.654874"
+  },
+  {
+    "name": "Sate Khas Senayan Pusat Blok E19",
+    "address": "Jl. Senopati, Bintaro Jaya",
+    "latitude": -6.274562,
+    "longitude": 106.729267,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 45000,
+    "rating": 4.8,
+    "ratingCount": 3727,
+    "tags": [
+      "Indonesian",
+      "Sate",
+      "Premium"
+    ],
+    "signatureDishes": [
+      "Special Sate",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.274562,106.729267"
+  },
+  {
+    "name": "Bandar Djakarta Express Blok E1",
+    "address": "Pasar Modern, Jakarta Selatan",
+    "latitude": -6.278026,
+    "longitude": 106.805196,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 137000,
+    "rating": 4.1,
+    "ratingCount": 3759,
+    "tags": [
+      "Seafood",
+      "Dinner",
+      "Family"
+    ],
+    "signatureDishes": [
+      "Special Bandar",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.278026,106.805196"
+  },
+  {
+    "name": "Sate Khas Senayan Jakarta Selatan Blok D10",
+    "address": "Pasar Modern, Jakarta Selatan",
+    "latitude": -6.239671,
+    "longitude": 106.819191,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 108000,
+    "rating": 4.6,
+    "ratingCount": 2728,
+    "tags": [
+      "Indonesian",
+      "Sate",
+      "Premium"
+    ],
+    "signatureDishes": [
+      "Special Sate",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.239671,106.819191"
+  },
+  {
+    "name": "Bandar Djakarta Alam Sutera",
+    "address": "Jl. Scientia Square, Alam Sutera, Tangerang",
+    "latitude": -6.211054,
+    "longitude": 106.634545,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 107000,
+    "rating": 4.5,
+    "ratingCount": 6896,
+    "tags": [
+      "Seafood",
+      "Dinner",
+      "Family"
+    ],
+    "signatureDishes": [
+      "Special Bandar",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.211054,106.634545"
+  },
+  {
+    "name": "Ayam Geprek Gold Chick Pusat",
+    "address": "Jl. Sudirman, Bintaro Jaya",
+    "latitude": -6.264644,
+    "longitude": 106.710483,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 40000,
+    "rating": 4.4,
+    "ratingCount": 7818,
+    "tags": [
+      "Spicy",
+      "Chicken",
+      "Cheap"
+    ],
+    "signatureDishes": [
+      "Special Ayam",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.264644,106.710483"
+  },
+  {
+    "name": "Burgreens Express Blok A6",
+    "address": "Jl. Alam Utama, Alam Sutera, Tangerang",
+    "latitude": -6.24023,
+    "longitude": 106.647826,
+    "isHalal": true,
+    "isVegan": true,
+    "startingPrice": 124000,
+    "rating": 4.1,
+    "ratingCount": 2799,
+    "tags": [
+      "Vegan",
+      "Burger",
+      "Healthy"
+    ],
+    "signatureDishes": [
+      "Special Burgreens",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.24023,106.647826"
+  },
+  {
+    "name": "Kopi Nako Pusat Blok C4",
+    "address": "Jl. Pahlawan Seribu, BSD City, Tangerang",
+    "latitude": -6.297512,
+    "longitude": 106.636172,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 147000,
+    "rating": 4.3,
+    "ratingCount": 1433,
+    "tags": [
+      "Coffee",
+      "Cafe",
+      "Snacks"
+    ],
+    "signatureDishes": [
+      "Special Kopi",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.297512,106.636172"
+  },
+  {
+    "name": "Sari Kuring Signature",
+    "address": "Jl. Alam Utama, Gading Serpong, Tangerang",
+    "latitude": -6.23654,
+    "longitude": 106.602675,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 128000,
+    "rating": 4.7,
+    "ratingCount": 781,
+    "tags": [
+      "Sunda",
+      "Family",
+      "Indonesian"
+    ],
+    "signatureDishes": [
+      "Special Sari",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.23654,106.602675"
+  },
+  {
+    "name": "Sate Babi Kunciran Alam Sutera",
+    "address": "Jl. MH Thamrin, Alam Sutera, Tangerang",
+    "latitude": -6.202389,
+    "longitude": 106.637572,
+    "isHalal": false,
+    "isVegan": false,
+    "startingPrice": 78000,
+    "rating": 4.6,
+    "ratingCount": 3462,
+    "tags": [
+      "Pork",
+      "Non-Halal",
+      "Dinner"
+    ],
+    "signatureDishes": [
+      "Special Sate",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.202389,106.637572"
+  },
+  {
+    "name": "Sate Khas Senayan Pusat Blok E11",
+    "address": "Jl. MH Thamrin, Jakarta Pusat",
+    "latitude": -6.155077,
+    "longitude": 106.835295,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 88000,
+    "rating": 4.2,
+    "ratingCount": 8370,
+    "tags": [
+      "Indonesian",
+      "Sate",
+      "Premium"
+    ],
+    "signatureDishes": [
+      "Special Sate",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.155077,106.835295"
+  },
+  {
+    "name": "Bandar Djakarta Signature",
+    "address": "Pasar Modern, Alam Sutera, Tangerang",
+    "latitude": -6.215563,
+    "longitude": 106.629099,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 20000,
+    "rating": 4.3,
+    "ratingCount": 5298,
+    "tags": [
+      "Seafood",
+      "Dinner",
+      "Family"
+    ],
+    "signatureDishes": [
+      "Special Bandar",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.215563,106.629099"
+  },
+  {
+    "name": "Sate Khas Senayan Pusat Blok E3",
+    "address": "Ruko Golden 8, Jakarta Selatan",
+    "latitude": -6.246729,
+    "longitude": 106.824239,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 52000,
+    "rating": 4.4,
+    "ratingCount": 2749,
+    "tags": [
+      "Indonesian",
+      "Sate",
+      "Premium"
+    ],
+    "signatureDishes": [
+      "Special Sate",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.246729,106.824239"
+  },
+  {
+    "name": "Bebek Kaleyo Jakarta Selatan",
+    "address": "Jl. Alam Utama, Jakarta Selatan",
+    "latitude": -6.258045,
+    "longitude": 106.777067,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 125000,
+    "rating": 4.4,
+    "ratingCount": 1113,
+    "tags": [
+      "Duck",
+      "Indonesian",
+      "Family"
+    ],
+    "signatureDishes": [
+      "Special Bebek",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.258045,106.777067"
+  },
+  {
+    "name": "Kopi Nako Pusat Blok D5",
+    "address": "Jl. Boulevard Raya, BSD City, Tangerang",
+    "latitude": -6.28864,
+    "longitude": 106.674048,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 38000,
+    "rating": 4.8,
+    "ratingCount": 2868,
+    "tags": [
+      "Coffee",
+      "Cafe",
+      "Snacks"
+    ],
+    "signatureDishes": [
+      "Special Kopi",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.28864,106.674048"
+  },
+  {
+    "name": "Nasi Goreng Kambing Kebon Sirih Gading Serpong Blok B18",
+    "address": "Jl. Boulevard Raya, Gading Serpong, Tangerang",
+    "latitude": -6.233977,
+    "longitude": 106.634004,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 133000,
+    "rating": 4.7,
+    "ratingCount": 4096,
+    "tags": [
+      "Indonesian",
+      "Street Food",
+      "Dinner"
+    ],
+    "signatureDishes": [
+      "Special Nasi",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.233977,106.634004"
+  },
+  {
+    "name": "Soto Betawi H. Mamat Express",
+    "address": "Jl. Boulevard Raya, Alam Sutera, Tangerang",
+    "latitude": -6.244223,
+    "longitude": 106.65207,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 112000,
+    "rating": 4.2,
+    "ratingCount": 1493,
+    "tags": [
+      "Indonesian",
+      "Soup",
+      "Meat"
+    ],
+    "signatureDishes": [
+      "Special Soto",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.244223,106.65207"
+  },
+  {
+    "name": "Burgreens Pusat Blok C8",
+    "address": "Jl. Kemang Raya, Bintaro Jaya",
+    "latitude": -6.277508,
+    "longitude": 106.716976,
+    "isHalal": true,
+    "isVegan": true,
+    "startingPrice": 62000,
+    "rating": 4.2,
+    "ratingCount": 1966,
+    "tags": [
+      "Vegan",
+      "Burger",
+      "Healthy"
+    ],
+    "signatureDishes": [
+      "Special Burgreens",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.277508,106.716976"
+  },
+  {
+    "name": "Burgreens Signature",
+    "address": "Jl. Sudirman, Gading Serpong, Tangerang",
+    "latitude": -6.232365,
+    "longitude": 106.631398,
+    "isHalal": true,
+    "isVegan": true,
+    "startingPrice": 43000,
+    "rating": 4.5,
+    "ratingCount": 8072,
+    "tags": [
+      "Vegan",
+      "Burger",
+      "Healthy"
+    ],
+    "signatureDishes": [
+      "Special Burgreens",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.232365,106.631398"
+  },
+  {
+    "name": "Sari Kuring Alam Sutera",
+    "address": "Jl. Scientia Square, Alam Sutera, Tangerang",
+    "latitude": -6.213626,
+    "longitude": 106.64262,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 70000,
+    "rating": 4.7,
+    "ratingCount": 4036,
+    "tags": [
+      "Sunda",
+      "Family",
+      "Indonesian"
+    ],
+    "signatureDishes": [
+      "Special Sari",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.213626,106.64262"
+  },
+  {
+    "name": "Sate Babi Kunciran Signature Blok D20",
+    "address": "Jl. Boulevard Raya, BSD City, Tangerang",
+    "latitude": -6.319319,
+    "longitude": 106.64057,
+    "isHalal": false,
+    "isVegan": false,
+    "startingPrice": 68000,
+    "rating": 4.3,
+    "ratingCount": 150,
+    "tags": [
+      "Pork",
+      "Non-Halal",
+      "Dinner"
+    ],
+    "signatureDishes": [
+      "Special Sate",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.319319,106.64057"
+  },
+  {
+    "name": "Ramen Seirock-ya Pusat",
+    "address": "Jl. Sudirman, BSD City, Tangerang",
+    "latitude": -6.308889,
+    "longitude": 106.633669,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 109000,
+    "rating": 4.8,
+    "ratingCount": 4804,
+    "tags": [
+      "Ramen",
+      "Japanese",
+      "Noodles",
+      "Halal"
+    ],
+    "signatureDishes": [
+      "Special Ramen",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.308889,106.633669"
+  },
+  {
+    "name": "Sate Babi Kunciran Pusat",
+    "address": "Ruko Paramount, Alam Sutera, Tangerang",
+    "latitude": -6.206393,
+    "longitude": 106.653737,
+    "isHalal": false,
+    "isVegan": false,
+    "startingPrice": 27000,
+    "rating": 4.3,
+    "ratingCount": 2738,
+    "tags": [
+      "Pork",
+      "Non-Halal",
+      "Dinner"
+    ],
+    "signatureDishes": [
+      "Special Sate",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.206393,106.653737"
+  },
+  {
+    "name": "Ramen Seirock-ya Pusat Blok I12",
+    "address": "Pasar Modern, Jakarta Selatan",
+    "latitude": -6.265696,
+    "longitude": 106.797773,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 110000,
+    "rating": 4.4,
+    "ratingCount": 1130,
+    "tags": [
+      "Ramen",
+      "Japanese",
+      "Noodles",
+      "Halal"
+    ],
+    "signatureDishes": [
+      "Special Ramen",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.265696,106.797773"
+  },
+  {
+    "name": "Burgreens Signature Blok D16",
+    "address": "Jl. Alam Utama, Alam Sutera, Tangerang",
+    "latitude": -6.248665,
+    "longitude": 106.651481,
+    "isHalal": true,
+    "isVegan": true,
+    "startingPrice": 145000,
+    "rating": 4.6,
+    "ratingCount": 1895,
+    "tags": [
+      "Vegan",
+      "Burger",
+      "Healthy"
+    ],
+    "signatureDishes": [
+      "Special Burgreens",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.248665,106.651481"
+  },
+  {
+    "name": "Kopi Nako Pusat Blok A8",
+    "address": "Jl. Pahlawan Seribu, Bintaro Jaya",
+    "latitude": -6.302157,
+    "longitude": 106.743032,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 23000,
+    "rating": 4.6,
+    "ratingCount": 8446,
+    "tags": [
+      "Coffee",
+      "Cafe",
+      "Snacks"
+    ],
+    "signatureDishes": [
+      "Special Kopi",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.302157,106.743032"
+  },
+  {
+    "name": "Nasi Goreng Kambing Kebon Sirih Jakarta Selatan Blok A1",
+    "address": "Flavor Bliss, Jakarta Selatan",
+    "latitude": -6.26728,
+    "longitude": 106.79678,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 67000,
+    "rating": 4.6,
+    "ratingCount": 587,
+    "tags": [
+      "Indonesian",
+      "Street Food",
+      "Dinner"
+    ],
+    "signatureDishes": [
+      "Special Nasi",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.26728,106.79678"
+  },
+  {
+    "name": "Nasi Goreng Kambing Kebon Sirih Pusat Blok A12",
+    "address": "Ruko Golden 8, Jakarta Selatan",
+    "latitude": -6.254435,
+    "longitude": 106.824043,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 134000,
+    "rating": 4.0,
+    "ratingCount": 1065,
+    "tags": [
+      "Indonesian",
+      "Street Food",
+      "Dinner"
+    ],
+    "signatureDishes": [
+      "Special Nasi",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.254435,106.824043"
+  },
+  {
+    "name": "Sate Khas Senayan Express Blok J16",
+    "address": "Jl. Alam Utama, Jakarta Selatan",
+    "latitude": -6.279284,
+    "longitude": 106.797474,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 139000,
+    "rating": 4.9,
+    "ratingCount": 3314,
+    "tags": [
+      "Indonesian",
+      "Sate",
+      "Premium"
+    ],
+    "signatureDishes": [
+      "Special Sate",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.279284,106.797474"
+  },
+  {
+    "name": "SaladStop! Express",
+    "address": "Jl. Pahlawan Seribu, BSD City, Tangerang",
+    "latitude": -6.311661,
+    "longitude": 106.629772,
+    "isHalal": true,
+    "isVegan": true,
+    "startingPrice": 118000,
+    "rating": 4.9,
+    "ratingCount": 5600,
+    "tags": [
+      "Vegan",
+      "Healthy",
+      "Salad"
+    ],
+    "signatureDishes": [
+      "Special SaladStop!",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.311661,106.629772"
+  },
+  {
+    "name": "Bakmi Babi Aloi Pusat",
+    "address": "Jl. Pahlawan Seribu, Gading Serpong, Tangerang",
+    "latitude": -6.240382,
+    "longitude": 106.636974,
+    "isHalal": false,
+    "isVegan": false,
+    "startingPrice": 79000,
+    "rating": 4.1,
+    "ratingCount": 310,
+    "tags": [
+      "Noodles",
+      "Non-Halal",
+      "Pork"
+    ],
+    "signatureDishes": [
+      "Special Bakmi",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.240382,106.636974"
+  },
+  {
+    "name": "Bakmi Babi Aloi Pusat Blok D2",
+    "address": "Jl. Boulevard Raya, BSD City, Tangerang",
+    "latitude": -6.305991,
+    "longitude": 106.634427,
+    "isHalal": false,
+    "isVegan": false,
+    "startingPrice": 143000,
+    "rating": 4.7,
+    "ratingCount": 6126,
+    "tags": [
+      "Noodles",
+      "Non-Halal",
+      "Pork"
+    ],
+    "signatureDishes": [
+      "Special Bakmi",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.305991,106.634427"
+  },
+  {
+    "name": "Mie Gacoan Alam Sutera",
+    "address": "Flavor Bliss, Alam Sutera, Tangerang",
+    "latitude": -6.239096,
+    "longitude": 106.62838,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 131000,
+    "rating": 4.7,
+    "ratingCount": 3679,
+    "tags": [
+      "Noodles",
+      "Spicy",
+      "Cheap"
+    ],
+    "signatureDishes": [
+      "Special Mie",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.239096,106.62838"
+  },
+  {
+    "name": "Ramen Seirock-ya Signature Blok G3",
+    "address": "Pasar Modern, Jakarta Pusat",
+    "latitude": -6.189857,
+    "longitude": 106.834191,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 80000,
+    "rating": 4.4,
+    "ratingCount": 8079,
+    "tags": [
+      "Ramen",
+      "Japanese",
+      "Noodles",
+      "Halal"
+    ],
+    "signatureDishes": [
+      "Special Ramen",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.189857,106.834191"
+  },
+  {
+    "name": "Nasi Goreng Kambing Kebon Sirih Signature Blok A17",
+    "address": "Jl. Senopati, Alam Sutera, Tangerang",
+    "latitude": -6.220303,
+    "longitude": 106.628064,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 67000,
+    "rating": 4.2,
+    "ratingCount": 4577,
+    "tags": [
+      "Indonesian",
+      "Street Food",
+      "Dinner"
+    ],
+    "signatureDishes": [
+      "Special Nasi",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.220303,106.628064"
+  },
+  {
+    "name": "Bakmi Babi Aloi Gading Serpong",
+    "address": "Pasar Modern, Gading Serpong, Tangerang",
+    "latitude": -6.238256,
+    "longitude": 106.596291,
+    "isHalal": false,
+    "isVegan": false,
+    "startingPrice": 134000,
+    "rating": 4.1,
+    "ratingCount": 4956,
+    "tags": [
+      "Noodles",
+      "Non-Halal",
+      "Pork"
+    ],
+    "signatureDishes": [
+      "Special Bakmi",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.238256,106.596291"
+  },
+  {
+    "name": "Bandar Djakarta BSD City",
+    "address": "Jl. Sudirman, BSD City, Tangerang",
+    "latitude": -6.280078,
+    "longitude": 106.632324,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 102000,
+    "rating": 4.1,
+    "ratingCount": 2548,
+    "tags": [
+      "Seafood",
+      "Dinner",
+      "Family"
+    ],
+    "signatureDishes": [
+      "Special Bandar",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.280078,106.632324"
+  },
+  {
+    "name": "Babi Panggang Tondano Pusat",
+    "address": "Ruko Paramount, Gading Serpong, Tangerang",
+    "latitude": -6.263285,
+    "longitude": 106.62186,
+    "isHalal": false,
+    "isVegan": false,
+    "startingPrice": 95000,
+    "rating": 4.1,
+    "ratingCount": 3592,
+    "tags": [
+      "Pork",
+      "Manado",
+      "Spicy"
+    ],
+    "signatureDishes": [
+      "Special Babi",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.263285,106.62186"
+  },
+  {
+    "name": "Ikkudo Ichi (Non-Halal) Express Blok I11",
+    "address": "Ruko Paramount, Gading Serpong, Tangerang",
+    "latitude": -6.217885,
+    "longitude": 106.632756,
+    "isHalal": false,
+    "isVegan": false,
+    "startingPrice": 30000,
+    "rating": 4.6,
+    "ratingCount": 3622,
+    "tags": [
+      "Ramen",
+      "Japanese",
+      "Non-Halal",
+      "Pork"
+    ],
+    "signatureDishes": [
+      "Special Ikkudo",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.217885,106.632756"
+  },
+  {
+    "name": "Babi Panggang Tondano Jakarta Pusat",
+    "address": "Jl. Boulevard Raya, Jakarta Pusat",
+    "latitude": -6.196488,
+    "longitude": 106.813604,
+    "isHalal": false,
+    "isVegan": false,
+    "startingPrice": 92000,
+    "rating": 4.4,
+    "ratingCount": 5525,
+    "tags": [
+      "Pork",
+      "Manado",
+      "Spicy"
+    ],
+    "signatureDishes": [
+      "Special Babi",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.196488,106.813604"
+  },
+  {
+    "name": "Ayam Geprek Gold Chick Express",
+    "address": "Jl. Sudirman, Gading Serpong, Tangerang",
+    "latitude": -6.221984,
+    "longitude": 106.615145,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 32000,
+    "rating": 4.5,
+    "ratingCount": 3155,
+    "tags": [
+      "Spicy",
+      "Chicken",
+      "Cheap"
+    ],
+    "signatureDishes": [
+      "Special Ayam",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.221984,106.615145"
+  },
+  {
+    "name": "SaladStop! Express Blok F10",
+    "address": "Ruko Paramount, Jakarta Pusat",
+    "latitude": -6.172179,
+    "longitude": 106.82485,
+    "isHalal": true,
+    "isVegan": true,
+    "startingPrice": 56000,
+    "rating": 4.4,
+    "ratingCount": 6058,
+    "tags": [
+      "Vegan",
+      "Healthy",
+      "Salad"
+    ],
+    "signatureDishes": [
+      "Special SaladStop!",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.172179,106.82485"
+  },
+  {
+    "name": "Lawless Burgerbar Express Blok G5",
+    "address": "Jl. Senopati, Jakarta Selatan",
+    "latitude": -6.268559,
+    "longitude": 106.787175,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 128000,
+    "rating": 4.2,
+    "ratingCount": 7467,
+    "tags": [
+      "Burger",
+      "Western",
+      "Heavy Meal"
+    ],
+    "signatureDishes": [
+      "Special Lawless",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.268559,106.787175"
+  },
+  {
+    "name": "Soto Betawi H. Mamat Pusat",
+    "address": "Pasar Modern, Bintaro Jaya",
+    "latitude": -6.294038,
+    "longitude": 106.744096,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 54000,
+    "rating": 4.0,
+    "ratingCount": 1868,
+    "tags": [
+      "Indonesian",
+      "Soup",
+      "Meat"
+    ],
+    "signatureDishes": [
+      "Special Soto",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.294038,106.744096"
+  },
+  {
+    "name": "Babi Panggang Tondano Signature Blok G1",
+    "address": "Jl. Pahlawan Seribu, Jakarta Pusat",
+    "latitude": -6.187483,
+    "longitude": 106.837746,
+    "isHalal": false,
+    "isVegan": false,
+    "startingPrice": 137000,
+    "rating": 4.6,
+    "ratingCount": 1746,
+    "tags": [
+      "Pork",
+      "Manado",
+      "Spicy"
+    ],
+    "signatureDishes": [
+      "Special Babi",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.187483,106.837746"
+  },
+  {
+    "name": "Lawless Burgerbar Pusat",
+    "address": "Jl. Boulevard Raya, Alam Sutera, Tangerang",
+    "latitude": -6.206947,
+    "longitude": 106.651276,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 125000,
+    "rating": 4.1,
+    "ratingCount": 4456,
+    "tags": [
+      "Burger",
+      "Western",
+      "Heavy Meal"
+    ],
+    "signatureDishes": [
+      "Special Lawless",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.206947,106.651276"
+  },
+  {
+    "name": "Ikkudo Ichi (Non-Halal) Pusat Blok B14",
+    "address": "Jl. Sudirman, Jakarta Pusat",
+    "latitude": -6.157903,
+    "longitude": 106.828471,
+    "isHalal": false,
+    "isVegan": false,
+    "startingPrice": 32000,
+    "rating": 4.4,
+    "ratingCount": 6437,
+    "tags": [
+      "Ramen",
+      "Japanese",
+      "Non-Halal",
+      "Pork"
+    ],
+    "signatureDishes": [
+      "Special Ikkudo",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.157903,106.828471"
+  },
+  {
+    "name": "Kopi Nako Express Blok E1",
+    "address": "Jl. Alam Utama, Jakarta Pusat",
+    "latitude": -6.176538,
+    "longitude": 106.852155,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 21000,
+    "rating": 4.1,
+    "ratingCount": 8341,
+    "tags": [
+      "Coffee",
+      "Cafe",
+      "Snacks"
+    ],
+    "signatureDishes": [
+      "Special Kopi",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.176538,106.852155"
+  },
+  {
+    "name": "Lawless Burgerbar Gading Serpong",
+    "address": "Flavor Bliss, Gading Serpong, Tangerang",
+    "latitude": -6.225836,
+    "longitude": 106.5969,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 123000,
+    "rating": 4.4,
+    "ratingCount": 5316,
+    "tags": [
+      "Burger",
+      "Western",
+      "Heavy Meal"
+    ],
+    "signatureDishes": [
+      "Special Lawless",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.225836,106.5969"
+  },
+  {
+    "name": "Sate Khas Senayan Signature",
+    "address": "Ruko Golden 8, BSD City, Tangerang",
+    "latitude": -6.311092,
+    "longitude": 106.639281,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 113000,
+    "rating": 4.1,
+    "ratingCount": 6477,
+    "tags": [
+      "Indonesian",
+      "Sate",
+      "Premium"
+    ],
+    "signatureDishes": [
+      "Special Sate",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.311092,106.639281"
+  },
+  {
+    "name": "Ramen Seirock-ya Express Blok H4",
+    "address": "Jl. Senopati, Alam Sutera, Tangerang",
+    "latitude": -6.240718,
+    "longitude": 106.65699,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 132000,
+    "rating": 4.7,
+    "ratingCount": 6366,
+    "tags": [
+      "Ramen",
+      "Japanese",
+      "Noodles",
+      "Halal"
+    ],
+    "signatureDishes": [
+      "Special Ramen",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.240718,106.65699"
+  },
+  {
+    "name": "Kopi Nako Express Blok J8",
+    "address": "Jl. Scientia Square, Alam Sutera, Tangerang",
+    "latitude": -6.232732,
+    "longitude": 106.644868,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 110000,
+    "rating": 4.5,
+    "ratingCount": 214,
+    "tags": [
+      "Coffee",
+      "Cafe",
+      "Snacks"
+    ],
+    "signatureDishes": [
+      "Special Kopi",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.232732,106.644868"
+  },
+  {
+    "name": "Ikkudo Ichi (Non-Halal) Signature Blok G3",
+    "address": "Jl. Scientia Square, BSD City, Tangerang",
+    "latitude": -6.295851,
+    "longitude": 106.651442,
+    "isHalal": false,
+    "isVegan": false,
+    "startingPrice": 66000,
+    "rating": 4.6,
+    "ratingCount": 966,
+    "tags": [
+      "Ramen",
+      "Japanese",
+      "Non-Halal",
+      "Pork"
+    ],
+    "signatureDishes": [
+      "Special Ikkudo",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.295851,106.651442"
+  },
+  {
+    "name": "Bebek Kaleyo Pusat",
+    "address": "Jl. Scientia Square, Gading Serpong, Tangerang",
+    "latitude": -6.260286,
+    "longitude": 106.624891,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 112000,
+    "rating": 4.2,
+    "ratingCount": 730,
+    "tags": [
+      "Duck",
+      "Indonesian",
+      "Family"
+    ],
+    "signatureDishes": [
+      "Special Bebek",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.260286,106.624891"
+  },
+  {
+    "name": "Ikkudo Ichi (Non-Halal) Bintaro Jaya",
+    "address": "Jl. Sudirman, Bintaro Jaya",
+    "latitude": -6.262321,
+    "longitude": 106.726458,
+    "isHalal": false,
+    "isVegan": false,
+    "startingPrice": 106000,
+    "rating": 4.6,
+    "ratingCount": 4041,
+    "tags": [
+      "Ramen",
+      "Japanese",
+      "Non-Halal",
+      "Pork"
+    ],
+    "signatureDishes": [
+      "Special Ikkudo",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.262321,106.726458"
+  },
+  {
+    "name": "SaladStop! Express Blok F20",
+    "address": "Jl. Pahlawan Seribu, Bintaro Jaya",
+    "latitude": -6.270659,
+    "longitude": 106.741093,
+    "isHalal": true,
+    "isVegan": true,
+    "startingPrice": 111000,
+    "rating": 4.7,
+    "ratingCount": 1040,
+    "tags": [
+      "Vegan",
+      "Healthy",
+      "Salad"
+    ],
+    "signatureDishes": [
+      "Special SaladStop!",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.270659,106.741093"
+  },
+  {
+    "name": "Ayam Geprek Gold Chick Jakarta Pusat",
+    "address": "Jl. Kemang Raya, Jakarta Pusat",
+    "latitude": -6.177955,
+    "longitude": 106.825009,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 145000,
+    "rating": 4.2,
+    "ratingCount": 1674,
+    "tags": [
+      "Spicy",
+      "Chicken",
+      "Cheap"
+    ],
+    "signatureDishes": [
+      "Special Ayam",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.177955,106.825009"
+  },
+  {
+    "name": "Nasi Goreng Kambing Kebon Sirih Signature Blok F17",
+    "address": "Jl. Senopati, Gading Serpong, Tangerang",
+    "latitude": -6.263437,
+    "longitude": 106.618719,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 125000,
+    "rating": 4.4,
+    "ratingCount": 3627,
+    "tags": [
+      "Indonesian",
+      "Street Food",
+      "Dinner"
+    ],
+    "signatureDishes": [
+      "Special Nasi",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.263437,106.618719"
+  },
+  {
+    "name": "Sate Khas Senayan Signature Blok C2",
+    "address": "Jl. Boulevard Raya, Jakarta Selatan",
+    "latitude": -6.28207,
+    "longitude": 106.798035,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 142000,
+    "rating": 4.8,
+    "ratingCount": 5615,
+    "tags": [
+      "Indonesian",
+      "Sate",
+      "Premium"
+    ],
+    "signatureDishes": [
+      "Special Sate",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.28207,106.798035"
+  },
+  {
+    "name": "Burgreens Signature Blok F3",
+    "address": "Jl. Kemang Raya, Bintaro Jaya",
+    "latitude": -6.288114,
+    "longitude": 106.700603,
+    "isHalal": true,
+    "isVegan": true,
+    "startingPrice": 27000,
+    "rating": 4.1,
+    "ratingCount": 8059,
+    "tags": [
+      "Vegan",
+      "Burger",
+      "Healthy"
+    ],
+    "signatureDishes": [
+      "Special Burgreens",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.288114,106.700603"
+  },
+  {
+    "name": "Babi Panggang Tondano Signature Blok F19",
+    "address": "Jl. Pahlawan Seribu, Jakarta Pusat",
+    "latitude": -6.200725,
+    "longitude": 106.851616,
+    "isHalal": false,
+    "isVegan": false,
+    "startingPrice": 149000,
+    "rating": 4.3,
+    "ratingCount": 217,
+    "tags": [
+      "Pork",
+      "Manado",
+      "Spicy"
+    ],
+    "signatureDishes": [
+      "Special Babi",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.200725,106.851616"
+  },
+  {
+    "name": "Nasi Goreng Kambing Kebon Sirih Express Blok E8",
+    "address": "Jl. Pahlawan Seribu, Jakarta Pusat",
+    "latitude": -6.155874,
+    "longitude": 106.850536,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 118000,
+    "rating": 4.8,
+    "ratingCount": 8173,
+    "tags": [
+      "Indonesian",
+      "Street Food",
+      "Dinner"
+    ],
+    "signatureDishes": [
+      "Special Nasi",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.155874,106.850536"
+  },
+  {
+    "name": "Ikkudo Ichi (Non-Halal) Signature Blok C16",
+    "address": "Flavor Bliss, Bintaro Jaya",
+    "latitude": -6.289903,
+    "longitude": 106.714396,
+    "isHalal": false,
+    "isVegan": false,
+    "startingPrice": 113000,
+    "rating": 4.1,
+    "ratingCount": 6088,
+    "tags": [
+      "Ramen",
+      "Japanese",
+      "Non-Halal",
+      "Pork"
+    ],
+    "signatureDishes": [
+      "Special Ikkudo",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.289903,106.714396"
+  },
+  {
+    "name": "Bakmi Babi Aloi Bintaro Jaya",
+    "address": "Jl. Kemang Raya, Bintaro Jaya",
+    "latitude": -6.285161,
+    "longitude": 106.716734,
+    "isHalal": false,
+    "isVegan": false,
+    "startingPrice": 62000,
+    "rating": 4.5,
+    "ratingCount": 1558,
+    "tags": [
+      "Noodles",
+      "Non-Halal",
+      "Pork"
+    ],
+    "signatureDishes": [
+      "Special Bakmi",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.285161,106.716734"
+  },
+  {
+    "name": "Bakmi GM Jakarta Selatan",
+    "address": "Flavor Bliss, Jakarta Selatan",
+    "latitude": -6.28091,
+    "longitude": 106.78368,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 26000,
+    "rating": 4.5,
+    "ratingCount": 3767,
+    "tags": [
+      "Noodles",
+      "Asian",
+      "Lunch"
+    ],
+    "signatureDishes": [
+      "Special Bakmi",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.28091,106.78368"
+  },
+  {
+    "name": "Ramen Seirock-ya Express Blok E11",
+    "address": "Jl. Sudirman, Jakarta Selatan",
+    "latitude": -6.274371,
+    "longitude": 106.806893,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 122000,
+    "rating": 4.6,
+    "ratingCount": 2895,
+    "tags": [
+      "Ramen",
+      "Japanese",
+      "Noodles",
+      "Halal"
+    ],
+    "signatureDishes": [
+      "Special Ramen",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.274371,106.806893"
+  },
+  {
+    "name": "Sate Babi Kunciran Pusat Blok D11",
+    "address": "Jl. Pahlawan Seribu, Jakarta Selatan",
+    "latitude": -6.265304,
+    "longitude": 106.781683,
+    "isHalal": false,
+    "isVegan": false,
+    "startingPrice": 80000,
+    "rating": 4.1,
+    "ratingCount": 2462,
+    "tags": [
+      "Pork",
+      "Non-Halal",
+      "Dinner"
+    ],
+    "signatureDishes": [
+      "Special Sate",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.265304,106.781683"
+  },
+  {
+    "name": "Kopi Nako Express Blok C8",
+    "address": "Jl. Boulevard Raya, Jakarta Pusat",
+    "latitude": -6.173417,
+    "longitude": 106.810473,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 146000,
+    "rating": 4.5,
+    "ratingCount": 6571,
+    "tags": [
+      "Coffee",
+      "Cafe",
+      "Snacks"
+    ],
+    "signatureDishes": [
+      "Special Kopi",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.173417,106.810473"
+  },
+  {
+    "name": "HokBen Jakarta Pusat",
+    "address": "Pasar Modern, Jakarta Pusat",
+    "latitude": -6.195185,
+    "longitude": 106.845817,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 74000,
+    "rating": 4.8,
+    "ratingCount": 6467,
+    "tags": [
+      "Japanese",
+      "Fast Food",
+      "Bento"
+    ],
+    "signatureDishes": [
+      "Special HokBen",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.195185,106.845817"
+  },
+  {
+    "name": "Ayam Geprek Gold Chick Express Blok A1",
+    "address": "Jl. Pahlawan Seribu, Jakarta Pusat",
+    "latitude": -6.199994,
+    "longitude": 106.847548,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 73000,
+    "rating": 4.5,
+    "ratingCount": 4202,
+    "tags": [
+      "Spicy",
+      "Chicken",
+      "Cheap"
+    ],
+    "signatureDishes": [
+      "Special Ayam",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.199994,106.847548"
+  },
+  {
+    "name": "Ramen Seirock-ya Gading Serpong",
+    "address": "Jl. Scientia Square, Gading Serpong, Tangerang",
+    "latitude": -6.233854,
+    "longitude": 106.603101,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 83000,
+    "rating": 4.2,
+    "ratingCount": 6663,
+    "tags": [
+      "Ramen",
+      "Japanese",
+      "Noodles",
+      "Halal"
+    ],
+    "signatureDishes": [
+      "Special Ramen",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.233854,106.603101"
+  },
+  {
+    "name": "Babi Panggang Tondano Signature Blok A5",
+    "address": "Jl. Alam Utama, Jakarta Pusat",
+    "latitude": -6.204857,
+    "longitude": 106.838146,
+    "isHalal": false,
+    "isVegan": false,
+    "startingPrice": 80000,
+    "rating": 4.0,
+    "ratingCount": 6030,
+    "tags": [
+      "Pork",
+      "Manado",
+      "Spicy"
+    ],
+    "signatureDishes": [
+      "Special Babi",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.204857,106.838146"
+  },
+  {
+    "name": "Sate Taichan Goreng Signature",
+    "address": "Ruko Golden 8, Bintaro Jaya",
+    "latitude": -6.255019,
+    "longitude": 106.707287,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 46000,
+    "rating": 4.3,
+    "ratingCount": 5679,
+    "tags": [
+      "Spicy",
+      "Street Food",
+      "Late Night"
+    ],
+    "signatureDishes": [
+      "Special Sate",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.255019,106.707287"
+  },
+  {
+    "name": "Ramen Seirock-ya Express Blok D14",
+    "address": "Ruko Golden 8, Jakarta Pusat",
+    "latitude": -6.172246,
+    "longitude": 106.843607,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 139000,
+    "rating": 4.0,
+    "ratingCount": 4843,
+    "tags": [
+      "Ramen",
+      "Japanese",
+      "Noodles",
+      "Halal"
+    ],
+    "signatureDishes": [
+      "Special Ramen",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.172246,106.843607"
+  },
+  {
+    "name": "SaladStop! Express Blok H9",
+    "address": "Jl. Scientia Square, Jakarta Pusat",
+    "latitude": -6.163729,
+    "longitude": 106.81945,
+    "isHalal": true,
+    "isVegan": true,
+    "startingPrice": 144000,
+    "rating": 4.2,
+    "ratingCount": 4914,
+    "tags": [
+      "Vegan",
+      "Healthy",
+      "Salad"
+    ],
+    "signatureDishes": [
+      "Special SaladStop!",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.163729,106.81945"
+  },
+  {
+    "name": "Ramen Seirock-ya Pusat Blok F18",
+    "address": "Jl. Boulevard Raya, BSD City, Tangerang",
+    "latitude": -6.316101,
+    "longitude": 106.659136,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 150000,
+    "rating": 4.4,
+    "ratingCount": 287,
+    "tags": [
+      "Ramen",
+      "Japanese",
+      "Noodles",
+      "Halal"
+    ],
+    "signatureDishes": [
+      "Special Ramen",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.316101,106.659136"
+  },
+  {
+    "name": "Ayam Geprek Gold Chick Signature Blok F7",
+    "address": "Jl. Senopati, Jakarta Selatan",
+    "latitude": -6.261334,
+    "longitude": 106.812995,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 150000,
+    "rating": 4.0,
+    "ratingCount": 5959,
+    "tags": [
+      "Spicy",
+      "Chicken",
+      "Cheap"
+    ],
+    "signatureDishes": [
+      "Special Ayam",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.261334,106.812995"
+  },
+  {
+    "name": "Kopi Nako Pusat Blok C20",
+    "address": "Jl. Boulevard Raya, Bintaro Jaya",
+    "latitude": -6.258355,
+    "longitude": 106.719612,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 48000,
+    "rating": 4.3,
+    "ratingCount": 4326,
+    "tags": [
+      "Coffee",
+      "Cafe",
+      "Snacks"
+    ],
+    "signatureDishes": [
+      "Special Kopi",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.258355,106.719612"
+  },
+  {
+    "name": "Bakmi Babi Aloi Pusat Blok A11",
+    "address": "Jl. Scientia Square, Jakarta Pusat",
+    "latitude": -6.192139,
+    "longitude": 106.831574,
+    "isHalal": false,
+    "isVegan": false,
+    "startingPrice": 144000,
+    "rating": 4.1,
+    "ratingCount": 1654,
+    "tags": [
+      "Noodles",
+      "Non-Halal",
+      "Pork"
+    ],
+    "signatureDishes": [
+      "Special Bakmi",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.192139,106.831574"
+  },
+  {
+    "name": "Nasi Goreng Kambing Kebon Sirih Alam Sutera",
+    "address": "Jl. MH Thamrin, Alam Sutera, Tangerang",
+    "latitude": -6.23369,
+    "longitude": 106.628219,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 26000,
+    "rating": 4.7,
+    "ratingCount": 3057,
+    "tags": [
+      "Indonesian",
+      "Street Food",
+      "Dinner"
+    ],
+    "signatureDishes": [
+      "Special Nasi",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.23369,106.628219"
+  },
+  {
+    "name": "Babi Panggang Tondano Alam Sutera",
+    "address": "Jl. Senopati, Alam Sutera, Tangerang",
+    "latitude": -6.24013,
+    "longitude": 106.661513,
+    "isHalal": false,
+    "isVegan": false,
+    "startingPrice": 85000,
+    "rating": 4.7,
+    "ratingCount": 534,
+    "tags": [
+      "Pork",
+      "Manado",
+      "Spicy"
+    ],
+    "signatureDishes": [
+      "Special Babi",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.24013,106.661513"
+  },
+  {
+    "name": "Sate Khas Senayan Signature Blok D9",
+    "address": "Jl. Pahlawan Seribu, Gading Serpong, Tangerang",
+    "latitude": -6.264424,
+    "longitude": 106.629097,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 132000,
+    "rating": 4.1,
+    "ratingCount": 8463,
+    "tags": [
+      "Indonesian",
+      "Sate",
+      "Premium"
+    ],
+    "signatureDishes": [
+      "Special Sate",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.264424,106.629097"
+  },
+  {
+    "name": "Kopi Nako Pusat Blok J6",
+    "address": "Jl. Sudirman, Alam Sutera, Tangerang",
+    "latitude": -6.232447,
+    "longitude": 106.664398,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 70000,
+    "rating": 4.6,
+    "ratingCount": 8207,
+    "tags": [
+      "Coffee",
+      "Cafe",
+      "Snacks"
+    ],
+    "signatureDishes": [
+      "Special Kopi",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.232447,106.664398"
+  },
+  {
+    "name": "Sate Taichan Goreng Pusat Blok B3",
+    "address": "Jl. Senopati, Gading Serpong, Tangerang",
+    "latitude": -6.224955,
+    "longitude": 106.631662,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 100000,
+    "rating": 4.8,
+    "ratingCount": 3647,
+    "tags": [
+      "Spicy",
+      "Street Food",
+      "Late Night"
+    ],
+    "signatureDishes": [
+      "Special Sate",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.224955,106.631662"
+  },
+  {
+    "name": "Lawless Burgerbar Jakarta Selatan",
+    "address": "Jl. Boulevard Raya, Jakarta Selatan",
+    "latitude": -6.250757,
+    "longitude": 106.785676,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 107000,
+    "rating": 4.2,
+    "ratingCount": 7007,
+    "tags": [
+      "Burger",
+      "Western",
+      "Heavy Meal"
+    ],
+    "signatureDishes": [
+      "Special Lawless",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.250757,106.785676"
+  },
+  {
+    "name": "Burgreens Signature Blok E16",
+    "address": "Jl. Scientia Square, Bintaro Jaya",
+    "latitude": -6.271734,
+    "longitude": 106.707248,
+    "isHalal": true,
+    "isVegan": true,
+    "startingPrice": 102000,
+    "rating": 4.7,
+    "ratingCount": 5522,
+    "tags": [
+      "Vegan",
+      "Burger",
+      "Healthy"
+    ],
+    "signatureDishes": [
+      "Special Burgreens",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.271734,106.707248"
+  },
+  {
+    "name": "Ramen Seirock-ya Alam Sutera",
+    "address": "Ruko Golden 8, Alam Sutera, Tangerang",
+    "latitude": -6.247246,
+    "longitude": 106.6333,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 150000,
+    "rating": 4.3,
+    "ratingCount": 246,
+    "tags": [
+      "Ramen",
+      "Japanese",
+      "Noodles",
+      "Halal"
+    ],
+    "signatureDishes": [
+      "Special Ramen",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.247246,106.6333"
+  },
+  {
+    "name": "Ayam Geprek Gold Chick Signature Blok B14",
+    "address": "Jl. MH Thamrin, BSD City, Tangerang",
+    "latitude": -6.29434,
+    "longitude": 106.656135,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 96000,
+    "rating": 4.4,
+    "ratingCount": 350,
+    "tags": [
+      "Spicy",
+      "Chicken",
+      "Cheap"
+    ],
+    "signatureDishes": [
+      "Special Ayam",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.29434,106.656135"
+  },
+  {
+    "name": "HokBen BSD City",
+    "address": "Jl. Kemang Raya, BSD City, Tangerang",
+    "latitude": -6.318447,
+    "longitude": 106.625731,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 113000,
+    "rating": 4.7,
+    "ratingCount": 877,
+    "tags": [
+      "Japanese",
+      "Fast Food",
+      "Bento"
+    ],
+    "signatureDishes": [
+      "Special HokBen",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.318447,106.625731"
+  },
+  {
+    "name": "Lawless Burgerbar Bintaro Jaya",
+    "address": "Jl. MH Thamrin, Bintaro Jaya",
+    "latitude": -6.278659,
+    "longitude": 106.744919,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 103000,
+    "rating": 4.6,
+    "ratingCount": 7138,
+    "tags": [
+      "Burger",
+      "Western",
+      "Heavy Meal"
+    ],
+    "signatureDishes": [
+      "Special Lawless",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.278659,106.744919"
+  },
+  {
+    "name": "Bakmi Babi Aloi Signature Blok J16",
+    "address": "Jl. Sudirman, Jakarta Selatan",
+    "latitude": -6.249858,
+    "longitude": 106.817843,
+    "isHalal": false,
+    "isVegan": false,
+    "startingPrice": 93000,
+    "rating": 4.7,
+    "ratingCount": 1180,
+    "tags": [
+      "Noodles",
+      "Non-Halal",
+      "Pork"
+    ],
+    "signatureDishes": [
+      "Special Bakmi",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.249858,106.817843"
+  },
+  {
+    "name": "Bakmi Babi Aloi Jakarta Pusat",
+    "address": "Jl. Boulevard Raya, Jakarta Pusat",
+    "latitude": -6.161444,
+    "longitude": 106.832207,
+    "isHalal": false,
+    "isVegan": false,
+    "startingPrice": 105000,
+    "rating": 4.5,
+    "ratingCount": 6343,
+    "tags": [
+      "Noodles",
+      "Non-Halal",
+      "Pork"
+    ],
+    "signatureDishes": [
+      "Special Bakmi",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.161444,106.832207"
+  },
+  {
+    "name": "Sate Khas Senayan Signature Blok D1",
+    "address": "Jl. Kemang Raya, Alam Sutera, Tangerang",
+    "latitude": -6.225035,
+    "longitude": 106.645937,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 122000,
+    "rating": 4.6,
+    "ratingCount": 6556,
+    "tags": [
+      "Indonesian",
+      "Sate",
+      "Premium"
+    ],
+    "signatureDishes": [
+      "Special Sate",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.225035,106.645937"
+  },
+  {
+    "name": "Sari Kuring Signature Blok F5",
+    "address": "Ruko Paramount, Bintaro Jaya",
+    "latitude": -6.283778,
+    "longitude": 106.699525,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 85000,
+    "rating": 4.6,
+    "ratingCount": 961,
+    "tags": [
+      "Sunda",
+      "Family",
+      "Indonesian"
+    ],
+    "signatureDishes": [
+      "Special Sari",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.283778,106.699525"
+  },
+  {
+    "name": "Ayam Geprek Gold Chick Signature Blok D1",
+    "address": "Flavor Bliss, Jakarta Pusat",
+    "latitude": -6.155829,
+    "longitude": 106.850626,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 76000,
+    "rating": 4.0,
+    "ratingCount": 2695,
+    "tags": [
+      "Spicy",
+      "Chicken",
+      "Cheap"
+    ],
+    "signatureDishes": [
+      "Special Ayam",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.155829,106.850626"
+  },
+  {
+    "name": "Ramen Seirock-ya Express Blok H10",
+    "address": "Jl. Kemang Raya, Gading Serpong, Tangerang",
+    "latitude": -6.242044,
+    "longitude": 106.60248,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 40000,
+    "rating": 4.9,
+    "ratingCount": 6616,
+    "tags": [
+      "Ramen",
+      "Japanese",
+      "Noodles",
+      "Halal"
+    ],
+    "signatureDishes": [
+      "Special Ramen",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.242044,106.60248"
+  },
+  {
+    "name": "Sate Babi Kunciran Express",
+    "address": "Jl. Pahlawan Seribu, BSD City, Tangerang",
+    "latitude": -6.280747,
+    "longitude": 106.65397,
+    "isHalal": false,
+    "isVegan": false,
+    "startingPrice": 28000,
+    "rating": 4.3,
+    "ratingCount": 6766,
+    "tags": [
+      "Pork",
+      "Non-Halal",
+      "Dinner"
+    ],
+    "signatureDishes": [
+      "Special Sate",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.280747,106.65397"
+  },
+  {
+    "name": "Lawless Burgerbar Signature Blok A17",
+    "address": "Jl. Kemang Raya, Bintaro Jaya",
+    "latitude": -6.295753,
+    "longitude": 106.70934,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 23000,
+    "rating": 4.5,
+    "ratingCount": 4185,
+    "tags": [
+      "Burger",
+      "Western",
+      "Heavy Meal"
+    ],
+    "signatureDishes": [
+      "Special Lawless",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.295753,106.70934"
+  },
+  {
+    "name": "Bakmi Babi Aloi BSD City",
+    "address": "Jl. Senopati, BSD City, Tangerang",
+    "latitude": -6.308736,
+    "longitude": 106.638311,
+    "isHalal": false,
+    "isVegan": false,
+    "startingPrice": 42000,
+    "rating": 4.8,
+    "ratingCount": 1967,
+    "tags": [
+      "Noodles",
+      "Non-Halal",
+      "Pork"
+    ],
+    "signatureDishes": [
+      "Special Bakmi",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.308736,106.638311"
+  },
+  {
+    "name": "Bandar Djakarta Bintaro Jaya",
+    "address": "Jl. Senopati, Bintaro Jaya",
+    "latitude": -6.302783,
+    "longitude": 106.73958,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 92000,
+    "rating": 4.4,
+    "ratingCount": 7788,
+    "tags": [
+      "Seafood",
+      "Dinner",
+      "Family"
+    ],
+    "signatureDishes": [
+      "Special Bandar",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.302783,106.73958"
+  },
+  {
+    "name": "Nasi Goreng Kambing Kebon Sirih Jakarta Selatan Blok E1",
+    "address": "Pasar Modern, Jakarta Selatan",
+    "latitude": -6.262627,
+    "longitude": 106.782599,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 81000,
+    "rating": 4.6,
+    "ratingCount": 1583,
+    "tags": [
+      "Indonesian",
+      "Street Food",
+      "Dinner"
+    ],
+    "signatureDishes": [
+      "Special Nasi",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.262627,106.782599"
+  },
+  {
+    "name": "HokBen Jakarta Selatan",
+    "address": "Ruko Paramount, Jakarta Selatan",
+    "latitude": -6.25898,
+    "longitude": 106.7984,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 50000,
+    "rating": 4.5,
+    "ratingCount": 6295,
+    "tags": [
+      "Japanese",
+      "Fast Food",
+      "Bento"
+    ],
+    "signatureDishes": [
+      "Special HokBen",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.25898,106.7984"
+  },
+  {
+    "name": "Sate Taichan Goreng Signature Blok H1",
+    "address": "Ruko Paramount, Jakarta Pusat",
+    "latitude": -6.178954,
+    "longitude": 106.834599,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 70000,
+    "rating": 4.6,
+    "ratingCount": 6942,
+    "tags": [
+      "Spicy",
+      "Street Food",
+      "Late Night"
+    ],
+    "signatureDishes": [
+      "Special Sate",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.178954,106.834599"
+  },
+  {
+    "name": "Bakmi Babi Aloi Signature Blok C4",
+    "address": "Jl. Sudirman, Jakarta Selatan",
+    "latitude": -6.238282,
+    "longitude": 106.817242,
+    "isHalal": false,
+    "isVegan": false,
+    "startingPrice": 24000,
+    "rating": 4.4,
+    "ratingCount": 8081,
+    "tags": [
+      "Noodles",
+      "Non-Halal",
+      "Pork"
+    ],
+    "signatureDishes": [
+      "Special Bakmi",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.238282,106.817242"
+  },
+  {
+    "name": "Ayam Geprek Gold Chick Gading Serpong",
+    "address": "Jl. Senopati, Gading Serpong, Tangerang",
+    "latitude": -6.259606,
+    "longitude": 106.618469,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 47000,
+    "rating": 4.2,
+    "ratingCount": 5086,
+    "tags": [
+      "Spicy",
+      "Chicken",
+      "Cheap"
+    ],
+    "signatureDishes": [
+      "Special Ayam",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.259606,106.618469"
+  },
+  {
+    "name": "Bakmi Babi Aloi Pusat Blok E11",
+    "address": "Flavor Bliss, Jakarta Pusat",
+    "latitude": -6.157395,
+    "longitude": 106.853756,
+    "isHalal": false,
+    "isVegan": false,
+    "startingPrice": 89000,
+    "rating": 4.9,
+    "ratingCount": 5143,
+    "tags": [
+      "Noodles",
+      "Non-Halal",
+      "Pork"
+    ],
+    "signatureDishes": [
+      "Special Bakmi",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.157395,106.853756"
+  },
+  {
+    "name": "Bebek Kaleyo Bintaro Jaya",
+    "address": "Jl. Boulevard Raya, Bintaro Jaya",
+    "latitude": -6.284822,
+    "longitude": 106.736028,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 87000,
+    "rating": 4.3,
+    "ratingCount": 7118,
+    "tags": [
+      "Duck",
+      "Indonesian",
+      "Family"
+    ],
+    "signatureDishes": [
+      "Special Bebek",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.284822,106.736028"
+  },
+  {
+    "name": "Nasi Goreng Kambing Kebon Sirih BSD City",
+    "address": "Jl. Alam Utama, BSD City, Tangerang",
+    "latitude": -6.28233,
+    "longitude": 106.641784,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 120000,
+    "rating": 4.6,
+    "ratingCount": 8326,
+    "tags": [
+      "Indonesian",
+      "Street Food",
+      "Dinner"
+    ],
+    "signatureDishes": [
+      "Special Nasi",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.28233,106.641784"
+  },
+  {
+    "name": "Mie Gacoan BSD City",
+    "address": "Jl. Senopati, BSD City, Tangerang",
+    "latitude": -6.324741,
+    "longitude": 106.66184,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 116000,
+    "rating": 4.2,
+    "ratingCount": 4741,
+    "tags": [
+      "Noodles",
+      "Spicy",
+      "Cheap"
+    ],
+    "signatureDishes": [
+      "Special Mie",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.324741,106.66184"
+  },
+  {
+    "name": "Ikkudo Ichi (Non-Halal) Signature Blok D5",
+    "address": "Jl. Senopati, Jakarta Selatan",
+    "latitude": -6.255015,
+    "longitude": 106.820304,
+    "isHalal": false,
+    "isVegan": false,
+    "startingPrice": 125000,
+    "rating": 4.2,
+    "ratingCount": 4034,
+    "tags": [
+      "Ramen",
+      "Japanese",
+      "Non-Halal",
+      "Pork"
+    ],
+    "signatureDishes": [
+      "Special Ikkudo",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.255015,106.820304"
+  },
+  {
+    "name": "Bandar Djakarta Signature Blok F18",
+    "address": "Ruko Paramount, Alam Sutera, Tangerang",
+    "latitude": -6.246806,
+    "longitude": 106.649097,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 74000,
+    "rating": 4.3,
+    "ratingCount": 2959,
+    "tags": [
+      "Seafood",
+      "Dinner",
+      "Family"
+    ],
+    "signatureDishes": [
+      "Special Bandar",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.246806,106.649097"
+  },
+  {
+    "name": "SaladStop! Pusat",
+    "address": "Jl. Kemang Raya, Jakarta Pusat",
+    "latitude": -6.19373,
+    "longitude": 106.837134,
+    "isHalal": true,
+    "isVegan": true,
+    "startingPrice": 38000,
+    "rating": 4.7,
+    "ratingCount": 3235,
+    "tags": [
+      "Vegan",
+      "Healthy",
+      "Salad"
+    ],
+    "signatureDishes": [
+      "Special SaladStop!",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.19373,106.837134"
+  },
+  {
+    "name": "Bebek Kaleyo Signature",
+    "address": "Jl. Pahlawan Seribu, Gading Serpong, Tangerang",
+    "latitude": -6.257934,
+    "longitude": 106.617335,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 65000,
+    "rating": 4.4,
+    "ratingCount": 2549,
+    "tags": [
+      "Duck",
+      "Indonesian",
+      "Family"
+    ],
+    "signatureDishes": [
+      "Special Bebek",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.257934,106.617335"
+  },
+  {
+    "name": "Bebek Kaleyo Signature Blok D15",
+    "address": "Jl. Alam Utama, Jakarta Pusat",
+    "latitude": -6.162014,
+    "longitude": 106.806805,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 82000,
+    "rating": 4.1,
+    "ratingCount": 3186,
+    "tags": [
+      "Duck",
+      "Indonesian",
+      "Family"
+    ],
+    "signatureDishes": [
+      "Special Bebek",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.162014,106.806805"
+  },
+  {
+    "name": "Ikkudo Ichi (Non-Halal) Signature Blok J14",
+    "address": "Flavor Bliss, Jakarta Pusat",
+    "latitude": -6.178567,
+    "longitude": 106.820216,
+    "isHalal": false,
+    "isVegan": false,
+    "startingPrice": 49000,
+    "rating": 4.5,
+    "ratingCount": 4391,
+    "tags": [
+      "Ramen",
+      "Japanese",
+      "Non-Halal",
+      "Pork"
+    ],
+    "signatureDishes": [
+      "Special Ikkudo",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.178567,106.820216"
+  },
+  {
+    "name": "Sate Taichan Goreng Signature Blok F2",
+    "address": "Jl. Scientia Square, BSD City, Tangerang",
+    "latitude": -6.282658,
+    "longitude": 106.631879,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 61000,
+    "rating": 4.3,
+    "ratingCount": 1639,
+    "tags": [
+      "Spicy",
+      "Street Food",
+      "Late Night"
+    ],
+    "signatureDishes": [
+      "Special Sate",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.282658,106.631879"
+  },
+  {
+    "name": "Ikkudo Ichi (Non-Halal) Gading Serpong",
+    "address": "Jl. Senopati, Gading Serpong, Tangerang",
+    "latitude": -6.248835,
+    "longitude": 106.6335,
+    "isHalal": false,
+    "isVegan": false,
+    "startingPrice": 37000,
+    "rating": 4.8,
+    "ratingCount": 8315,
+    "tags": [
+      "Ramen",
+      "Japanese",
+      "Non-Halal",
+      "Pork"
+    ],
+    "signatureDishes": [
+      "Special Ikkudo",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.248835,106.6335"
+  },
+  {
+    "name": "Nasi Goreng Kambing Kebon Sirih Signature Blok C19",
+    "address": "Jl. MH Thamrin, Bintaro Jaya",
+    "latitude": -6.270958,
+    "longitude": 106.733118,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 76000,
+    "rating": 4.3,
+    "ratingCount": 4000,
+    "tags": [
+      "Indonesian",
+      "Street Food",
+      "Dinner"
+    ],
+    "signatureDishes": [
+      "Special Nasi",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.270958,106.733118"
+  },
+  {
+    "name": "Ramen Seirock-ya Jakarta Pusat",
+    "address": "Jl. Alam Utama, Jakarta Pusat",
+    "latitude": -6.18046,
+    "longitude": 106.819361,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 131000,
+    "rating": 4.4,
+    "ratingCount": 6886,
+    "tags": [
+      "Ramen",
+      "Japanese",
+      "Noodles",
+      "Halal"
+    ],
+    "signatureDishes": [
+      "Special Ramen",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.18046,106.819361"
+  },
+  {
+    "name": "Sate Babi Kunciran Express Blok G19",
+    "address": "Jl. Sudirman, Jakarta Pusat",
+    "latitude": -6.167875,
+    "longitude": 106.810837,
+    "isHalal": false,
+    "isVegan": false,
+    "startingPrice": 36000,
+    "rating": 4.4,
+    "ratingCount": 7451,
+    "tags": [
+      "Pork",
+      "Non-Halal",
+      "Dinner"
+    ],
+    "signatureDishes": [
+      "Special Sate",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.167875,106.810837"
+  },
+  {
+    "name": "Ayam Geprek Gold Chick Signature Blok F17",
+    "address": "Jl. Senopati, Jakarta Pusat",
+    "latitude": -6.184781,
+    "longitude": 106.820045,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 66000,
+    "rating": 4.8,
+    "ratingCount": 2650,
+    "tags": [
+      "Spicy",
+      "Chicken",
+      "Cheap"
+    ],
+    "signatureDishes": [
+      "Special Ayam",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.184781,106.820045"
+  },
+  {
+    "name": "Burgreens Alam Sutera",
+    "address": "Jl. Boulevard Raya, Alam Sutera, Tangerang",
+    "latitude": -6.248253,
+    "longitude": 106.637733,
+    "isHalal": true,
+    "isVegan": true,
+    "startingPrice": 103000,
+    "rating": 4.1,
+    "ratingCount": 3060,
+    "tags": [
+      "Vegan",
+      "Burger",
+      "Healthy"
+    ],
+    "signatureDishes": [
+      "Special Burgreens",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.248253,106.637733"
+  },
+  {
+    "name": "Nasi Goreng Kambing Kebon Sirih Pusat Blok I16",
+    "address": "Flavor Bliss, Alam Sutera, Tangerang",
+    "latitude": -6.232505,
+    "longitude": 106.642687,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 131000,
+    "rating": 4.3,
+    "ratingCount": 2065,
+    "tags": [
+      "Indonesian",
+      "Street Food",
+      "Dinner"
+    ],
+    "signatureDishes": [
+      "Special Nasi",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.232505,106.642687"
+  },
+  {
+    "name": "Nasi Goreng Kambing Kebon Sirih Signature Blok A14",
+    "address": "Jl. MH Thamrin, Gading Serpong, Tangerang",
+    "latitude": -6.262704,
+    "longitude": 106.643419,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 112000,
+    "rating": 4.1,
+    "ratingCount": 8478,
+    "tags": [
+      "Indonesian",
+      "Street Food",
+      "Dinner"
+    ],
+    "signatureDishes": [
+      "Special Nasi",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.262704,106.643419"
+  },
+  {
+    "name": "Soto Betawi H. Mamat Bintaro Jaya Blok G1",
+    "address": "Ruko Golden 8, Bintaro Jaya",
+    "latitude": -6.294471,
+    "longitude": 106.734491,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 113000,
+    "rating": 4.6,
+    "ratingCount": 7902,
+    "tags": [
+      "Indonesian",
+      "Soup",
+      "Meat"
+    ],
+    "signatureDishes": [
+      "Special Soto",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.294471,106.734491"
+  },
+  {
+    "name": "Ramen Seirock-ya Jakarta Pusat Blok E9",
+    "address": "Jl. Sudirman, Jakarta Pusat",
+    "latitude": -6.17873,
+    "longitude": 106.850046,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 112000,
+    "rating": 4.4,
+    "ratingCount": 4780,
+    "tags": [
+      "Ramen",
+      "Japanese",
+      "Noodles",
+      "Halal"
+    ],
+    "signatureDishes": [
+      "Special Ramen",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.17873,106.850046"
+  },
+  {
+    "name": "Babi Panggang Tondano BSD City",
+    "address": "Jl. MH Thamrin, BSD City, Tangerang",
+    "latitude": -6.297189,
+    "longitude": 106.672897,
+    "isHalal": false,
+    "isVegan": false,
+    "startingPrice": 51000,
+    "rating": 4.5,
+    "ratingCount": 8484,
+    "tags": [
+      "Pork",
+      "Manado",
+      "Spicy"
+    ],
+    "signatureDishes": [
+      "Special Babi",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.297189,106.672897"
+  },
+  {
+    "name": "Mie Gacoan Express",
+    "address": "Ruko Golden 8, Alam Sutera, Tangerang",
+    "latitude": -6.241455,
+    "longitude": 106.656315,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 85000,
+    "rating": 4.4,
+    "ratingCount": 4218,
+    "tags": [
+      "Noodles",
+      "Spicy",
+      "Cheap"
+    ],
+    "signatureDishes": [
+      "Special Mie",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.241455,106.656315"
+  },
+  {
+    "name": "Lawless Burgerbar Express Blok H10",
+    "address": "Jl. Boulevard Raya, Bintaro Jaya",
+    "latitude": -6.279215,
+    "longitude": 106.716062,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 93000,
+    "rating": 4.4,
+    "ratingCount": 7115,
+    "tags": [
+      "Burger",
+      "Western",
+      "Heavy Meal"
+    ],
+    "signatureDishes": [
+      "Special Lawless",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.279215,106.716062"
+  },
+  {
+    "name": "Sari Kuring Pusat Blok F16",
+    "address": "Ruko Paramount, BSD City, Tangerang",
+    "latitude": -6.29224,
+    "longitude": 106.662291,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 62000,
+    "rating": 4.2,
+    "ratingCount": 3832,
+    "tags": [
+      "Sunda",
+      "Family",
+      "Indonesian"
+    ],
+    "signatureDishes": [
+      "Special Sari",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.29224,106.662291"
+  },
+  {
+    "name": "Ikkudo Ichi (Non-Halal) Pusat Blok C1",
+    "address": "Jl. Senopati, BSD City, Tangerang",
+    "latitude": -6.296655,
+    "longitude": 106.666266,
+    "isHalal": false,
+    "isVegan": false,
+    "startingPrice": 128000,
+    "rating": 4.6,
+    "ratingCount": 1280,
+    "tags": [
+      "Ramen",
+      "Japanese",
+      "Non-Halal",
+      "Pork"
+    ],
+    "signatureDishes": [
+      "Special Ikkudo",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.296655,106.666266"
+  },
+  {
+    "name": "Kopi Nako Signature",
+    "address": "Jl. Pahlawan Seribu, Alam Sutera, Tangerang",
+    "latitude": -6.245816,
+    "longitude": 106.65693,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 144000,
+    "rating": 4.2,
+    "ratingCount": 4832,
+    "tags": [
+      "Coffee",
+      "Cafe",
+      "Snacks"
+    ],
+    "signatureDishes": [
+      "Special Kopi",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.245816,106.65693"
+  },
+  {
+    "name": "Bandar Djakarta Express Blok A2",
+    "address": "Flavor Bliss, Gading Serpong, Tangerang",
+    "latitude": -6.25155,
+    "longitude": 106.622402,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 25000,
+    "rating": 4.5,
+    "ratingCount": 6169,
+    "tags": [
+      "Seafood",
+      "Dinner",
+      "Family"
+    ],
+    "signatureDishes": [
+      "Special Bandar",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.25155,106.622402"
+  },
+  {
+    "name": "Babi Panggang Tondano Gading Serpong",
+    "address": "Pasar Modern, Gading Serpong, Tangerang",
+    "latitude": -6.261055,
+    "longitude": 106.617599,
+    "isHalal": false,
+    "isVegan": false,
+    "startingPrice": 111000,
+    "rating": 4.0,
+    "ratingCount": 4581,
+    "tags": [
+      "Pork",
+      "Manado",
+      "Spicy"
+    ],
+    "signatureDishes": [
+      "Special Babi",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.261055,106.617599"
+  },
+  {
+    "name": "Soto Betawi H. Mamat Pusat Blok E17",
+    "address": "Jl. Sudirman, Gading Serpong, Tangerang",
+    "latitude": -6.216397,
+    "longitude": 106.602605,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 58000,
+    "rating": 4.5,
+    "ratingCount": 1913,
+    "tags": [
+      "Indonesian",
+      "Soup",
+      "Meat"
+    ],
+    "signatureDishes": [
+      "Special Soto",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.216397,106.602605"
+  },
+  {
+    "name": "Ayam Geprek Gold Chick Signature Blok B8",
+    "address": "Jl. Pahlawan Seribu, BSD City, Tangerang",
+    "latitude": -6.309693,
+    "longitude": 106.637923,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 21000,
+    "rating": 4.8,
+    "ratingCount": 2387,
+    "tags": [
+      "Spicy",
+      "Chicken",
+      "Cheap"
+    ],
+    "signatureDishes": [
+      "Special Ayam",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.309693,106.637923"
+  },
+  {
+    "name": "Babi Panggang Tondano Pusat Blok E5",
+    "address": "Ruko Golden 8, Bintaro Jaya",
+    "latitude": -6.290526,
+    "longitude": 106.696915,
+    "isHalal": false,
+    "isVegan": false,
+    "startingPrice": 94000,
+    "rating": 4.7,
+    "ratingCount": 5985,
+    "tags": [
+      "Pork",
+      "Manado",
+      "Spicy"
+    ],
+    "signatureDishes": [
+      "Special Babi",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.290526,106.696915"
+  },
+  {
+    "name": "SaladStop! Signature",
+    "address": "Jl. Alam Utama, Jakarta Pusat",
+    "latitude": -6.181487,
+    "longitude": 106.821842,
+    "isHalal": true,
+    "isVegan": true,
+    "startingPrice": 144000,
+    "rating": 4.5,
+    "ratingCount": 6607,
+    "tags": [
+      "Vegan",
+      "Healthy",
+      "Salad"
+    ],
+    "signatureDishes": [
+      "Special SaladStop!",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.181487,106.821842"
+  },
+  {
+    "name": "Ayam Geprek Gold Chick Express Blok H5",
+    "address": "Jl. Senopati, Alam Sutera, Tangerang",
+    "latitude": -6.233136,
+    "longitude": 106.659662,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 146000,
+    "rating": 4.4,
+    "ratingCount": 5953,
+    "tags": [
+      "Spicy",
+      "Chicken",
+      "Cheap"
+    ],
+    "signatureDishes": [
+      "Special Ayam",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.233136,106.659662"
+  },
+  {
+    "name": "Bakmi Babi Aloi Pusat Blok F16",
+    "address": "Jl. Scientia Square, Jakarta Pusat",
+    "latitude": -6.197274,
+    "longitude": 106.854051,
+    "isHalal": false,
+    "isVegan": false,
+    "startingPrice": 144000,
+    "rating": 4.7,
+    "ratingCount": 8436,
+    "tags": [
+      "Noodles",
+      "Non-Halal",
+      "Pork"
+    ],
+    "signatureDishes": [
+      "Special Bakmi",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.197274,106.854051"
+  },
+  {
+    "name": "Ikkudo Ichi (Non-Halal) Jakarta Selatan",
+    "address": "Ruko Golden 8, Jakarta Selatan",
+    "latitude": -6.239721,
+    "longitude": 106.808355,
+    "isHalal": false,
+    "isVegan": false,
+    "startingPrice": 116000,
+    "rating": 4.4,
+    "ratingCount": 4554,
+    "tags": [
+      "Ramen",
+      "Japanese",
+      "Non-Halal",
+      "Pork"
+    ],
+    "signatureDishes": [
+      "Special Ikkudo",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.239721,106.808355"
+  },
+  {
+    "name": "Sari Kuring Signature Blok H2",
+    "address": "Jl. Pahlawan Seribu, Gading Serpong, Tangerang",
+    "latitude": -6.227715,
+    "longitude": 106.610189,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 97000,
+    "rating": 4.0,
+    "ratingCount": 7453,
+    "tags": [
+      "Sunda",
+      "Family",
+      "Indonesian"
+    ],
+    "signatureDishes": [
+      "Special Sari",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.227715,106.610189"
+  },
+  {
+    "name": "Mie Gacoan Signature",
+    "address": "Jl. Senopati, BSD City, Tangerang",
+    "latitude": -6.323636,
+    "longitude": 106.634465,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 64000,
+    "rating": 4.8,
+    "ratingCount": 7530,
+    "tags": [
+      "Noodles",
+      "Spicy",
+      "Cheap"
+    ],
+    "signatureDishes": [
+      "Special Mie",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.323636,106.634465"
+  },
+  {
+    "name": "Lawless Burgerbar Express Blok D5",
+    "address": "Jl. MH Thamrin, Gading Serpong, Tangerang",
+    "latitude": -6.226871,
+    "longitude": 106.595833,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 99000,
+    "rating": 4.5,
+    "ratingCount": 4242,
+    "tags": [
+      "Burger",
+      "Western",
+      "Heavy Meal"
+    ],
+    "signatureDishes": [
+      "Special Lawless",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.226871,106.595833"
+  },
+  {
+    "name": "Babi Panggang Tondano Jakarta Pusat Blok I9",
+    "address": "Jl. Sudirman, Jakarta Pusat",
+    "latitude": -6.170469,
+    "longitude": 106.831041,
+    "isHalal": false,
+    "isVegan": false,
+    "startingPrice": 39000,
+    "rating": 4.8,
+    "ratingCount": 6988,
+    "tags": [
+      "Pork",
+      "Manado",
+      "Spicy"
+    ],
+    "signatureDishes": [
+      "Special Babi",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.170469,106.831041"
+  },
+  {
+    "name": "Sate Babi Kunciran Pusat Blok I11",
+    "address": "Jl. Pahlawan Seribu, Jakarta Pusat",
+    "latitude": -6.184089,
+    "longitude": 106.821857,
+    "isHalal": false,
+    "isVegan": false,
+    "startingPrice": 91000,
+    "rating": 4.1,
+    "ratingCount": 8383,
+    "tags": [
+      "Pork",
+      "Non-Halal",
+      "Dinner"
+    ],
+    "signatureDishes": [
+      "Special Sate",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.184089,106.821857"
+  },
+  {
+    "name": "Babi Panggang Tondano Pusat Blok G13",
+    "address": "Jl. Sudirman, Gading Serpong, Tangerang",
+    "latitude": -6.2582,
+    "longitude": 106.638862,
+    "isHalal": false,
+    "isVegan": false,
+    "startingPrice": 149000,
+    "rating": 4.2,
+    "ratingCount": 6507,
+    "tags": [
+      "Pork",
+      "Manado",
+      "Spicy"
+    ],
+    "signatureDishes": [
+      "Special Babi",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.2582,106.638862"
+  },
+  {
+    "name": "Bandar Djakarta Pusat Blok F11",
+    "address": "Pasar Modern, Alam Sutera, Tangerang",
+    "latitude": -6.229436,
+    "longitude": 106.660466,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 129000,
+    "rating": 4.0,
+    "ratingCount": 679,
+    "tags": [
+      "Seafood",
+      "Dinner",
+      "Family"
+    ],
+    "signatureDishes": [
+      "Special Bandar",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.229436,106.660466"
+  },
+  {
+    "name": "Burgreens Express Blok F4",
+    "address": "Jl. MH Thamrin, Bintaro Jaya",
+    "latitude": -6.274236,
+    "longitude": 106.702946,
+    "isHalal": true,
+    "isVegan": true,
+    "startingPrice": 23000,
+    "rating": 4.4,
+    "ratingCount": 586,
+    "tags": [
+      "Vegan",
+      "Burger",
+      "Healthy"
+    ],
+    "signatureDishes": [
+      "Special Burgreens",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.274236,106.702946"
+  },
+  {
+    "name": "Sate Babi Kunciran Signature Blok A10",
+    "address": "Ruko Paramount, Bintaro Jaya",
+    "latitude": -6.270288,
+    "longitude": 106.737525,
+    "isHalal": false,
+    "isVegan": false,
+    "startingPrice": 135000,
+    "rating": 4.1,
+    "ratingCount": 215,
+    "tags": [
+      "Pork",
+      "Non-Halal",
+      "Dinner"
+    ],
+    "signatureDishes": [
+      "Special Sate",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.270288,106.737525"
+  },
+  {
+    "name": "Ayam Geprek Gold Chick Pusat Blok C12",
+    "address": "Pasar Modern, Jakarta Pusat",
+    "latitude": -6.169679,
+    "longitude": 106.846293,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 33000,
+    "rating": 4.4,
+    "ratingCount": 6811,
+    "tags": [
+      "Spicy",
+      "Chicken",
+      "Cheap"
+    ],
+    "signatureDishes": [
+      "Special Ayam",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.169679,106.846293"
+  },
+  {
+    "name": "HokBen Pusat Blok D9",
+    "address": "Flavor Bliss, Alam Sutera, Tangerang",
+    "latitude": -6.217652,
+    "longitude": 106.653222,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 58000,
+    "rating": 4.8,
+    "ratingCount": 211,
+    "tags": [
+      "Japanese",
+      "Fast Food",
+      "Bento"
+    ],
+    "signatureDishes": [
+      "Special HokBen",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.217652,106.653222"
+  },
+  {
+    "name": "Sate Khas Senayan Bintaro Jaya Blok E12",
+    "address": "Flavor Bliss, Bintaro Jaya",
+    "latitude": -6.257236,
+    "longitude": 106.710808,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 119000,
+    "rating": 4.8,
+    "ratingCount": 4303,
+    "tags": [
+      "Indonesian",
+      "Sate",
+      "Premium"
+    ],
+    "signatureDishes": [
+      "Special Sate",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.257236,106.710808"
+  },
+  {
+    "name": "Ayam Geprek Gold Chick Signature Blok J13",
+    "address": "Jl. Senopati, Bintaro Jaya",
+    "latitude": -6.256862,
+    "longitude": 106.735868,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 36000,
+    "rating": 4.6,
+    "ratingCount": 930,
+    "tags": [
+      "Spicy",
+      "Chicken",
+      "Cheap"
+    ],
+    "signatureDishes": [
+      "Special Ayam",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.256862,106.735868"
+  },
+  {
+    "name": "Kopi Nako Express Blok D3",
+    "address": "Jl. Scientia Square, Bintaro Jaya",
+    "latitude": -6.278416,
+    "longitude": 106.71202,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 80000,
+    "rating": 4.0,
+    "ratingCount": 2974,
+    "tags": [
+      "Coffee",
+      "Cafe",
+      "Snacks"
+    ],
+    "signatureDishes": [
+      "Special Kopi",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.278416,106.71202"
+  },
+  {
+    "name": "Babi Panggang Tondano Signature Blok J4",
+    "address": "Jl. MH Thamrin, Alam Sutera, Tangerang",
+    "latitude": -6.221297,
+    "longitude": 106.670506,
+    "isHalal": false,
+    "isVegan": false,
+    "startingPrice": 110000,
+    "rating": 4.8,
+    "ratingCount": 1464,
+    "tags": [
+      "Pork",
+      "Manado",
+      "Spicy"
+    ],
+    "signatureDishes": [
+      "Special Babi",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.221297,106.670506"
+  },
+  {
+    "name": "Kopi Nako Pusat Blok C11",
+    "address": "Jl. Senopati, BSD City, Tangerang",
+    "latitude": -6.31679,
+    "longitude": 106.659427,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 72000,
+    "rating": 4.0,
+    "ratingCount": 275,
+    "tags": [
+      "Coffee",
+      "Cafe",
+      "Snacks"
+    ],
+    "signatureDishes": [
+      "Special Kopi",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.31679,106.659427"
+  },
+  {
+    "name": "Burgreens Alam Sutera Blok B16",
+    "address": "Flavor Bliss, Alam Sutera, Tangerang",
+    "latitude": -6.224152,
+    "longitude": 106.673857,
+    "isHalal": true,
+    "isVegan": true,
+    "startingPrice": 57000,
+    "rating": 4.5,
+    "ratingCount": 5208,
+    "tags": [
+      "Vegan",
+      "Burger",
+      "Healthy"
+    ],
+    "signatureDishes": [
+      "Special Burgreens",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.224152,106.673857"
+  },
+  {
+    "name": "Ikkudo Ichi (Non-Halal) Pusat Blok D14",
+    "address": "Jl. Sudirman, Alam Sutera, Tangerang",
+    "latitude": -6.220875,
+    "longitude": 106.637638,
+    "isHalal": false,
+    "isVegan": false,
+    "startingPrice": 103000,
+    "rating": 4.5,
+    "ratingCount": 4267,
+    "tags": [
+      "Ramen",
+      "Japanese",
+      "Non-Halal",
+      "Pork"
+    ],
+    "signatureDishes": [
+      "Special Ikkudo",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.220875,106.637638"
+  },
+  {
+    "name": "Ikkudo Ichi (Non-Halal) Signature Blok J3",
+    "address": "Jl. Sudirman, Jakarta Selatan",
+    "latitude": -6.278991,
+    "longitude": 106.816342,
+    "isHalal": false,
+    "isVegan": false,
+    "startingPrice": 73000,
+    "rating": 4.1,
+    "ratingCount": 2262,
+    "tags": [
+      "Ramen",
+      "Japanese",
+      "Non-Halal",
+      "Pork"
+    ],
+    "signatureDishes": [
+      "Special Ikkudo",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.278991,106.816342"
+  },
+  {
+    "name": "Ikkudo Ichi (Non-Halal) Signature Blok I10",
+    "address": "Jl. Boulevard Raya, Gading Serpong, Tangerang",
+    "latitude": -6.227475,
+    "longitude": 106.63581,
+    "isHalal": false,
+    "isVegan": false,
+    "startingPrice": 75000,
+    "rating": 4.4,
+    "ratingCount": 742,
+    "tags": [
+      "Ramen",
+      "Japanese",
+      "Non-Halal",
+      "Pork"
+    ],
+    "signatureDishes": [
+      "Special Ikkudo",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.227475,106.63581"
+  },
+  {
+    "name": "Bakmi Babi Aloi BSD City Blok A6",
+    "address": "Jl. Senopati, BSD City, Tangerang",
+    "latitude": -6.295424,
+    "longitude": 106.662793,
+    "isHalal": false,
+    "isVegan": false,
+    "startingPrice": 60000,
+    "rating": 4.2,
+    "ratingCount": 6769,
+    "tags": [
+      "Noodles",
+      "Non-Halal",
+      "Pork"
+    ],
+    "signatureDishes": [
+      "Special Bakmi",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.295424,106.662793"
+  },
+  {
+    "name": "Sate Babi Kunciran Signature Blok F2",
+    "address": "Jl. Alam Utama, BSD City, Tangerang",
+    "latitude": -6.30337,
+    "longitude": 106.6669,
+    "isHalal": false,
+    "isVegan": false,
+    "startingPrice": 23000,
+    "rating": 4.4,
+    "ratingCount": 5381,
+    "tags": [
+      "Pork",
+      "Non-Halal",
+      "Dinner"
+    ],
+    "signatureDishes": [
+      "Special Sate",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.30337,106.6669"
+  },
+  {
+    "name": "Burgreens Pusat Blok H9",
+    "address": "Flavor Bliss, Gading Serpong, Tangerang",
+    "latitude": -6.258107,
+    "longitude": 106.598001,
+    "isHalal": true,
+    "isVegan": true,
+    "startingPrice": 21000,
+    "rating": 4.0,
+    "ratingCount": 6632,
+    "tags": [
+      "Vegan",
+      "Burger",
+      "Healthy"
+    ],
+    "signatureDishes": [
+      "Special Burgreens",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.258107,106.598001"
+  },
+  {
+    "name": "Ikkudo Ichi (Non-Halal) Pusat Blok C5",
+    "address": "Flavor Bliss, Jakarta Selatan",
+    "latitude": -6.263346,
+    "longitude": 106.819761,
+    "isHalal": false,
+    "isVegan": false,
+    "startingPrice": 95000,
+    "rating": 4.3,
+    "ratingCount": 3297,
+    "tags": [
+      "Ramen",
+      "Japanese",
+      "Non-Halal",
+      "Pork"
+    ],
+    "signatureDishes": [
+      "Special Ikkudo",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.263346,106.819761"
+  },
+  {
+    "name": "Bakmi GM Gading Serpong",
+    "address": "Jl. Kemang Raya, Gading Serpong, Tangerang",
+    "latitude": -6.218708,
+    "longitude": 106.639343,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 58000,
+    "rating": 4.5,
+    "ratingCount": 2489,
+    "tags": [
+      "Noodles",
+      "Asian",
+      "Lunch"
+    ],
+    "signatureDishes": [
+      "Special Bakmi",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.218708,106.639343"
+  },
+  {
+    "name": "Mie Gacoan Pusat Blok A4",
+    "address": "Flavor Bliss, Alam Sutera, Tangerang",
+    "latitude": -6.202182,
+    "longitude": 106.666613,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 69000,
+    "rating": 4.9,
+    "ratingCount": 3813,
+    "tags": [
+      "Noodles",
+      "Spicy",
+      "Cheap"
+    ],
+    "signatureDishes": [
+      "Special Mie",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.202182,106.666613"
+  },
+  {
+    "name": "Ayam Geprek Gold Chick Signature Blok B20",
+    "address": "Jl. Senopati, Jakarta Pusat",
+    "latitude": -6.15758,
+    "longitude": 106.844099,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 86000,
+    "rating": 4.4,
+    "ratingCount": 5442,
+    "tags": [
+      "Spicy",
+      "Chicken",
+      "Cheap"
+    ],
+    "signatureDishes": [
+      "Special Ayam",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.15758,106.844099"
+  },
+  {
+    "name": "Kopi Nako Signature Blok I17",
+    "address": "Jl. Sudirman, Bintaro Jaya",
+    "latitude": -6.276089,
+    "longitude": 106.71671,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 32000,
+    "rating": 4.6,
+    "ratingCount": 712,
+    "tags": [
+      "Coffee",
+      "Cafe",
+      "Snacks"
+    ],
+    "signatureDishes": [
+      "Special Kopi",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.276089,106.71671"
+  },
+  {
+    "name": "Ikkudo Ichi (Non-Halal) Signature Blok J15",
+    "address": "Ruko Paramount, Bintaro Jaya",
+    "latitude": -6.277569,
+    "longitude": 106.728336,
+    "isHalal": false,
+    "isVegan": false,
+    "startingPrice": 64000,
+    "rating": 4.0,
+    "ratingCount": 7244,
+    "tags": [
+      "Ramen",
+      "Japanese",
+      "Non-Halal",
+      "Pork"
+    ],
+    "signatureDishes": [
+      "Special Ikkudo",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.277569,106.728336"
+  },
+  {
+    "name": "Ramen Seirock-ya Pusat Blok C11",
+    "address": "Jl. Senopati, Gading Serpong, Tangerang",
+    "latitude": -6.252793,
+    "longitude": 106.612112,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 39000,
+    "rating": 4.3,
+    "ratingCount": 7225,
+    "tags": [
+      "Ramen",
+      "Japanese",
+      "Noodles",
+      "Halal"
+    ],
+    "signatureDishes": [
+      "Special Ramen",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.252793,106.612112"
+  },
+  {
+    "name": "Bakmi Babi Aloi Signature Blok J3",
+    "address": "Flavor Bliss, Gading Serpong, Tangerang",
+    "latitude": -6.251387,
+    "longitude": 106.613531,
+    "isHalal": false,
+    "isVegan": false,
+    "startingPrice": 91000,
+    "rating": 4.3,
+    "ratingCount": 6580,
+    "tags": [
+      "Noodles",
+      "Non-Halal",
+      "Pork"
+    ],
+    "signatureDishes": [
+      "Special Bakmi",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.251387,106.613531"
+  },
+  {
+    "name": "Nasi Goreng Kambing Kebon Sirih Pusat Blok C2",
+    "address": "Ruko Paramount, BSD City, Tangerang",
+    "latitude": -6.288675,
+    "longitude": 106.627831,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 142000,
+    "rating": 4.5,
+    "ratingCount": 215,
+    "tags": [
+      "Indonesian",
+      "Street Food",
+      "Dinner"
+    ],
+    "signatureDishes": [
+      "Special Nasi",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.288675,106.627831"
+  },
+  {
+    "name": "Ramen Seirock-ya Gading Serpong Blok J18",
+    "address": "Jl. Pahlawan Seribu, Gading Serpong, Tangerang",
+    "latitude": -6.245606,
+    "longitude": 106.604862,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 68000,
+    "rating": 4.6,
+    "ratingCount": 7396,
+    "tags": [
+      "Ramen",
+      "Japanese",
+      "Noodles",
+      "Halal"
+    ],
+    "signatureDishes": [
+      "Special Ramen",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.245606,106.604862"
+  },
+  {
+    "name": "Ikkudo Ichi (Non-Halal) Express Blok D12",
+    "address": "Jl. MH Thamrin, Jakarta Selatan",
+    "latitude": -6.262377,
+    "longitude": 106.798788,
+    "isHalal": false,
+    "isVegan": false,
+    "startingPrice": 111000,
+    "rating": 4.4,
+    "ratingCount": 3317,
+    "tags": [
+      "Ramen",
+      "Japanese",
+      "Non-Halal",
+      "Pork"
+    ],
+    "signatureDishes": [
+      "Special Ikkudo",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.262377,106.798788"
+  },
+  {
+    "name": "Nasi Goreng Kambing Kebon Sirih Pusat Blok D19",
+    "address": "Ruko Paramount, Gading Serpong, Tangerang",
+    "latitude": -6.250029,
+    "longitude": 106.596703,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 88000,
+    "rating": 4.4,
+    "ratingCount": 2686,
+    "tags": [
+      "Indonesian",
+      "Street Food",
+      "Dinner"
+    ],
+    "signatureDishes": [
+      "Special Nasi",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.250029,106.596703"
+  },
+  {
+    "name": "Ayam Geprek Gold Chick Pusat Blok D20",
+    "address": "Jl. Alam Utama, Bintaro Jaya",
+    "latitude": -6.268775,
+    "longitude": 106.695162,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 73000,
+    "rating": 4.4,
+    "ratingCount": 8180,
+    "tags": [
+      "Spicy",
+      "Chicken",
+      "Cheap"
+    ],
+    "signatureDishes": [
+      "Special Ayam",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.268775,106.695162"
+  },
+  {
+    "name": "Ramen Seirock-ya Jakarta Selatan",
+    "address": "Jl. Kemang Raya, Jakarta Selatan",
+    "latitude": -6.280885,
+    "longitude": 106.79544,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 51000,
+    "rating": 4.6,
+    "ratingCount": 4099,
+    "tags": [
+      "Ramen",
+      "Japanese",
+      "Noodles",
+      "Halal"
+    ],
+    "signatureDishes": [
+      "Special Ramen",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.280885,106.79544"
+  },
+  {
+    "name": "SaladStop! Signature Blok C5",
+    "address": "Jl. Kemang Raya, Alam Sutera, Tangerang",
+    "latitude": -6.241584,
+    "longitude": 106.677911,
+    "isHalal": true,
+    "isVegan": true,
+    "startingPrice": 51000,
+    "rating": 4.3,
+    "ratingCount": 3358,
+    "tags": [
+      "Vegan",
+      "Healthy",
+      "Salad"
+    ],
+    "signatureDishes": [
+      "Special SaladStop!",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.241584,106.677911"
+  },
+  {
+    "name": "Sari Kuring Bintaro Jaya",
+    "address": "Jl. Pahlawan Seribu, Bintaro Jaya",
+    "latitude": -6.258751,
+    "longitude": 106.698255,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 34000,
+    "rating": 4.2,
+    "ratingCount": 6218,
+    "tags": [
+      "Sunda",
+      "Family",
+      "Indonesian"
+    ],
+    "signatureDishes": [
+      "Special Sari",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.258751,106.698255"
+  },
+  {
+    "name": "HokBen Express Blok H13",
+    "address": "Flavor Bliss, Bintaro Jaya",
+    "latitude": -6.263362,
+    "longitude": 106.711564,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 44000,
+    "rating": 4.8,
+    "ratingCount": 5565,
+    "tags": [
+      "Japanese",
+      "Fast Food",
+      "Bento"
+    ],
+    "signatureDishes": [
+      "Special HokBen",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.263362,106.711564"
+  },
+  {
+    "name": "Soto Betawi H. Mamat Pusat Blok E12",
+    "address": "Pasar Modern, Alam Sutera, Tangerang",
+    "latitude": -6.202464,
+    "longitude": 106.672005,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 75000,
+    "rating": 4.3,
+    "ratingCount": 4570,
+    "tags": [
+      "Indonesian",
+      "Soup",
+      "Meat"
+    ],
+    "signatureDishes": [
+      "Special Soto",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.202464,106.672005"
+  },
+  {
+    "name": "Sari Kuring Bintaro Jaya Blok G17",
+    "address": "Pasar Modern, Bintaro Jaya",
+    "latitude": -6.303642,
+    "longitude": 106.741405,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 52000,
+    "rating": 4.6,
+    "ratingCount": 1835,
+    "tags": [
+      "Sunda",
+      "Family",
+      "Indonesian"
+    ],
+    "signatureDishes": [
+      "Special Sari",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.303642,106.741405"
+  },
+  {
+    "name": "Bakmi Babi Aloi Pusat Blok B7",
+    "address": "Jl. Kemang Raya, Bintaro Jaya",
+    "latitude": -6.279469,
+    "longitude": 106.724653,
+    "isHalal": false,
+    "isVegan": false,
+    "startingPrice": 107000,
+    "rating": 4.6,
+    "ratingCount": 5395,
+    "tags": [
+      "Noodles",
+      "Non-Halal",
+      "Pork"
+    ],
+    "signatureDishes": [
+      "Special Bakmi",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.279469,106.724653"
+  },
+  {
+    "name": "Sate Babi Kunciran Express Blok D17",
+    "address": "Jl. Senopati, BSD City, Tangerang",
+    "latitude": -6.313736,
+    "longitude": 106.655331,
+    "isHalal": false,
+    "isVegan": false,
+    "startingPrice": 61000,
+    "rating": 4.2,
+    "ratingCount": 6029,
+    "tags": [
+      "Pork",
+      "Non-Halal",
+      "Dinner"
+    ],
+    "signatureDishes": [
+      "Special Sate",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.313736,106.655331"
+  },
+  {
+    "name": "Babi Panggang Tondano Alam Sutera Blok G4",
+    "address": "Ruko Golden 8, Alam Sutera, Tangerang",
+    "latitude": -6.211371,
+    "longitude": 106.645638,
+    "isHalal": false,
+    "isVegan": false,
+    "startingPrice": 124000,
+    "rating": 4.6,
+    "ratingCount": 4369,
+    "tags": [
+      "Pork",
+      "Manado",
+      "Spicy"
+    ],
+    "signatureDishes": [
+      "Special Babi",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.211371,106.645638"
+  },
+  {
+    "name": "Ayam Geprek Gold Chick Express Blok J2",
+    "address": "Jl. Alam Utama, Alam Sutera, Tangerang",
+    "latitude": -6.240606,
+    "longitude": 106.661789,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 20000,
+    "rating": 4.2,
+    "ratingCount": 6153,
+    "tags": [
+      "Spicy",
+      "Chicken",
+      "Cheap"
+    ],
+    "signatureDishes": [
+      "Special Ayam",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.240606,106.661789"
+  },
+  {
+    "name": "Bakmi GM Pusat",
+    "address": "Ruko Golden 8, Gading Serpong, Tangerang",
+    "latitude": -6.251776,
+    "longitude": 106.634358,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 44000,
+    "rating": 4.8,
+    "ratingCount": 5277,
+    "tags": [
+      "Noodles",
+      "Asian",
+      "Lunch"
+    ],
+    "signatureDishes": [
+      "Special Bakmi",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.251776,106.634358"
+  },
+  {
+    "name": "HokBen Signature Blok J17",
+    "address": "Jl. Alam Utama, Bintaro Jaya",
+    "latitude": -6.277424,
+    "longitude": 106.741363,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 60000,
+    "rating": 4.6,
+    "ratingCount": 4973,
+    "tags": [
+      "Japanese",
+      "Fast Food",
+      "Bento"
+    ],
+    "signatureDishes": [
+      "Special HokBen",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.277424,106.741363"
+  },
+  {
+    "name": "Kopi Nako Signature Blok D15",
+    "address": "Jl. Senopati, Jakarta Pusat",
+    "latitude": -6.157289,
+    "longitude": 106.826196,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 93000,
+    "rating": 4.5,
+    "ratingCount": 8135,
+    "tags": [
+      "Coffee",
+      "Cafe",
+      "Snacks"
+    ],
+    "signatureDishes": [
+      "Special Kopi",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.157289,106.826196"
+  },
+  {
+    "name": "Sate Taichan Goreng Alam Sutera",
+    "address": "Pasar Modern, Alam Sutera, Tangerang",
+    "latitude": -6.201394,
+    "longitude": 106.653215,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 148000,
+    "rating": 4.0,
+    "ratingCount": 3452,
+    "tags": [
+      "Spicy",
+      "Street Food",
+      "Late Night"
+    ],
+    "signatureDishes": [
+      "Special Sate",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.201394,106.653215"
+  },
+  {
+    "name": "Lawless Burgerbar Signature Blok A1",
+    "address": "Ruko Paramount, Gading Serpong, Tangerang",
+    "latitude": -6.263419,
+    "longitude": 106.639031,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 127000,
+    "rating": 4.0,
+    "ratingCount": 1501,
+    "tags": [
+      "Burger",
+      "Western",
+      "Heavy Meal"
+    ],
+    "signatureDishes": [
+      "Special Lawless",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.263419,106.639031"
+  },
+  {
+    "name": "Mie Gacoan Bintaro Jaya Blok H13",
+    "address": "Jl. Kemang Raya, Bintaro Jaya",
+    "latitude": -6.300659,
+    "longitude": 106.724948,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 43000,
+    "rating": 4.7,
+    "ratingCount": 6779,
+    "tags": [
+      "Noodles",
+      "Spicy",
+      "Cheap"
+    ],
+    "signatureDishes": [
+      "Special Mie",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.300659,106.724948"
+  },
+  {
+    "name": "Mie Gacoan Pusat Blok H12",
+    "address": "Jl. Boulevard Raya, Jakarta Selatan",
+    "latitude": -6.280676,
+    "longitude": 106.805551,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 98000,
+    "rating": 4.3,
+    "ratingCount": 6665,
+    "tags": [
+      "Noodles",
+      "Spicy",
+      "Cheap"
+    ],
+    "signatureDishes": [
+      "Special Mie",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.280676,106.805551"
+  },
+  {
+    "name": "Bebek Kaleyo Signature Blok C16",
+    "address": "Jl. Pahlawan Seribu, Alam Sutera, Tangerang",
+    "latitude": -6.228273,
+    "longitude": 106.656462,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 77000,
+    "rating": 4.5,
+    "ratingCount": 2969,
+    "tags": [
+      "Duck",
+      "Indonesian",
+      "Family"
+    ],
+    "signatureDishes": [
+      "Special Bebek",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.228273,106.656462"
+  },
+  {
+    "name": "Sate Khas Senayan Pusat Blok G20",
+    "address": "Jl. Pahlawan Seribu, Jakarta Pusat",
+    "latitude": -6.197074,
+    "longitude": 106.813136,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 48000,
+    "rating": 4.5,
+    "ratingCount": 2202,
+    "tags": [
+      "Indonesian",
+      "Sate",
+      "Premium"
+    ],
+    "signatureDishes": [
+      "Special Sate",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.197074,106.813136"
+  },
+  {
+    "name": "Mie Gacoan Gading Serpong",
+    "address": "Jl. Scientia Square, Gading Serpong, Tangerang",
+    "latitude": -6.223776,
+    "longitude": 106.595458,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 114000,
+    "rating": 4.9,
+    "ratingCount": 670,
+    "tags": [
+      "Noodles",
+      "Spicy",
+      "Cheap"
+    ],
+    "signatureDishes": [
+      "Special Mie",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.223776,106.595458"
+  },
+  {
+    "name": "Sate Babi Kunciran Bintaro Jaya",
+    "address": "Flavor Bliss, Bintaro Jaya",
+    "latitude": -6.270791,
+    "longitude": 106.698217,
+    "isHalal": false,
+    "isVegan": false,
+    "startingPrice": 138000,
+    "rating": 4.9,
+    "ratingCount": 7560,
+    "tags": [
+      "Pork",
+      "Non-Halal",
+      "Dinner"
+    ],
+    "signatureDishes": [
+      "Special Sate",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.270791,106.698217"
+  },
+  {
+    "name": "Bakmi Babi Aloi Signature Blok B18",
+    "address": "Jl. Senopati, Bintaro Jaya",
+    "latitude": -6.270091,
+    "longitude": 106.724839,
+    "isHalal": false,
+    "isVegan": false,
+    "startingPrice": 58000,
+    "rating": 4.4,
+    "ratingCount": 1017,
+    "tags": [
+      "Noodles",
+      "Non-Halal",
+      "Pork"
+    ],
+    "signatureDishes": [
+      "Special Bakmi",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.270091,106.724839"
+  },
+  {
+    "name": "Bakmi GM Signature",
+    "address": "Ruko Paramount, BSD City, Tangerang",
+    "latitude": -6.288941,
+    "longitude": 106.671253,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 128000,
+    "rating": 4.3,
+    "ratingCount": 237,
+    "tags": [
+      "Noodles",
+      "Asian",
+      "Lunch"
+    ],
+    "signatureDishes": [
+      "Special Bakmi",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.288941,106.671253"
+  },
+  {
+    "name": "Babi Panggang Tondano BSD City Blok A12",
+    "address": "Jl. Boulevard Raya, BSD City, Tangerang",
+    "latitude": -6.281212,
+    "longitude": 106.662365,
+    "isHalal": false,
+    "isVegan": false,
+    "startingPrice": 141000,
+    "rating": 4.8,
+    "ratingCount": 4181,
+    "tags": [
+      "Pork",
+      "Manado",
+      "Spicy"
+    ],
+    "signatureDishes": [
+      "Special Babi",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.281212,106.662365"
+  },
+  {
+    "name": "SaladStop! Express Blok E17",
+    "address": "Jl. Sudirman, Gading Serpong, Tangerang",
+    "latitude": -6.224898,
+    "longitude": 106.638931,
+    "isHalal": true,
+    "isVegan": true,
+    "startingPrice": 103000,
+    "rating": 4.7,
+    "ratingCount": 5460,
+    "tags": [
+      "Vegan",
+      "Healthy",
+      "Salad"
+    ],
+    "signatureDishes": [
+      "Special SaladStop!",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.224898,106.638931"
+  },
+  {
+    "name": "Bakmi GM Gading Serpong Blok B4",
+    "address": "Jl. Pahlawan Seribu, Gading Serpong, Tangerang",
+    "latitude": -6.25628,
+    "longitude": 106.643376,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 143000,
+    "rating": 4.3,
+    "ratingCount": 2443,
+    "tags": [
+      "Noodles",
+      "Asian",
+      "Lunch"
+    ],
+    "signatureDishes": [
+      "Special Bakmi",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.25628,106.643376"
+  },
+  {
+    "name": "Ikkudo Ichi (Non-Halal) Signature Blok D8",
+    "address": "Pasar Modern, Gading Serpong, Tangerang",
+    "latitude": -6.218461,
+    "longitude": 106.636286,
+    "isHalal": false,
+    "isVegan": false,
+    "startingPrice": 54000,
+    "rating": 4.1,
+    "ratingCount": 5497,
+    "tags": [
+      "Ramen",
+      "Japanese",
+      "Non-Halal",
+      "Pork"
+    ],
+    "signatureDishes": [
+      "Special Ikkudo",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.218461,106.636286"
+  },
+  {
+    "name": "HokBen Gading Serpong",
+    "address": "Jl. Senopati, Gading Serpong, Tangerang",
+    "latitude": -6.242587,
+    "longitude": 106.632703,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 139000,
+    "rating": 4.0,
+    "ratingCount": 7077,
+    "tags": [
+      "Japanese",
+      "Fast Food",
+      "Bento"
+    ],
+    "signatureDishes": [
+      "Special HokBen",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.242587,106.632703"
+  },
+  {
+    "name": "Babi Panggang Tondano Signature Blok C19",
+    "address": "Pasar Modern, Gading Serpong, Tangerang",
+    "latitude": -6.259466,
+    "longitude": 106.618206,
+    "isHalal": false,
+    "isVegan": false,
+    "startingPrice": 21000,
+    "rating": 4.7,
+    "ratingCount": 7354,
+    "tags": [
+      "Pork",
+      "Manado",
+      "Spicy"
+    ],
+    "signatureDishes": [
+      "Special Babi",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.259466,106.618206"
+  },
+  {
+    "name": "Sari Kuring Pusat Blok B14",
+    "address": "Jl. Pahlawan Seribu, Bintaro Jaya",
+    "latitude": -6.295421,
+    "longitude": 106.738001,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 97000,
+    "rating": 4.4,
+    "ratingCount": 5647,
+    "tags": [
+      "Sunda",
+      "Family",
+      "Indonesian"
+    ],
+    "signatureDishes": [
+      "Special Sari",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.295421,106.738001"
+  },
+  {
+    "name": "Soto Betawi H. Mamat Signature",
+    "address": "Jl. Senopati, Alam Sutera, Tangerang",
+    "latitude": -6.247421,
+    "longitude": 106.638277,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 99000,
+    "rating": 4.2,
+    "ratingCount": 5282,
+    "tags": [
+      "Indonesian",
+      "Soup",
+      "Meat"
+    ],
+    "signatureDishes": [
+      "Special Soto",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.247421,106.638277"
+  },
+  {
+    "name": "Ayam Geprek Gold Chick Pusat Blok I19",
+    "address": "Jl. Alam Utama, Bintaro Jaya",
+    "latitude": -6.287587,
+    "longitude": 106.73784,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 97000,
+    "rating": 4.5,
+    "ratingCount": 5302,
+    "tags": [
+      "Spicy",
+      "Chicken",
+      "Cheap"
+    ],
+    "signatureDishes": [
+      "Special Ayam",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.287587,106.73784"
+  },
+  {
+    "name": "Sate Khas Senayan Signature Blok H14",
+    "address": "Jl. Kemang Raya, Jakarta Pusat",
+    "latitude": -6.185985,
+    "longitude": 106.836162,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 129000,
+    "rating": 4.9,
+    "ratingCount": 7637,
+    "tags": [
+      "Indonesian",
+      "Sate",
+      "Premium"
+    ],
+    "signatureDishes": [
+      "Special Sate",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.185985,106.836162"
+  },
+  {
+    "name": "Mie Gacoan Alam Sutera Blok F14",
+    "address": "Jl. Kemang Raya, Alam Sutera, Tangerang",
+    "latitude": -6.203498,
+    "longitude": 106.631561,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 135000,
+    "rating": 4.2,
+    "ratingCount": 669,
+    "tags": [
+      "Noodles",
+      "Spicy",
+      "Cheap"
+    ],
+    "signatureDishes": [
+      "Special Mie",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.203498,106.631561"
+  },
+  {
+    "name": "HokBen Pusat Blok G12",
+    "address": "Flavor Bliss, Gading Serpong, Tangerang",
+    "latitude": -6.238426,
+    "longitude": 106.62854,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 21000,
+    "rating": 4.2,
+    "ratingCount": 3002,
+    "tags": [
+      "Japanese",
+      "Fast Food",
+      "Bento"
+    ],
+    "signatureDishes": [
+      "Special HokBen",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.238426,106.62854"
+  },
+  {
+    "name": "Ayam Geprek Gold Chick Express Blok B7",
+    "address": "Pasar Modern, Bintaro Jaya",
+    "latitude": -6.272412,
+    "longitude": 106.732923,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 62000,
+    "rating": 4.2,
+    "ratingCount": 2323,
+    "tags": [
+      "Spicy",
+      "Chicken",
+      "Cheap"
+    ],
+    "signatureDishes": [
+      "Special Ayam",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.272412,106.732923"
+  },
+  {
+    "name": "Sate Taichan Goreng Express",
+    "address": "Jl. Sudirman, Alam Sutera, Tangerang",
+    "latitude": -6.200124,
+    "longitude": 106.648607,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 35000,
+    "rating": 4.5,
+    "ratingCount": 8193,
+    "tags": [
+      "Spicy",
+      "Street Food",
+      "Late Night"
+    ],
+    "signatureDishes": [
+      "Special Sate",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.200124,106.648607"
+  },
+  {
+    "name": "Bandar Djakarta Signature Blok D12",
+    "address": "Jl. Scientia Square, Alam Sutera, Tangerang",
+    "latitude": -6.244253,
+    "longitude": 106.670866,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 76000,
+    "rating": 4.9,
+    "ratingCount": 568,
+    "tags": [
+      "Seafood",
+      "Dinner",
+      "Family"
+    ],
+    "signatureDishes": [
+      "Special Bandar",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.244253,106.670866"
+  },
+  {
+    "name": "SaladStop! Signature Blok B20",
+    "address": "Jl. Alam Utama, BSD City, Tangerang",
+    "latitude": -6.283947,
+    "longitude": 106.66718,
+    "isHalal": true,
+    "isVegan": true,
+    "startingPrice": 58000,
+    "rating": 4.8,
+    "ratingCount": 2667,
+    "tags": [
+      "Vegan",
+      "Healthy",
+      "Salad"
+    ],
+    "signatureDishes": [
+      "Special SaladStop!",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.283947,106.66718"
+  },
+  {
+    "name": "Lawless Burgerbar BSD City",
+    "address": "Pasar Modern, BSD City, Tangerang",
+    "latitude": -6.3146,
+    "longitude": 106.657336,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 23000,
+    "rating": 4.2,
+    "ratingCount": 7667,
+    "tags": [
+      "Burger",
+      "Western",
+      "Heavy Meal"
+    ],
+    "signatureDishes": [
+      "Special Lawless",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.3146,106.657336"
+  },
+  {
+    "name": "Nasi Goreng Kambing Kebon Sirih Express Blok I18",
+    "address": "Jl. Alam Utama, BSD City, Tangerang",
+    "latitude": -6.276255,
+    "longitude": 106.650126,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 141000,
+    "rating": 4.7,
+    "ratingCount": 1030,
+    "tags": [
+      "Indonesian",
+      "Street Food",
+      "Dinner"
+    ],
+    "signatureDishes": [
+      "Special Nasi",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.276255,106.650126"
+  },
+  {
+    "name": "Babi Panggang Tondano BSD City Blok E12",
+    "address": "Jl. Senopati, BSD City, Tangerang",
+    "latitude": -6.280999,
+    "longitude": 106.625318,
+    "isHalal": false,
+    "isVegan": false,
+    "startingPrice": 70000,
+    "rating": 4.4,
+    "ratingCount": 1322,
+    "tags": [
+      "Pork",
+      "Manado",
+      "Spicy"
+    ],
+    "signatureDishes": [
+      "Special Babi",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.280999,106.625318"
+  },
+  {
+    "name": "Bakmi GM Express",
+    "address": "Jl. Boulevard Raya, Jakarta Selatan",
+    "latitude": -6.268875,
+    "longitude": 106.794197,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 48000,
+    "rating": 4.6,
+    "ratingCount": 5386,
+    "tags": [
+      "Noodles",
+      "Asian",
+      "Lunch"
+    ],
+    "signatureDishes": [
+      "Special Bakmi",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.268875,106.794197"
+  },
+  {
+    "name": "Burgreens Jakarta Pusat",
+    "address": "Jl. Pahlawan Seribu, Jakarta Pusat",
+    "latitude": -6.164681,
+    "longitude": 106.835616,
+    "isHalal": true,
+    "isVegan": true,
+    "startingPrice": 29000,
+    "rating": 4.1,
+    "ratingCount": 3019,
+    "tags": [
+      "Vegan",
+      "Burger",
+      "Healthy"
+    ],
+    "signatureDishes": [
+      "Special Burgreens",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.164681,106.835616"
+  },
+  {
+    "name": "Ayam Geprek Gold Chick Signature Blok B5",
+    "address": "Pasar Modern, BSD City, Tangerang",
+    "latitude": -6.282399,
+    "longitude": 106.636975,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 32000,
+    "rating": 4.8,
+    "ratingCount": 6016,
+    "tags": [
+      "Spicy",
+      "Chicken",
+      "Cheap"
+    ],
+    "signatureDishes": [
+      "Special Ayam",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.282399,106.636975"
+  },
+  {
+    "name": "Ramen Seirock-ya Express Blok G17",
+    "address": "Jl. MH Thamrin, Jakarta Pusat",
+    "latitude": -6.183708,
+    "longitude": 106.842929,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 55000,
+    "rating": 4.5,
+    "ratingCount": 5470,
+    "tags": [
+      "Ramen",
+      "Japanese",
+      "Noodles",
+      "Halal"
+    ],
+    "signatureDishes": [
+      "Special Ramen",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.183708,106.842929"
+  },
+  {
+    "name": "Ikkudo Ichi (Non-Halal) Express Blok H8",
+    "address": "Jl. Kemang Raya, Jakarta Pusat",
+    "latitude": -6.204587,
+    "longitude": 106.82767,
+    "isHalal": false,
+    "isVegan": false,
+    "startingPrice": 124000,
+    "rating": 4.5,
+    "ratingCount": 8272,
+    "tags": [
+      "Ramen",
+      "Japanese",
+      "Non-Halal",
+      "Pork"
+    ],
+    "signatureDishes": [
+      "Special Ikkudo",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.204587,106.82767"
+  },
+  {
+    "name": "Ikkudo Ichi (Non-Halal) Signature Blok G5",
+    "address": "Flavor Bliss, BSD City, Tangerang",
+    "latitude": -6.310283,
+    "longitude": 106.638264,
+    "isHalal": false,
+    "isVegan": false,
+    "startingPrice": 38000,
+    "rating": 4.8,
+    "ratingCount": 3121,
+    "tags": [
+      "Ramen",
+      "Japanese",
+      "Non-Halal",
+      "Pork"
+    ],
+    "signatureDishes": [
+      "Special Ikkudo",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.310283,106.638264"
+  },
+  {
+    "name": "Mie Gacoan Pusat Blok J10",
+    "address": "Jl. Alam Utama, BSD City, Tangerang",
+    "latitude": -6.307174,
+    "longitude": 106.673775,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 77000,
+    "rating": 4.2,
+    "ratingCount": 7341,
+    "tags": [
+      "Noodles",
+      "Spicy",
+      "Cheap"
+    ],
+    "signatureDishes": [
+      "Special Mie",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.307174,106.673775"
+  },
+  {
+    "name": "Sari Kuring Express",
+    "address": "Ruko Golden 8, Bintaro Jaya",
+    "latitude": -6.300281,
+    "longitude": 106.708485,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 79000,
+    "rating": 4.8,
+    "ratingCount": 7735,
+    "tags": [
+      "Sunda",
+      "Family",
+      "Indonesian"
+    ],
+    "signatureDishes": [
+      "Special Sari",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.300281,106.708485"
+  },
+  {
+    "name": "Kopi Nako Express Blok C16",
+    "address": "Jl. Pahlawan Seribu, Jakarta Pusat",
+    "latitude": -6.172228,
+    "longitude": 106.823948,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 95000,
+    "rating": 4.6,
+    "ratingCount": 4553,
+    "tags": [
+      "Coffee",
+      "Cafe",
+      "Snacks"
+    ],
+    "signatureDishes": [
+      "Special Kopi",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.172228,106.823948"
+  },
+  {
+    "name": "Kopi Nako Express Blok D13",
+    "address": "Jl. Boulevard Raya, BSD City, Tangerang",
+    "latitude": -6.31186,
+    "longitude": 106.632842,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 63000,
+    "rating": 4.7,
+    "ratingCount": 969,
+    "tags": [
+      "Coffee",
+      "Cafe",
+      "Snacks"
+    ],
+    "signatureDishes": [
+      "Special Kopi",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.31186,106.632842"
+  },
+  {
+    "name": "Sate Taichan Goreng Pusat Blok I14",
+    "address": "Jl. Kemang Raya, BSD City, Tangerang",
+    "latitude": -6.311855,
+    "longitude": 106.647504,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 48000,
+    "rating": 4.9,
+    "ratingCount": 6424,
+    "tags": [
+      "Spicy",
+      "Street Food",
+      "Late Night"
+    ],
+    "signatureDishes": [
+      "Special Sate",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.311855,106.647504"
+  },
+  {
+    "name": "Soto Betawi H. Mamat Express Blok F13",
+    "address": "Jl. Scientia Square, Bintaro Jaya",
+    "latitude": -6.278892,
+    "longitude": 106.744149,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 90000,
+    "rating": 4.2,
+    "ratingCount": 1109,
+    "tags": [
+      "Indonesian",
+      "Soup",
+      "Meat"
+    ],
+    "signatureDishes": [
+      "Special Soto",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.278892,106.744149"
+  },
+  {
+    "name": "Lawless Burgerbar Pusat Blok G6",
+    "address": "Ruko Paramount, BSD City, Tangerang",
+    "latitude": -6.314218,
+    "longitude": 106.626697,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 62000,
+    "rating": 4.8,
+    "ratingCount": 3903,
+    "tags": [
+      "Burger",
+      "Western",
+      "Heavy Meal"
+    ],
+    "signatureDishes": [
+      "Special Lawless",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.314218,106.626697"
+  },
+  {
+    "name": "Bebek Kaleyo Bintaro Jaya Blok I10",
+    "address": "Jl. Scientia Square, Bintaro Jaya",
+    "latitude": -6.304735,
+    "longitude": 106.743098,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 132000,
+    "rating": 4.6,
+    "ratingCount": 4511,
+    "tags": [
+      "Duck",
+      "Indonesian",
+      "Family"
+    ],
+    "signatureDishes": [
+      "Special Bebek",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.304735,106.743098"
+  },
+  {
+    "name": "Lawless Burgerbar Express Blok H17",
+    "address": "Jl. Boulevard Raya, Alam Sutera, Tangerang",
+    "latitude": -6.233332,
+    "longitude": 106.637038,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 138000,
+    "rating": 4.6,
+    "ratingCount": 6719,
+    "tags": [
+      "Burger",
+      "Western",
+      "Heavy Meal"
+    ],
+    "signatureDishes": [
+      "Special Lawless",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.233332,106.637038"
+  },
+  {
+    "name": "Bebek Kaleyo Pusat Blok G8",
+    "address": "Jl. Kemang Raya, Gading Serpong, Tangerang",
+    "latitude": -6.224568,
+    "longitude": 106.622785,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 99000,
+    "rating": 4.6,
+    "ratingCount": 8109,
+    "tags": [
+      "Duck",
+      "Indonesian",
+      "Family"
+    ],
+    "signatureDishes": [
+      "Special Bebek",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.224568,106.622785"
+  },
+  {
+    "name": "Sate Khas Senayan Alam Sutera",
+    "address": "Jl. Pahlawan Seribu, Alam Sutera, Tangerang",
+    "latitude": -6.222232,
+    "longitude": 106.655764,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 124000,
+    "rating": 4.3,
+    "ratingCount": 5126,
+    "tags": [
+      "Indonesian",
+      "Sate",
+      "Premium"
+    ],
+    "signatureDishes": [
+      "Special Sate",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.222232,106.655764"
+  },
+  {
+    "name": "Sari Kuring Pusat Blok B1",
+    "address": "Ruko Paramount, Jakarta Pusat",
+    "latitude": -6.196483,
+    "longitude": 106.827661,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 150000,
+    "rating": 4.1,
+    "ratingCount": 2303,
+    "tags": [
+      "Sunda",
+      "Family",
+      "Indonesian"
+    ],
+    "signatureDishes": [
+      "Special Sari",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.196483,106.827661"
+  },
+  {
+    "name": "Bandar Djakarta Pusat Blok J6",
+    "address": "Jl. Scientia Square, Jakarta Pusat",
+    "latitude": -6.169103,
+    "longitude": 106.823153,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 98000,
+    "rating": 4.6,
+    "ratingCount": 3524,
+    "tags": [
+      "Seafood",
+      "Dinner",
+      "Family"
+    ],
+    "signatureDishes": [
+      "Special Bandar",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.169103,106.823153"
+  },
+  {
+    "name": "Bakmi Babi Aloi Signature Blok H17",
+    "address": "Jl. Scientia Square, Gading Serpong, Tangerang",
+    "latitude": -6.216648,
+    "longitude": 106.602139,
+    "isHalal": false,
+    "isVegan": false,
+    "startingPrice": 81000,
+    "rating": 4.6,
+    "ratingCount": 7536,
+    "tags": [
+      "Noodles",
+      "Non-Halal",
+      "Pork"
+    ],
+    "signatureDishes": [
+      "Special Bakmi",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.216648,106.602139"
+  },
+  {
+    "name": "Sate Khas Senayan Alam Sutera Blok J12",
+    "address": "Ruko Paramount, Alam Sutera, Tangerang",
+    "latitude": -6.246893,
+    "longitude": 106.64283,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 117000,
+    "rating": 4.7,
+    "ratingCount": 3097,
+    "tags": [
+      "Indonesian",
+      "Sate",
+      "Premium"
+    ],
+    "signatureDishes": [
+      "Special Sate",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.246893,106.64283"
+  },
+  {
+    "name": "Sate Khas Senayan Signature Blok J14",
+    "address": "Ruko Paramount, Alam Sutera, Tangerang",
+    "latitude": -6.213694,
+    "longitude": 106.65245,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 43000,
+    "rating": 4.9,
+    "ratingCount": 1825,
+    "tags": [
+      "Indonesian",
+      "Sate",
+      "Premium"
+    ],
+    "signatureDishes": [
+      "Special Sate",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.213694,106.65245"
+  },
+  {
+    "name": "Sate Taichan Goreng BSD City",
+    "address": "Flavor Bliss, BSD City, Tangerang",
+    "latitude": -6.276401,
+    "longitude": 106.669576,
+    "isHalal": true,
+    "isVegan": false,
+    "startingPrice": 132000,
+    "rating": 4.7,
+    "ratingCount": 4560,
+    "tags": [
+      "Spicy",
+      "Street Food",
+      "Late Night"
+    ],
+    "signatureDishes": [
+      "Special Sate",
+      "Nasi Putih",
+      "Es Teh Manis"
+    ],
+    "locationUrl": "https://www.google.com/maps/search/?api=1&query=-6.276401,106.669576"
+  }
+]
