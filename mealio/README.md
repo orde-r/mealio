@@ -1,4 +1,4 @@
-# mealio
+# mealino
 
 A new Flutter project.
 
