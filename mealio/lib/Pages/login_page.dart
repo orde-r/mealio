@@ -2,6 +2,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:mealino/Pages/home_page.dart';
 import 'package:mealino/Pages/register_page.dart';
+import 'package:mealino/Services/auth_service.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -14,6 +15,66 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage>{
 
   bool isPasswordHidden = true;
+
+  final TextEditingController emailController =
+      TextEditingController();
+
+  final TextEditingController passwordController =
+      TextEditingController();
+
+  Future<void> login() async {
+    try {
+      final result = await AuthService.login(
+        email: emailController.text,
+        password: passwordController.text,
+      );
+
+      final statusCode = result["statusCode"];
+      final data = result["data"];
+
+      if (statusCode == 200) {
+
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(
+            content: Text(
+              "Login Success",
+            ),
+          ),
+        );
+
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(
+            builder: (context) => const HomePage(),
+          ),
+        );
+
+      } else {
+          ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text(
+              data["message"] ?? "Login Failed",
+            ),
+          ),
+        );
+
+      }
+
+    } catch (e) {
+
+    print(e);
+
+    ScaffoldMessenger.of(context).showSnackBar(
+      const SnackBar(
+        content: Text(
+          "Connection Error",
+        ),
+      ),
+    );
+
+  } 
+  }
+
 
   @override
   Widget build(BuildContext context) {
@@ -111,6 +172,7 @@ class _LoginPageState extends State<LoginPage>{
               const SizedBox(height: 10),
 
               TextField(
+                controller: emailController,
                 decoration: InputDecoration(
                   hintText: "hello@example.com",
 
@@ -154,6 +216,7 @@ class _LoginPageState extends State<LoginPage>{
               const SizedBox(height: 10),
 
               TextField(
+                controller: passwordController,
 
                 obscureText: isPasswordHidden,
 
@@ -209,14 +272,7 @@ class _LoginPageState extends State<LoginPage>{
                 height: 58,
 
                 child: ElevatedButton(
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const HomePage(), 
-                      )
-                    );
-                  },
+                  onPressed: login,
 
                   style: ElevatedButton.styleFrom(
                     backgroundColor: const Color(0xFFF26A3D),

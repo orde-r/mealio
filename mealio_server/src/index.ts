@@ -2,6 +2,7 @@ import express from "express";
 import { Response, Request } from "express";
 import swaggerUi from "swagger-ui-express";
 import prisma from "./prisma";
+import cors from "cors";
 
 import { authRouter } from "./routes/authRoute";
 import { favoriteRouter } from "./routes/favoriteRoute";
@@ -13,6 +14,11 @@ const app = express();
 const port = 3000;
 
 app.use(express.json());
+app.use(cors({
+  origin: "*",
+  methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
+  allowedHeaders: ["Content-Type", "Authorization"],
+}));
 
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(openApiDocument));
 app.get("/api-docs/openapi.yaml", (req: Request, res: Response) => {

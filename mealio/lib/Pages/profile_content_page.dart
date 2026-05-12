@@ -4,9 +4,43 @@ import 'package:mealino/Pages/change_name_page.dart';
 import 'package:mealino/Pages/food_profile_page.dart';
 import 'package:mealino/Pages/update_password_page.dart';
 import 'package:mealino/Pages/welcome_page.dart';
+import 'package:mealino/Services/user_service.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
-class ProfileContentPage extends StatelessWidget {
+class ProfileContentPage extends StatefulWidget {
   const ProfileContentPage({super.key});
+
+  @override
+  State<ProfileContentPage> createState() => _ProfileContentPageState();
+}
+
+class _ProfileContentPageState extends State<ProfileContentPage> {
+
+  String name = "";
+  String email = "";
+
+  final TextEditingController nameController =
+    TextEditingController();
+
+  @override
+  void initState() {
+    super.initState();
+    loadUser();
+  }
+
+  Future<void> loadUser() async {
+
+    final prefs =
+    await SharedPreferences.getInstance();
+
+    setState(() {
+
+      name = prefs.getString("name") ?? "";
+      email = prefs.getString("email") ?? "";
+
+    });
+
+  }
 
   Widget buildMenuItem({
     required IconData icon,
@@ -127,22 +161,22 @@ class ProfileContentPage extends StatelessWidget {
 
               Center(
                 child: Column(
-                  children: const [
-                    SizedBox(height: 10),
+                  children: [
+                    const SizedBox(height: 10),
 
                     Text(
-                      'Name',
-                      style: TextStyle(
+                      name,
+                      style: const TextStyle(
                         fontSize: 35,
                         fontWeight: FontWeight.bold,
                         color: Color(0xFF111827),
                       ),
                     ),
 
-                    SizedBox(height: 2),
+                    const SizedBox(height: 2),
 
                     Text(
-                      'Name@sunib.ac.id',
+                      email,
                       style: TextStyle(
                         fontSize: 18,
                         color: Color(0xFF64748B),
@@ -181,13 +215,21 @@ class ProfileContentPage extends StatelessWidget {
                     buildMenuItem(
                       icon: Icons.person_outline, 
                       title: "Change Name",
-                      onTap: () {
-                        Navigator.push(
+                      onTap: () async {
+
+                        await Navigator.push(
+
                           context,
+
                           MaterialPageRoute(
-                            builder: (context) => const ChangeNamePage() 
+                            builder: (context) =>
+                                const ChangeNamePage(),
                           ),
+
                         );
+
+                        loadUser();
+
                       },
                     ),
 
@@ -299,13 +341,19 @@ class ProfileContentPage extends StatelessWidget {
                                         width: double.infinity,
                                         height: 50,
                                         child: ElevatedButton(
-                                          onPressed: (){
-                                            Navigator.push(
+                                          onPressed: () async {
+
+                                            await UserService.logout();
+
+                                            Navigator.pushAndRemoveUntil(
                                               context,
                                               MaterialPageRoute(
-                                                builder: (context) => const WelcomePage(), 
-                                              )
+                                                builder: (context) =>
+                                                    const WelcomePage(),
+                                              ),
+                                              (route) => false,
                                             );
+
                                           },
                                           style: ElevatedButton.styleFrom(
                                             backgroundColor: const Color(0xFFF26A3D),

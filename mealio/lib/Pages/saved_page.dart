@@ -1,21 +1,129 @@
+import 'dart:convert';
 import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
+import 'package:shared_preferences/shared_preferences.dart';
 
-class SavedPage extends StatelessWidget {
+class SavedPage extends StatefulWidget {
   const SavedPage({super.key});
 
+  @override
+  State<SavedPage> createState() => _SavedPageState();
+}
+
+class _SavedPageState extends State<SavedPage> {
+
+  List restaurants = [];
+
+  @override
+  void initState() {
+    super.initState();
+    getFavorites();
+  }
+
+  Future<void> getFavorites() async {
+
+    try {
+
+      final prefs =
+          await SharedPreferences.getInstance();
+
+      final token = prefs.getString("token");
+
+      final response = await http.get(
+
+        Uri.parse(
+          'http://localhost:3000/api/user/favorites',
+        ),
+
+        headers: {
+          "Authorization": "Bearer $token",
+        },
+
+      );
+
+      final data = jsonDecode(response.body);
+
+      if(response.statusCode == 200){
+
+        setState(() {
+          restaurants = data;
+        });
+
+      }
+
+    } catch(e){
+
+      print(e);
+
+    }
+
+  }
+
+  Future<void> removeFavorite(
+    String restaurantId,
+  ) async {
+
+    try {
+
+      final prefs =
+          await SharedPreferences.getInstance();
+
+      final token = prefs.getString("token");
+
+      final response = await http.delete(
+
+        Uri.parse(
+          'http://localhost:3000/api/user/favorites/$restaurantId',
+        ),
+
+        headers: {
+          "Authorization": "Bearer $token",
+        },
+
+      );
+
+      if(response.statusCode == 200){
+
+        getFavorites();
+
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(
+            content: Text(
+              "Removed from favorites",
+            ),
+          ),
+        );
+
+      }
+
+    } catch(e){
+
+      print(e);
+
+    }
+
+  }
+
   Widget restaurantCard({
+
+    required String id,
     required String imageUrl,
     required String name,
     required String category,
     required double rating,
     required String price,
     required String distance,
+
   }) {
+
     return Container(
+
       margin: const EdgeInsets.only(bottom: 20),
+
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(24),
+
         boxShadow: [
           BoxShadow(
             color: Colors.black.withOpacity(0.08),
@@ -27,11 +135,14 @@ class SavedPage extends StatelessWidget {
 
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
+
         children: [
 
           Stack(
             children: [
+
               ClipRRect(
+
                 borderRadius: const BorderRadius.only(
                   topLeft: Radius.circular(24),
                   topRight: Radius.circular(24),
@@ -48,17 +159,26 @@ class SavedPage extends StatelessWidget {
               Positioned(
                 top: 16,
                 right: 16,
-                child: Container(
-                  width: 42,
-                  height: 42,
-                  decoration: const BoxDecoration(
-                    color: Colors.white,
-                    shape: BoxShape.circle,
-                  ),
 
-                  child: const Icon(
-                    Icons.favorite,
-                    color: Color(0xFFF26A3D),
+                child: GestureDetector(
+
+                  onTap: () {
+                    removeFavorite(id);
+                  },
+
+                  child: Container(
+                    width: 42,
+                    height: 42,
+
+                    decoration: const BoxDecoration(
+                      color: Colors.white,
+                      shape: BoxShape.circle,
+                    ),
+
+                    child: const Icon(
+                      Icons.favorite,
+                      color: Color(0xFFF26A3D),
+                    ),
                   ),
                 ),
               ),
@@ -70,22 +190,29 @@ class SavedPage extends StatelessWidget {
 
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
+
               children: [
 
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  mainAxisAlignment:
+                      MainAxisAlignment.spaceBetween,
+
                   children: [
 
-                    Text(
-                      name,
-                      style: const TextStyle(
-                        fontSize: 28,
-                        fontWeight: FontWeight.bold,
-                        color: Color(0xFF1E293B),
+                    Expanded(
+                      child: Text(
+                        name,
+
+                        style: const TextStyle(
+                          fontSize: 28,
+                          fontWeight: FontWeight.bold,
+                          color: Color(0xFF1E293B),
+                        ),
                       ),
                     ),
 
                     Container(
+
                       padding: const EdgeInsets.symmetric(
                         horizontal: 12,
                         vertical: 6,
@@ -109,6 +236,7 @@ class SavedPage extends StatelessWidget {
 
                           Text(
                             'Open',
+
                             style: TextStyle(
                               fontWeight: FontWeight.w500,
                             ),
@@ -123,6 +251,7 @@ class SavedPage extends StatelessWidget {
 
                 Text(
                   category,
+
                   style: TextStyle(
                     fontSize: 17,
                     color: Colors.grey.shade600,
@@ -132,7 +261,9 @@ class SavedPage extends StatelessWidget {
                 const SizedBox(height: 20),
 
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  mainAxisAlignment:
+                      MainAxisAlignment.spaceBetween,
+
                   children: [
 
                     Row(
@@ -148,6 +279,7 @@ class SavedPage extends StatelessWidget {
 
                         Text(
                           rating.toString(),
+
                           style: const TextStyle(
                             fontSize: 16,
                             fontWeight: FontWeight.w600,
@@ -159,6 +291,7 @@ class SavedPage extends StatelessWidget {
 
                         Text(
                           '•',
+
                           style: TextStyle(
                             fontSize: 18,
                             color: Colors.grey.shade400,
@@ -169,6 +302,7 @@ class SavedPage extends StatelessWidget {
 
                         Text(
                           price,
+
                           style: TextStyle(
                             fontSize: 16,
                             color: Colors.grey.shade600,
@@ -179,6 +313,7 @@ class SavedPage extends StatelessWidget {
 
                         Text(
                           '•',
+
                           style: TextStyle(
                             fontSize: 18,
                             color: Colors.grey.shade400,
@@ -189,6 +324,7 @@ class SavedPage extends StatelessWidget {
 
                         Text(
                           distance,
+
                           style: TextStyle(
                             fontSize: 16,
                             color: Colors.grey.shade600,
@@ -199,6 +335,7 @@ class SavedPage extends StatelessWidget {
 
                     const Text(
                       'View Map →',
+
                       style: TextStyle(
                         fontSize: 16,
                         fontWeight: FontWeight.bold,
@@ -218,33 +355,14 @@ class SavedPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-    final restaurantList = [
-
-      restaurantCard(
-        imageUrl: "https://images.unsplash.com/photo-1569718212165-3a8278d5f624",
-        name: "Ramen Nagi",
-        category: "Japanese - Ramen - Noodles",
-        rating: 4.5,
-        price: "From 15k",
-        distance: "0.8 km",
-      ),
-
-      restaurantCard(
-        imageUrl: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4",
-        name: "Sushi Hiro",
-        category: "Japanese - Sushi",
-        rating: 4.8,
-        price: "From 25k",
-        distance: "1.2 km",
-      ),
-    ];
-
     return Scaffold(
+
       backgroundColor: Colors.white,
 
       appBar: AppBar(
         backgroundColor: Colors.white,
         centerTitle: true,
+        automaticallyImplyLeading: false,
 
         title: const Text(
           "Favorites",
@@ -258,21 +376,28 @@ class SavedPage extends StatelessWidget {
       ),
 
       body: SafeArea(
+
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 28),
+          padding: const EdgeInsets.symmetric(
+            horizontal: 28,
+          ),
 
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
+
             children: [
 
               const SizedBox(height: 20),
 
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                mainAxisAlignment:
+                    MainAxisAlignment.spaceBetween,
+
                 children: [
 
                   const Text(
                     'Saved Places',
+
                     style: TextStyle(
                       fontSize: 30,
                       fontWeight: FontWeight.bold,
@@ -281,9 +406,11 @@ class SavedPage extends StatelessWidget {
                   ),
 
                   Text(
-                    restaurantList.length > 1
-                      ? '${restaurantList.length} Items'
-                      : '${restaurantList.length} Item',
+
+                    restaurants.length > 1
+                      ? '${restaurants.length} Items'
+                      : '${restaurants.length} Item',
+
                     style: TextStyle(
                       fontSize: 18,
                       color: Colors.grey.shade600,
@@ -296,9 +423,50 @@ class SavedPage extends StatelessWidget {
               const SizedBox(height: 25),
 
               Expanded(
-                child: ListView(
-                  children: restaurantList,
-                ),
+
+                child: restaurants.isEmpty
+
+                  ? const Center(
+                      child: Text(
+                        "No Favorite Restaurant",
+                      ),
+                    )
+
+                  : ListView.builder(
+
+                      itemCount: restaurants.length,
+
+                      itemBuilder: (context, index) {
+
+                        final restaurant =
+                            restaurants[index];
+
+                        return restaurantCard(
+
+                          id: restaurant["id"],
+
+                          imageUrl:
+                              restaurant["imageUrl"],
+
+                          name:
+                              restaurant["name"],
+
+                          category:
+                              restaurant["tags"]
+                                  .join(" • "),
+
+                          rating:
+                              restaurant["rating"]
+                                  .toDouble(),
+
+                          price:
+                              "From ${restaurant["startingPrice"]}k",
+
+                          distance:
+                              "0.8 km",
+                        );
+                      },
+                    ),
               ),
             ],
           ),

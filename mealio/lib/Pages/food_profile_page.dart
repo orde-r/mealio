@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mealino/Pages/profile_page.dart';
+import 'package:mealino/Services/user_service.dart';
 
 class FoodProfilePage extends StatefulWidget {
   const FoodProfilePage({super.key});
@@ -10,10 +11,17 @@ class FoodProfilePage extends StatefulWidget {
 
 class _FoodProfileState extends State<FoodProfilePage>{
 
-  bool halal = true;
-  bool vegan = true;
+  bool halal = false;
+  bool vegan = false;
 
   List<String> selected = [];
+
+  @override
+  void initState() {
+    super.initState();
+
+    loadPreferences();
+  }
 
   Widget buildSwitchCard({
   required String title,
@@ -134,6 +142,88 @@ class _FoodProfileState extends State<FoodProfilePage>{
         ),
       ),
     );
+  }
+
+  Future<void> loadPreferences() async {
+
+    try {
+
+      final result =
+          await UserService.getPreferences();
+
+      final data = result["data"]["user"];
+
+      setState(() {
+
+        halal =
+            data["requiresHalal"] ?? false;
+
+        vegan =
+            data["requiresVegan"] ?? false;
+
+        selected = List<String>.from(
+          data["allergies"] ?? [],
+        );
+
+      });
+
+    } catch(e){
+
+      print(e);
+
+    }
+
+  }
+
+  Future<void> savePreferences() async {
+
+    try {
+
+      final result = await UserService.savePreferences(
+
+        halal: halal,
+        vegan: vegan,
+        allergies: selected,
+
+      );
+
+      final statusCode = result["statusCode"];
+
+      if(statusCode == 200 ||
+          statusCode == 201){
+
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(
+            content: Text(
+              "Preferences Saved",
+            ),
+          ),
+        );
+
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) =>
+                const ProfilePage(),
+          ),
+        );
+
+      }
+
+    } catch(e){
+
+      print(e);
+
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+          content: Text(
+            "Connection Error",
+          ),
+        ),
+      );
+
+    }
+
   }
 
   @override
@@ -279,14 +369,7 @@ class _FoodProfileState extends State<FoodProfilePage>{
                 height: 58,
 
                 child: ElevatedButton(
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const ProfilePage(), 
-                      )
-                    );
-                  },
+                  onPressed: savePreferences,
 
                   style: ElevatedButton.styleFrom(
                     backgroundColor: const Color(0xFFF26A3D),

@@ -1,8 +1,88 @@
 import 'package:flutter/material.dart';
-import 'package:mealino/Pages/profile_page.dart';
+import 'package:mealino/Services/user_service.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
-class ChangeNamePage extends StatelessWidget {
+class ChangeNamePage extends StatefulWidget {
   const ChangeNamePage({super.key});
+
+  @override
+  State<ChangeNamePage> createState() => _ChangeNamePageState();
+}
+
+class _ChangeNamePageState extends State<ChangeNamePage> {
+
+  final TextEditingController nameController = TextEditingController();
+
+  Future<void> changeName() async {
+
+    try {
+
+      final result =
+          await UserService.changeName(
+        name: nameController.text,
+      );
+
+      final statusCode =
+          result["statusCode"];
+
+      final data = result["data"];
+
+      if(statusCode == 200){
+
+        final prefs =
+            await SharedPreferences.getInstance();
+
+        await prefs.setString(
+          "name",
+          nameController.text,
+        );
+
+        ScaffoldMessenger.of(context)
+            .showSnackBar(
+
+          const SnackBar(
+            content: Text(
+              "Name Updated",
+            ),
+          ),
+
+        );
+
+        Navigator.pop(context);
+
+      } else {
+
+        ScaffoldMessenger.of(context)
+            .showSnackBar(
+
+          SnackBar(
+            content: Text(
+              data["message"] ??
+                  "Failed",
+            ),
+          ),
+
+        );
+
+      }
+
+    } catch(e){
+
+      print(e);
+
+      ScaffoldMessenger.of(context)
+          .showSnackBar(
+
+        const SnackBar(
+          content: Text(
+            "Connection Error",
+          ),
+        ),
+
+      );
+
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -46,6 +126,7 @@ class ChangeNamePage extends StatelessWidget {
               const SizedBox(height: 10),
 
               TextField(
+                controller: nameController,
                 decoration: InputDecoration(
                   hintText: "Your Name",
 
@@ -102,14 +183,7 @@ class ChangeNamePage extends StatelessWidget {
                 height: 58,
 
                 child: ElevatedButton(
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const ProfilePage(), 
-                      )
-                    );
-                  },
+                  onPressed: changeName,
 
                   style: ElevatedButton.styleFrom(
                     backgroundColor: const Color(0xFFF26A3D),

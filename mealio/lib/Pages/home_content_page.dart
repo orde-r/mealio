@@ -9,6 +9,7 @@ class HomeContentPage extends StatefulWidget {
 }
 
 class _HomeContentState extends State<HomeContentPage>{
+  final TextEditingController moodController = TextEditingController();
   final List<int> priceOptions = [10,30,50,100,300];
 
   String formatRange(int start, int end) {
@@ -69,6 +70,7 @@ class _HomeContentState extends State<HomeContentPage>{
               const SizedBox(height: 15),
 
               TextField(
+                controller: moodController,
                 minLines: 4,
                 maxLines: null,
 
@@ -283,7 +285,23 @@ class _HomeContentState extends State<HomeContentPage>{
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => const FoodResultPage(), 
+                        builder: (context) => FoodResultPage(
+
+                          radius: radius,
+
+                          minPrice:
+                              priceOptions[
+                                priceRangeIndex.start.toInt()
+                              ],
+
+                          maxPrice:
+                              priceOptions[
+                                priceRangeIndex.end.toInt()
+                              ],
+
+                          mood:
+                              moodController.text,
+                        ),
                       )
                     );
                   },

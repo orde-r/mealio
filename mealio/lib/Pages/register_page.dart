@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
-import 'package:mealino/Pages/home_page.dart';
 import 'package:mealino/Pages/login_page.dart';
 import 'package:mealino/Pages/privacy_page.dart';
 import 'package:mealino/Pages/terms_page.dart';
+import 'package:mealino/Services/auth_service.dart';
 
 class RegisterPage extends StatefulWidget {
   const RegisterPage({super.key});
@@ -16,6 +16,92 @@ class _RegisterPageState extends State<RegisterPage> {
 
   bool isPasswordHidden = true;
   bool isConfirmPassordHidden = true;
+
+  final TextEditingController nameController =
+    TextEditingController();
+
+  final TextEditingController emailController =
+      TextEditingController();
+
+  final TextEditingController passwordController =
+      TextEditingController();
+
+  final TextEditingController confirmPasswordController =
+      TextEditingController();
+
+  Future<void> register() async {
+
+    if(passwordController.text !=
+        confirmPasswordController.text){
+
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+          content: Text(
+            "Password does not match",
+          ),
+        ),
+      );
+
+      return;
+    }
+
+    try {
+
+      final result = await AuthService.register(
+        name: nameController.text,
+        email: emailController.text,
+        password: passwordController.text,
+      );
+
+      final statusCode = result["statusCode"];
+      final data = result["data"];
+
+      if(statusCode == 200 || statusCode == 201){
+
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(
+            content: Text(
+              "Register Success",
+            ),
+          ),
+        );
+
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) =>
+                const LoginPage(),
+          ),
+        );
+
+      } else {
+
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text(
+              data["message"] ??
+                  "Register Failed",
+            ),
+          ),
+        );
+
+      }
+
+    } catch(e){
+
+      print(e);
+
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+          content: Text(
+            "Connection Error",
+          ),
+        ),
+      );
+
+    }
+
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -82,6 +168,7 @@ class _RegisterPageState extends State<RegisterPage> {
               const SizedBox(height: 10),
 
               TextField(
+                controller: nameController,
                 decoration: InputDecoration(
                   hintText: "Your Name",
 
@@ -125,6 +212,7 @@ class _RegisterPageState extends State<RegisterPage> {
               const SizedBox(height: 10),
 
               TextField(
+                controller: emailController,
                 decoration: InputDecoration(
                   hintText: "hello@example.com",
 
@@ -168,6 +256,7 @@ class _RegisterPageState extends State<RegisterPage> {
               const SizedBox(height: 10),
 
               TextField(
+                controller: passwordController,
 
                 obscureText: isPasswordHidden,
 
@@ -252,6 +341,7 @@ class _RegisterPageState extends State<RegisterPage> {
               const SizedBox(height: 10),
 
               TextField(
+                controller: confirmPasswordController,
 
                 obscureText: isConfirmPassordHidden,
 
@@ -359,14 +449,7 @@ class _RegisterPageState extends State<RegisterPage> {
                 height: 58,
 
                 child: ElevatedButton(
-                  onPressed: () {
-                     Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const HomePage(), 
-                      )
-                    );
-                  },
+                  onPressed: register,
 
                   style: ElevatedButton.styleFrom(
                     backgroundColor: const Color(0xFFF26A3D),

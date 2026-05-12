@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mealino/Pages/profile_page.dart';
+import 'package:mealino/Services/user_service.dart';
 
 class UpdatePasswordPage extends StatefulWidget {
   const UpdatePasswordPage({super.key});
@@ -13,6 +13,103 @@ class _UpdatePasswordState extends State<UpdatePasswordPage> {
   bool isCurrentPasswordHidden = true;
   bool isNewPasswordHidden = true;
   bool isConfirmNewPasswordHidden = true; 
+
+  final TextEditingController oldPasswordController =
+    TextEditingController();
+
+  final TextEditingController newPasswordController =
+      TextEditingController();
+
+  final TextEditingController confirmNewPasswordController =
+      TextEditingController();
+
+  Future<void> updatePassword() async {
+
+    if(newPasswordController.text !=
+        confirmNewPasswordController.text){
+
+      ScaffoldMessenger.of(context)
+          .showSnackBar(
+
+        const SnackBar(
+          content: Text(
+            "Password does not match",
+          ),
+        ),
+
+      );
+
+      return;
+    }
+
+    try {
+
+      final result =
+          await UserService.updatePassword(
+
+        oldPassword:
+            oldPasswordController.text,
+
+        newPassword:
+            newPasswordController.text,
+
+      );
+
+      final statusCode =
+          result["statusCode"];
+
+      final data =
+          result["data"];
+
+      if(statusCode == 200){
+
+        ScaffoldMessenger.of(context)
+            .showSnackBar(
+
+          const SnackBar(
+            content: Text(
+              "Password Updated",
+            ),
+          ),
+
+        );
+
+        Navigator.pop(context);
+
+      } else {
+
+        ScaffoldMessenger.of(context)
+            .showSnackBar(
+
+          SnackBar(
+            content: Text(
+              data["message"] ??
+                  "Update Failed",
+            ),
+          ),
+
+        );
+
+      }
+
+    } catch(e){
+
+      print(e);
+
+      ScaffoldMessenger.of(context)
+          .showSnackBar(
+
+        const SnackBar(
+          content: Text(
+            "Connection Error",
+          ),
+        ),
+
+      );
+
+    }
+
+  }   
 
   @override
   Widget build(BuildContext context) {
@@ -78,6 +175,7 @@ class _UpdatePasswordState extends State<UpdatePasswordPage> {
               const SizedBox(height: 10),
 
               TextField(
+                controller: oldPasswordController,
 
                 obscureText: isCurrentPasswordHidden,
 
@@ -142,6 +240,7 @@ class _UpdatePasswordState extends State<UpdatePasswordPage> {
               const SizedBox(height: 10),
 
               TextField(
+                controller: newPasswordController,
 
                 obscureText: isNewPasswordHidden,
 
@@ -216,6 +315,7 @@ class _UpdatePasswordState extends State<UpdatePasswordPage> {
               const SizedBox(height: 10),
 
               TextField(
+                controller: confirmNewPasswordController,
 
                 obscureText: isConfirmNewPasswordHidden,
 
@@ -272,14 +372,7 @@ class _UpdatePasswordState extends State<UpdatePasswordPage> {
                 height: 58,
 
                 child: ElevatedButton(
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const ProfilePage(), 
-                      )
-                    );
-                  },
+                  onPressed: updatePassword,
 
                   style: ElevatedButton.styleFrom(
                     backgroundColor: const Color(0xFFF26A3D),
