@@ -1,9 +1,9 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:mealino/Pages/login_page.dart';
-import 'package:mealino/Pages/privacy_page.dart';
-import 'package:mealino/Pages/register_page.dart';
-import 'package:mealino/Pages/terms_page.dart';
+import 'package:mealio/Pages/login_page.dart';
+import 'package:mealio/Pages/privacy_page.dart';
+import 'package:mealio/Pages/register_page.dart';
+import 'package:mealio/Pages/terms_page.dart';
 
 class WelcomePage extends StatelessWidget {
   const WelcomePage({super.key});
@@ -14,7 +14,7 @@ class WelcomePage extends StatelessWidget {
       backgroundColor: Colors.white,
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 28),
+          padding: const EdgeInsets.symmetric(horizontal: 24),
           child: Column(
             children: [
               const Spacer(flex: 2),
@@ -34,17 +34,12 @@ class WelcomePage extends StatelessWidget {
                   ],
                 ),
                 child: Center(
-                  child: Container(
-                    width: 80,
-                    height: 80,
-                    decoration: const BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: Color(0xFFF26A3D),
-                    ),
-                    child: const Icon(
-                      Icons.ramen_dining_rounded,
-                      color: Colors.white,
-                      size: 38,
+                  child: ClipOval(
+                    child: Image.asset(
+                      'assets/icon.png',
+                      width: 80,
+                      height: 80,
+                      fit: BoxFit.cover,
                     ),
                   ),
                 ),
@@ -87,14 +82,14 @@ class WelcomePage extends StatelessWidget {
                       context,
                       MaterialPageRoute(
                         builder: (context) => const RegisterPage(),
-                        ),
+                      ),
                     );
                   },
-                  
+
                   style: ElevatedButton.styleFrom(
                     backgroundColor: const Color(0xFFF26A3D),
                     elevation: 6,
-                    shadowColor: const Color(0xFFF26A3D).withOpacity(0.35),
+                    shadowColor: const Color(0xFFF26A3D).withValues(alpha: 0.35),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(18),
                     ),
@@ -121,7 +116,7 @@ class WelcomePage extends StatelessWidget {
                       context,
                       MaterialPageRoute(
                         builder: (context) => const LoginPage(),
-                        ),
+                      ),
                     );
                   },
                   style: ElevatedButton.styleFrom(
@@ -130,10 +125,7 @@ class WelcomePage extends StatelessWidget {
                     shadowColor: Colors.black.withValues(alpha: 0.08),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(18),
-                      side: const BorderSide(
-                        color: Colors.black,
-                        width: 1.5,
-                      )
+                      side: const BorderSide(color: Colors.black, width: 1.5),
                     ),
                   ),
                   child: const Text(

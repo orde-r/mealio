@@ -1,10 +1,10 @@
 
 import 'package:flutter/material.dart';
-import 'package:mealino/Pages/change_name_page.dart';
-import 'package:mealino/Pages/food_profile_page.dart';
-import 'package:mealino/Pages/update_password_page.dart';
-import 'package:mealino/Pages/welcome_page.dart';
-import 'package:mealino/Services/user_service.dart';
+import 'package:mealio/Pages/change_name_page.dart';
+import 'package:mealio/Pages/food_profile_page.dart';
+import 'package:mealio/Pages/update_password_page.dart';
+import 'package:mealio/Pages/welcome_page.dart';
+import 'package:mealio/Services/user_service.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class ProfileContentPage extends StatefulWidget {
@@ -120,7 +120,7 @@ class _ProfileContentPageState extends State<ProfileContentPage> {
 
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 28),
+          padding: const EdgeInsets.symmetric(horizontal: 24),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [ 
@@ -342,8 +342,9 @@ class _ProfileContentPageState extends State<ProfileContentPage> {
                                         height: 50,
                                         child: ElevatedButton(
                                           onPressed: () async {
-
                                             await UserService.logout();
+
+                                            if (!context.mounted) return;
 
                                             Navigator.pushAndRemoveUntil(
                                               context,
@@ -353,7 +354,6 @@ class _ProfileContentPageState extends State<ProfileContentPage> {
                                               ),
                                               (route) => false,
                                             );
-
                                           },
                                           style: ElevatedButton.styleFrom(
                                             backgroundColor: const Color(0xFFF26A3D),

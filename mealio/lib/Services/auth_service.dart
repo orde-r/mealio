@@ -1,103 +1,40 @@
-import 'dart:convert';
-import 'package:http/http.dart' as http;
+import 'package:mealio/Services/api_client.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-
 class AuthService {
-
   static Future<Map<String, dynamic>> register({
-
     required String name,
     required String email,
     required String password,
-
   }) async {
-
-    final response = await http.post(
-
-      Uri.parse(
-        'http://localhost:3000/api/auth/register',
-      ),
-
-      headers: {
-        "Content-Type": "application/json",
-      },
-
-      body: jsonEncode({
-
-        "name": name,
-        "email": email,
-        "password": password,
-
-      }),
-
-    );
-
-    return {
-
-      "statusCode": response.statusCode,
-      "data": jsonDecode(response.body),
-
-    };
-
+    return ApiClient.post('/api/auth/register', {
+      'name': name,
+      'email': email,
+      'password': password,
+    });
   }
 
   static Future<Map<String, dynamic>> login({
-
     required String email,
     required String password,
-
   }) async {
+    final result = await ApiClient.post('/api/auth/login', {
+      'email': email,
+      'password': password,
+    });
 
-    final response = await http.post(
-
-      Uri.parse(
-        'http://localhost:3000/api/auth/login',
-      ),
-
-      headers: {
-        "Content-Type": "application/json",
-      },
-
-      body: jsonEncode({
-
-        "email": email,
-        "password": password,
-
-      }),
-
-    );
-
-    final data = jsonDecode(response.body);
-
-    if(response.statusCode == 200){
-
+    if (result['statusCode'] == 200) {
+      final data = result['data'];
       final prefs = await SharedPreferences.getInstance();
-
-      prefs.setString(
-        "token",
-        data["token"],
+      await prefs.setString('token', data['token']);
+      await prefs.setString('name', data['user']['name']);
+      await prefs.setString('email', data['user']['email']);
+      await prefs.setBool(
+        'hasCompletedOnboarding',
+        data['user']['hasCompletedOnboarding'] ?? false,
       );
-
-      prefs.setString(
-        "name",
-        data["user"]["name"],
-      );
-
-      prefs.setString(
-        "email",
-        data["user"]["email"],
-      );
-
     }
 
-    return {
-
-      "statusCode": response.statusCode,
-      "data": jsonDecode(response.body),
-
-    };
-
+    return result;
   }
-
 }

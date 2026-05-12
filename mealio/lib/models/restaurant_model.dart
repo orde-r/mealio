@@ -23,6 +23,8 @@ class RestaurantModel {
 
   final double distanceKm;
 
+  final double? aiScore;
+
   RestaurantModel({
     required this.id,
     required this.name,
@@ -47,6 +49,7 @@ class RestaurantModel {
     required this.imageUrl,
 
     required this.distanceKm,
+    this.aiScore,
   });
 
   factory RestaurantModel.fromJson(Map<String, dynamic> json) {
@@ -79,6 +82,7 @@ class RestaurantModel {
       imageUrl: json["imageUrl"] ?? "",
 
       distanceKm: (json["distanceKm"] ?? 0).toDouble(),
+      aiScore: json["aiScore"]?.toDouble(),
     );
   }
 }

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:mealino/Pages/home_content_page.dart';
-import 'package:mealino/Pages/profile_content_page.dart';
-import 'package:mealino/Pages/saved_page.dart';
+import 'package:mealio/Pages/home_content_page.dart';
+import 'package:mealio/Pages/profile_content_page.dart';
+import 'package:mealio/Pages/favorite_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -12,12 +12,12 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
 
-  int _selectedIndex = 1; // default di Home
+  int _selectedIndex = 1;
 
-  final List<Widget> _pages = const [
-    SavedPage(),
-    HomeContentPage(),
-    ProfileContentPage(),
+  final List<Widget> _pages = [
+    const FavoritePage(),
+    const HomeContentPage(),
+    const ProfileContentPage(),
   ];
 
   void _onItemTapped(int index) {
@@ -29,8 +29,10 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
-      body: _pages[_selectedIndex],
+      body: IndexedStack(
+        index: _selectedIndex,
+        children: _pages,
+      ),
       
 
       bottomNavigationBar: BottomNavigationBar(

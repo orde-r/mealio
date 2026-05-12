@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:mealino/Pages/home_content_page.dart';
-import 'package:mealino/Pages/profile_content_page.dart';
-import 'package:mealino/Pages/saved_page.dart';
+import 'package:mealio/Pages/home_content_page.dart';
+import 'package:mealio/Pages/profile_content_page.dart';
+import 'package:mealio/Pages/favorite_page.dart';
 
 class ProfilePage extends StatefulWidget {
   const ProfilePage({super.key});
@@ -15,7 +15,7 @@ class _ProfilePageState extends State<ProfilePage> {
   int _selectedIndex = 2; // default di Home
 
   final List<Widget> _pages = const [
-    SavedPage(),
+    FavoritePage(),
     HomeContentPage(),
     ProfileContentPage(),
   ];

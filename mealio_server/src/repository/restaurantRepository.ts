@@ -57,6 +57,7 @@ export async function findRecommendedRestaurants(params: {
   longitude: number;
   radiusKm: number;
   maxStartingPrice: number;
+  minStartingPrice?: number;
   requiresHalal: boolean;
   requiresVegan: boolean;
   allergies: string[];
@@ -66,6 +67,7 @@ export async function findRecommendedRestaurants(params: {
     longitude,
     radiusKm,
     maxStartingPrice,
+    minStartingPrice,
     requiresHalal,
     requiresVegan,
     allergies,
@@ -75,6 +77,7 @@ export async function findRecommendedRestaurants(params: {
     where: {
       startingPrice: {
         lte: maxStartingPrice,
+        ...(minStartingPrice != null ? { gte: minStartingPrice } : {}),
       },
       ...(requiresHalal ? { isHalal: true } : {}),
       ...(requiresVegan ? { isVegan: true } : {}),
@@ -110,7 +113,10 @@ export async function findRecommendedRestaurants(params: {
           return false;
         }
 
-        return values.some((value) => allergySet.has(normalizeValue(value)));
+        return values.some((value) => {
+          const tokens = normalizeValue(value).split(/[\s\-_,.]+/);
+          return tokens.some((token) => allergySet.has(token));
+        });
       };
 
       return (
