@@ -6,7 +6,7 @@ import prisma from "../src/prisma";
 type SeedRestaurant = Prisma.RestaurantCreateManyInput;
 
 async function loadRestaurantData(): Promise<SeedRestaurant[]> {
-  const seedFilePath = path.resolve(__dirname, "restaurants.json");
+  const seedFilePath = path.resolve(__dirname, "restaurants_expanded.json");
   const fileContents = await readFile(seedFilePath, "utf8");
 
   return JSON.parse(fileContents) as SeedRestaurant[];

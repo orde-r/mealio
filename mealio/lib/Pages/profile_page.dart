@@ -1,0 +1,60 @@
+import 'package:flutter/material.dart';
+import 'package:mealio/Pages/home_content_page.dart';
+import 'package:mealio/Pages/profile_content_page.dart';
+import 'package:mealio/Pages/favorite_page.dart';
+
+class ProfilePage extends StatefulWidget {
+  const ProfilePage({super.key});
+
+  @override
+  State<ProfilePage> createState() => _ProfilePageState();
+}
+
+class _ProfilePageState extends State<ProfilePage> {
+
+  int _selectedIndex = 2; // default di Home
+
+  final List<Widget> _pages = const [
+    FavoritePage(),
+    HomeContentPage(),
+    ProfileContentPage(),
+  ];
+
+  void _onItemTapped(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+
+      body: _pages[_selectedIndex],
+      
+
+      bottomNavigationBar: BottomNavigationBar(
+        currentIndex: _selectedIndex,
+        onTap: _onItemTapped,
+
+        selectedItemColor: const Color(0xFFF26A3D),
+        unselectedItemColor: const Color(0xFF94A3B8),
+
+        items: const [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.favorite_border),
+            label: "Saved",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: "Home",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person_outline),
+            label: "Profile",
+          ),
+        ],
+      ),
+    );
+  }
+}

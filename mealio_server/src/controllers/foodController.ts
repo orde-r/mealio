@@ -12,7 +12,8 @@ const recommendSchema = z.object({
   latitude: z.number().min(-90).max(90),
   longitude: z.number().min(-180).max(180),
   radiusKm: z.number().positive(),
-  maxStartingPrice: z.number().positive(),
+  maxStartingPrice: z.number().positive().optional(),
+  minStartingPrice: z.number().positive().optional(),
   mood: z.string().trim().min(1, "mood is required"),
 });
 
@@ -32,46 +33,141 @@ type AiRanking = {
   score: number;
 };
 
-const AI_MAX_CANDIDATES = 30;
+const AI_MAX_CANDIDATES = 99;
+const DEFAULT_GEMINI_MAX_OUTPUT_TOKENS = 16384;
 
-const aiRankingSchema = z.object({
-  rankings: z.array(
-    z.object({
-      id: z.string(),
-      score: z.number().min(0).max(100),
-    }),
-  ),
+const aiRankingEntrySchema = z.object({
+  id: z.string().trim().min(1),
+  score: z.coerce.number().min(0).max(100),
 });
+
+const aiRankingPayloadSchema = z.object({
+  rankings: z.array(aiRankingEntrySchema),
+});
+
+const aiRankingArraySchema = z.array(aiRankingEntrySchema);
 
 function extractJsonPayload(text: string): string | null {
   const trimmed = text.trim();
-  if (trimmed.startsWith("{") && trimmed.endsWith("}")) {
-    return trimmed;
+
+  // Strip markdown code fences if present
+  const noFences = trimmed
+    .replace(/^```(?:json)?\s*\n?/i, "")
+    .replace(/\n?```\s*$/, "")
+    .trim();
+
+  if (noFences.startsWith("{") && noFences.endsWith("}")) {
+    return noFences;
   }
 
-  const firstBrace = trimmed.indexOf("{");
-  const lastBrace = trimmed.lastIndexOf("}");
+  const firstBrace = noFences.indexOf("{");
+  const lastBrace = noFences.lastIndexOf("}");
   if (firstBrace === -1 || lastBrace === -1 || lastBrace <= firstBrace) {
     return null;
   }
 
-  return trimmed.slice(firstBrace, lastBrace + 1);
+  return noFences.slice(firstBrace, lastBrace + 1);
+}
+
+function repairJson(text: string): string {
+  return text
+    .replace(/,\s*,/g, ",")
+    .replace(/,\s*]/g, "]")
+    .replace(/,\s*}/g, "}");
+}
+
+function validateAiRankingsPayload(parsed: unknown): AiRanking[] | null {
+  const objectResult = aiRankingPayloadSchema.safeParse(parsed);
+  if (objectResult.success) {
+    return objectResult.data.rankings;
+  }
+
+  const arrayResult = aiRankingArraySchema.safeParse(parsed);
+  if (arrayResult.success) {
+    return arrayResult.data;
+  }
+
+  return null;
+}
+
+function extractRankingObjects(text: string): AiRanking[] {
+  const rankings: AiRanking[] = [];
+  const seenIds = new Set<string>();
+  const rankingObjectRegex =
+    /\{\s*"id"\s*:\s*"([^"]+)"\s*,\s*"score"\s*:\s*(-?\d+(?:\.\d+)?)\s*\}/g;
+
+  let match: RegExpExecArray | null;
+  while ((match = rankingObjectRegex.exec(text)) !== null) {
+    const validated = aiRankingEntrySchema.safeParse({
+      id: match[1],
+      score: Number(match[2]),
+    });
+
+    if (!validated.success || seenIds.has(validated.data.id)) {
+      continue;
+    }
+
+    seenIds.add(validated.data.id);
+    rankings.push(validated.data);
+  }
+
+  return rankings;
 }
 
 function parseAiRankings(text: string): AiRanking[] | null {
+  const recoverRankings = (): AiRanking[] | null => {
+    const extractedRankings = extractRankingObjects(text);
+    if (extractedRankings.length === 0) {
+      return null;
+    }
+
+    if (process.env.GEMINI_DEBUG?.trim() === "true") {
+      console.debug(
+        `[parseAiRankings] Recovered ${extractedRankings.length} ranking objects from raw Gemini output`,
+      );
+    }
+
+    return extractedRankings;
+  };
+
   const jsonPayload = extractJsonPayload(text);
   if (!jsonPayload) {
+    const recoveredRankings = recoverRankings();
+    if (recoveredRankings) {
+      return recoveredRankings;
+    }
+
+    console.warn("[parseAiRankings] Failed to extract JSON payload");
     return null;
   }
 
   try {
-    const parsed = JSON.parse(jsonPayload);
-    const validated = aiRankingSchema.safeParse(parsed);
-    if (!validated.success) {
-      return null;
+    const repaired = repairJson(jsonPayload);
+    const parsed = JSON.parse(repaired);
+    const validated = validateAiRankingsPayload(parsed);
+    if (validated) {
+      return validated;
     }
-    return validated.data.rankings;
-  } catch {
+
+    const recoveredRankings = recoverRankings();
+    if (recoveredRankings) {
+      return recoveredRankings;
+    }
+
+    console.warn("[parseAiRankings] Schema validation failed");
+    return null;
+  } catch (error) {
+    const recoveredRankings = recoverRankings();
+    if (recoveredRankings) {
+      if (process.env.GEMINI_DEBUG?.trim() === "true") {
+        console.debug(
+          `[parseAiRankings] Recovered ${recoveredRankings.length} ranking objects after a Gemini JSON parse failure`,
+        );
+      }
+      return recoveredRankings;
+    }
+
+    console.warn("[parseAiRankings] JSON parse error:", error);
     return null;
   }
 }
@@ -113,6 +209,20 @@ function buildGeminiPrompt(params: {
   ].join("\n");
 }
 
+function getGeminiMaxOutputTokens(): number {
+  const rawValue = process.env.GEMINI_MAX_OUTPUT_TOKENS?.trim();
+  if (!rawValue) {
+    return DEFAULT_GEMINI_MAX_OUTPUT_TOKENS;
+  }
+
+  const parsedValue = Number(rawValue);
+  if (!Number.isInteger(parsedValue) || parsedValue <= 0) {
+    return DEFAULT_GEMINI_MAX_OUTPUT_TOKENS;
+  }
+
+  return parsedValue;
+}
+
 async function rankWithGemini(params: {
   mood: string;
   maxStartingPrice: number;
@@ -127,7 +237,8 @@ async function rankWithGemini(params: {
     return null;
   }
 
-  const modelName = process.env.GEMINI_MODEL?.trim() || "gemini-3-flash-preview";
+  const modelName =
+    process.env.GEMINI_MODEL?.trim() || "gemini-3-flash-preview";
   const genAi = new GoogleGenerativeAI(apiKey);
   const model = genAi.getGenerativeModel({
     model: modelName,
@@ -135,7 +246,7 @@ async function rankWithGemini(params: {
       temperature: 0,
       topP: 1,
       topK: 1,
-      maxOutputTokens: 8192,
+      maxOutputTokens: getGeminiMaxOutputTokens(),
       responseMimeType: "application/json",
     },
   });
@@ -217,8 +328,14 @@ export const recommendRestaurants = async (
       return;
     }
 
-    const { latitude, longitude, radiusKm, maxStartingPrice, mood } =
-      parsedBody.data;
+    const {
+      latitude,
+      longitude,
+      radiusKm,
+      maxStartingPrice,
+      minStartingPrice,
+      mood,
+    } = parsedBody.data;
 
     const user = await findUserById(userId);
     if (!user) {
@@ -229,13 +346,20 @@ export const recommendRestaurants = async (
     // Accept values like "25" as "25k" to match seed pricing units.
     //TODO: Confirm the pricing units
     const normalizedMaxStartingPrice =
-      maxStartingPrice <= 1000 ? maxStartingPrice * 1000 : maxStartingPrice;
+      maxStartingPrice != null && maxStartingPrice <= 1000
+        ? maxStartingPrice * 1000
+        : maxStartingPrice;
+    const normalizedMinStartingPrice =
+      minStartingPrice != null && minStartingPrice <= 1000
+        ? minStartingPrice * 1000
+        : minStartingPrice;
 
     const candidates = await findRecommendedRestaurants({
       latitude,
       longitude,
       radiusKm,
-      maxStartingPrice: normalizedMaxStartingPrice,
+      maxStartingPrice: normalizedMaxStartingPrice ?? 999999999,
+      minStartingPrice: normalizedMinStartingPrice,
       requiresHalal: user.requiresHalal ?? false,
       requiresVegan: user.requiresVegan ?? false,
       allergies: user.allergies ?? [],
@@ -248,9 +372,17 @@ export const recommendRestaurants = async (
     try {
       const aiResult = await rankWithGemini({
         mood,
-        maxStartingPrice: normalizedMaxStartingPrice,
+        maxStartingPrice: normalizedMaxStartingPrice ?? 999999999,
         candidates,
       });
+      if (process.env.GEMINI_DEBUG?.trim() === "true") {
+        console.debug(
+          "[recommendRestaurants] AI result:",
+          aiResult
+            ? `got ${aiResult.ranked.length} ranked`
+            : "null (fell back)",
+        );
+      }
       if (aiResult) {
         rankedCandidates = aiResult.ranked;
         scoringSource = "gemini";
