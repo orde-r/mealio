@@ -3,6 +3,7 @@ import 'package:mealio/Services/favorites_service.dart';
 import 'package:mealio/Services/food_service.dart';
 import 'package:mealio/models/restaurant_model.dart';
 import 'package:mealio/widgets/restaurant_card.dart';
+import 'package:mealio/theme/mealio_theme.dart';
 
 class FoodResultPage extends StatefulWidget {
   final double radius;
@@ -26,6 +27,8 @@ class _FoodResultState extends State<FoodResultPage> {
   List<RestaurantModel> restaurantList = [];
   final Set<String> favoritedIds = {};
   String selectedSort = "Relevance";
+  bool _isLoading = true;
+  String? _errorMessage;
 
   @override
   void initState() {
@@ -34,6 +37,13 @@ class _FoodResultState extends State<FoodResultPage> {
   }
 
   Future<void> _loadData() async {
+    if (mounted) {
+      setState(() {
+        _isLoading = true;
+        _errorMessage = null;
+      });
+    }
+
     try {
       final results = await Future.wait([
         FoodService.getRecommendations(
@@ -54,12 +64,15 @@ class _FoodResultState extends State<FoodResultPage> {
         favoritedIds.addAll(favorites.map((f) => f['id'].toString()));
       }
 
-      setState(() {});
+      setState(() {
+        _isLoading = false;
+      });
     } catch (e) {
       if (!mounted) return;
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text(e.toString().replaceFirst('Exception: ', ''))),
-      );
+      setState(() {
+        _isLoading = false;
+        _errorMessage = e.toString().replaceFirst('Exception: ', '');
+      });
     }
   }
 
@@ -103,10 +116,10 @@ class _FoodResultState extends State<FoodResultPage> {
         restaurantList.sort((a, b) => b.rating.compareTo(a.rating));
       } else if (type == "Price") {
         restaurantList.sort(
-            (a, b) => a.startingPrice.compareTo(b.startingPrice));
+          (a, b) => a.startingPrice.compareTo(b.startingPrice),
+        );
       } else if (type == "Distance") {
-        restaurantList.sort(
-            (a, b) => a.distanceKm.compareTo(b.distanceKm));
+        restaurantList.sort((a, b) => a.distanceKm.compareTo(b.distanceKm));
       } else if (type == "Relevance") {
         restaurantList.sort((a, b) {
           final aScore = a.aiScore ?? 0;
@@ -124,15 +137,22 @@ class _FoodResultState extends State<FoodResultPage> {
       onTap: () => sortRestaurants(label),
       child: Container(
         margin: const EdgeInsets.only(right: 8),
-        padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
+        padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
         decoration: BoxDecoration(
-          color: isSelected ? const Color(0xFFF26A3D) : Colors.transparent,
-          borderRadius: BorderRadius.circular(20),
+          color: isSelected ? MealioColors.primary : MealioColors.surface,
+          borderRadius: BorderRadius.circular(999),
           border: Border.all(
-            color: isSelected
-                ? const Color(0xFFF26A3D)
-                : const Color(0xFFE2E8F0),
+            color: isSelected ? MealioColors.primary : MealioColors.border,
           ),
+          boxShadow: isSelected
+              ? [
+                  BoxShadow(
+                    color: MealioColors.primary.withValues(alpha: 0.18),
+                    blurRadius: 18,
+                    offset: const Offset(0, 8),
+                  ),
+                ]
+              : [],
         ),
         child: Text(
           label,
@@ -148,20 +168,10 @@ class _FoodResultState extends State<FoodResultPage> {
 
   @override
   Widget build(BuildContext context) {
+    final textTheme = Theme.of(context).textTheme;
+
     return Scaffold(
-      backgroundColor: Colors.white,
-      appBar: AppBar(
-        backgroundColor: Colors.white,
-        centerTitle: true,
-        title: const Text(
-          "Top Picks",
-          style: TextStyle(
-            fontSize: 20,
-            fontWeight: FontWeight.bold,
-            color: Colors.black,
-          ),
-        ),
-      ),
+      appBar: AppBar(title: const Text('Top Picks')),
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 24),
@@ -169,12 +179,12 @@ class _FoodResultState extends State<FoodResultPage> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const SizedBox(height: 10),
-              const Center(
-                child: Text("Sort by",
-                  style: TextStyle(
-                      fontWeight: FontWeight.w700,
-                      fontSize: 15,
-                      color: Color(0xFF1E293B),
+              Center(
+                child: Text(
+                  'Sort by',
+                  style: textTheme.labelLarge?.copyWith(
+                    fontWeight: FontWeight.w700,
+                    color: MealioColors.textPrimary,
                   ),
                 ),
               ),
@@ -193,31 +203,125 @@ class _FoodResultState extends State<FoodResultPage> {
                 ),
               ),
               const SizedBox(height: 20),
-              Text(
-                restaurantList.length > 1
-                    ? '${restaurantList.length} Matches'
-                    : '${restaurantList.length} Match',
-                style: const TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.w600,
+              Container(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 12,
+                  vertical: 8,
+                ),
+                decoration: BoxDecoration(
+                  color: MealioColors.surface,
+                  borderRadius: BorderRadius.circular(999),
+                  border: Border.all(color: MealioColors.border),
+                ),
+                child: Text(
+                  restaurantList.length == 1
+                      ? '1 match found'
+                      : '${restaurantList.length} matches found',
+                  style: textTheme.labelLarge?.copyWith(
+                    color: MealioColors.textSecondary,
+                    fontWeight: FontWeight.w700,
+                  ),
                 ),
               ),
               const SizedBox(height: 25),
               Expanded(
-                child: restaurantList.isEmpty
+                child: _isLoading
                     ? const Center(child: CircularProgressIndicator())
+                    : _errorMessage != null
+                    ? _buildStatusState(
+                        context,
+                        icon: Icons.error_outline,
+                        title: 'Could not load results',
+                        subtitle: _errorMessage!,
+                        actionLabel: 'Try again',
+                        onAction: _loadData,
+                      )
+                    : restaurantList.isEmpty
+                    ? _buildStatusState(
+                        context,
+                        icon: Icons.ramen_dining_outlined,
+                        title: 'No matches found',
+                        subtitle:
+                            'Try widening the price range or increasing the search radius.',
+                      )
                     : ListView(
                         children: restaurantList
-                            .map((r) => RestaurantCard(
-                                  restaurant: r,
-                                  isFavorited: favoritedIds.contains(r.id),
-                                  onFavoriteToggle: () => _toggleFavorite(r),
-                                ))
+                            .map(
+                              (r) => RestaurantCard(
+                                restaurant: r,
+                                isFavorited: favoritedIds.contains(r.id),
+                                onFavoriteToggle: () => _toggleFavorite(r),
+                              ),
+                            )
                             .toList(),
                       ),
               ),
             ],
           ),
+        ),
+      ),
+    );
+  }
+
+  Widget _buildStatusState(
+    BuildContext context, {
+    required IconData icon,
+    required String title,
+    required String subtitle,
+    String? actionLabel,
+    VoidCallback? onAction,
+  }) {
+    final textTheme = Theme.of(context).textTheme;
+
+    return Center(
+      child: Container(
+        width: double.infinity,
+        padding: const EdgeInsets.all(24),
+        decoration: BoxDecoration(
+          color: MealioColors.surface,
+          borderRadius: BorderRadius.circular(24),
+          border: Border.all(color: MealioColors.border),
+        ),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Container(
+              width: 72,
+              height: 72,
+              decoration: BoxDecoration(
+                color: MealioColors.primary.withValues(alpha: 0.10),
+                shape: BoxShape.circle,
+              ),
+              child: Icon(icon, color: MealioColors.primary, size: 32),
+            ),
+            const SizedBox(height: 18),
+            Text(
+              title,
+              textAlign: TextAlign.center,
+              style: textTheme.headlineSmall?.copyWith(
+                fontSize: 24,
+                color: MealioColors.textPrimary,
+              ),
+            ),
+            const SizedBox(height: 8),
+            Text(
+              subtitle,
+              textAlign: TextAlign.center,
+              style: textTheme.bodyMedium?.copyWith(
+                color: MealioColors.textSecondary,
+              ),
+            ),
+            if (actionLabel != null && onAction != null) ...[
+              const SizedBox(height: 18),
+              SizedBox(
+                width: double.infinity,
+                child: ElevatedButton(
+                  onPressed: onAction,
+                  child: Text(actionLabel),
+                ),
+              ),
+            ],
+          ],
         ),
       ),
     );

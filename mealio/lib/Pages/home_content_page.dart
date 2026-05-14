@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mealio/Pages/food_result_page.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:mealio/theme/mealio_theme.dart';
 
 class HomeContentPage extends StatefulWidget {
   const HomeContentPage({super.key});
@@ -69,93 +70,99 @@ class _HomeContentState extends State<HomeContentPage> {
 
   @override
   Widget build(BuildContext context) {
+    final textTheme = Theme.of(context).textTheme;
+
     return Scaffold(
-      backgroundColor: Colors.white,
       body: SafeArea(
         child: SingleChildScrollView(
-          padding: const EdgeInsets.symmetric(horizontal: 24),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              const SizedBox(height: 20),
-              Text(
-                'Hungry, $userName?',
-                style: const TextStyle(
-                  fontSize: 28,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.black,
-                ),
-              ),
-              const SizedBox(height: 4),
-              const Text(
-                'What are you\ncraving today?',
-                style: TextStyle(
-                  fontSize: 36,
-                  height: 1.1,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.black,
-                ),
-              ),
-              const SizedBox(height: 18),
-              TextField(
-                controller: moodController,
-                minLines: 4,
-                maxLines: null,
-                decoration: InputDecoration(
-                  hintText:
-                      "i want something... (e.g., spicy and warm\nbecause it's raining)",
-                  hintStyle: const TextStyle(color: Color(0xFF64748B)),
-                  filled: true,
-                  fillColor: const Color.fromARGB(255, 248, 248, 248),
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(12),
-                  ),
-                  enabledBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(12),
-                    borderSide: const BorderSide(color: Color(0xFFE2E8F0)),
-                  ),
-                  focusedBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(12),
-                    borderSide: const BorderSide(
-                      color: Color(0xFFE2E8F0),
-                      width: 2,
+          padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 20),
+          child: Center(
+            child: ConstrainedBox(
+              constraints: const BoxConstraints(maxWidth: 560),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  // Container(
+                  //   padding: const EdgeInsets.symmetric(
+                  //     horizontal: 14,
+                  //     vertical: 8,
+                  //   ),
+                  //   decoration: BoxDecoration(
+                  //     color: MealioColors.surface,
+                  //     borderRadius: BorderRadius.circular(999),
+                  //     border: Border.all(color: MealioColors.border),
+                  //   ),
+                  //   child: Text(
+                  //     'Mealio search',
+                  //     style: textTheme.labelLarge?.copyWith(
+                  //       color: MealioColors.textSecondary,
+                  //       fontWeight: FontWeight.w700,
+                  //     ),
+                  //   ),
+                  // ),
+                  // const SizedBox(height: 18),
+                  Text(
+                    'Hungry, $userName?',
+                    style: textTheme.headlineSmall?.copyWith(
+                      fontSize: 28,
+                      color: MealioColors.textPrimary,
                     ),
                   ),
-                  contentPadding: const EdgeInsets.symmetric(
-                    horizontal: 16,
-                    vertical: 16,
+                  const SizedBox(height: 4),
+                  Text(
+                    'What are you\ncraving today?',
+                    style: textTheme.displaySmall?.copyWith(
+                      fontSize: 36,
+                      height: 1.08,
+                      color: MealioColors.textPrimary,
+                    ),
                   ),
-                ),
-              ),
-              const SizedBox(height: 20),
-              _buildRadiusCard(),
-              const SizedBox(height: 20),
-              _buildPricingCard(),
-              const SizedBox(height: 24),
-              SizedBox(
-                width: double.infinity,
-                height: 58,
-                child: ElevatedButton(
-                  onPressed: _findFood,
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: const Color(0xFFF26A3D),
-                    shape: RoundedRectangleBorder(
+                  const SizedBox(height: 12),
+                  Text(
+                    'Tell Mealio the vibe, then narrow down distance and budget.',
+                    style: textTheme.bodyLarge?.copyWith(
+                      color: MealioColors.textSecondary,
+                    ),
+                  ),
+                  const SizedBox(height: 18),
+                  Container(
+                    decoration: BoxDecoration(
+                      color: MealioColors.surface,
                       borderRadius: BorderRadius.circular(16),
+                      border: Border.all(color: MealioColors.border),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black.withValues(alpha: 0.04),
+                          blurRadius: 20,
+                          offset: const Offset(0, 8),
+                        ),
+                      ],
+                    ),
+                    child: TextField(
+                      controller: moodController,
+                      minLines: 4,
+                      maxLines: null,
+                      decoration: const InputDecoration(
+                        filled: false,
+                        hintText:
+                            "I want something... (e.g., spicy and warm because it's raining)",
+                      ),
                     ),
                   ),
-                  child: const Text(
-                    "Find My Food",
-                    style: TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white,
-                    ),
+                  const SizedBox(height: 20),
+                  _buildRadiusCard(),
+                  const SizedBox(height: 20),
+                  _buildPricingCard(),
+                  const SizedBox(height: 24),
+                  ElevatedButton(
+                    onPressed: _findFood,
+                    child: const Text('Find My Food'),
                   ),
-                ),
+                  const SizedBox(height: 32),
+                ],
               ),
-              const SizedBox(height: 32),
-            ],
+            ),
           ),
         ),
       ),
@@ -163,12 +170,21 @@ class _HomeContentState extends State<HomeContentPage> {
   }
 
   Widget _buildRadiusCard() {
+    final textTheme = Theme.of(context).textTheme;
+
     return Container(
-      padding: const EdgeInsets.all(16),
+      padding: const EdgeInsets.all(18),
       decoration: BoxDecoration(
-        color: const Color.fromARGB(255, 248, 248, 248),
-        borderRadius: BorderRadius.circular(12),
-        border: Border.all(color: const Color(0xFFE2E8F0), width: 1.5),
+        color: MealioColors.surface,
+        borderRadius: BorderRadius.circular(24),
+        border: Border.all(color: MealioColors.border),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withValues(alpha: 0.04),
+            blurRadius: 20,
+            offset: const Offset(0, 8),
+          ),
+        ],
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -176,56 +192,58 @@ class _HomeContentState extends State<HomeContentPage> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              const Row(
+              Row(
                 children: [
-                  Icon(Icons.location_on, color: Color(0xFFF26A3D)),
-                  SizedBox(width: 6),
+                  Container(
+                    width: 36,
+                    height: 36,
+                    decoration: BoxDecoration(
+                      color: MealioColors.primary.withValues(alpha: 0.10),
+                      shape: BoxShape.circle,
+                    ),
+                    child: const Icon(
+                      Icons.location_on,
+                      color: MealioColors.primary,
+                      size: 18,
+                    ),
+                  ),
+                  const SizedBox(width: 10),
                   Text(
-                    "Search Radius",
-                    style: TextStyle(
+                    'Search Radius',
+                    style: textTheme.labelLarge?.copyWith(
                       fontWeight: FontWeight.bold,
-                      color: Color(0xFF64748B),
+                      color: MealioColors.textSecondary,
                     ),
                   ),
                 ],
               ),
               Text(
-                "${radius.toInt()} km",
-                style: const TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 16,
+                '${radius.toInt()} km',
+                style: textTheme.titleMedium?.copyWith(
+                  fontWeight: FontWeight.w800,
+                  color: MealioColors.textPrimary,
                 ),
               ),
             ],
           ),
-          SliderTheme(
-            data: SliderTheme.of(context).copyWith(
-              activeTrackColor: const Color(0xFFF26A3D),
-              inactiveTrackColor: const Color(0xFFE2E8F0),
-              thumbColor: const Color(0xFFF26A3D),
-              overlayColor:
-                  const Color(0xFFF26A3D).withValues(alpha: 0.2),
-              trackHeight: 6,
-            ),
-            child: Slider(
-              value: radius,
-              min: 1,
-              max: 15,
-              divisions: 3,
-              onChanged: (value) {
-                setState(() {
-                  radius = value;
-                });
-              },
-            ),
+          Slider(
+            value: radius,
+            min: 1,
+            max: 15,
+            divisions: 3,
+            onChanged: (value) {
+              setState(() {
+                radius = value;
+              });
+            },
           ),
-          const Row(
+          Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text("1km", style: TextStyle(color: Color(0xFF94A3B8))),
-              Text("5km", style: TextStyle(color: Color(0xFF94A3B8))),
-              Text("10km", style: TextStyle(color: Color(0xFF94A3B8))),
-              Text("15km", style: TextStyle(color: Color(0xFF94A3B8))),
+            children: const [
+              Text('1 km', style: TextStyle(color: MealioColors.textMuted)),
+              Text('5 km', style: TextStyle(color: MealioColors.textMuted)),
+              Text('10 km', style: TextStyle(color: MealioColors.textMuted)),
+              Text('15 km', style: TextStyle(color: MealioColors.textMuted)),
             ],
           ),
         ],
@@ -234,12 +252,21 @@ class _HomeContentState extends State<HomeContentPage> {
   }
 
   Widget _buildPricingCard() {
+    final textTheme = Theme.of(context).textTheme;
+
     return Container(
-      padding: const EdgeInsets.all(16),
+      padding: const EdgeInsets.all(18),
       decoration: BoxDecoration(
-        color: const Color.fromARGB(255, 248, 248, 248),
-        borderRadius: BorderRadius.circular(12),
-        border: Border.all(color: const Color(0xFFE2E8F0), width: 1.5),
+        color: MealioColors.surface,
+        borderRadius: BorderRadius.circular(24),
+        border: Border.all(color: MealioColors.border),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withValues(alpha: 0.04),
+            blurRadius: 20,
+            offset: const Offset(0, 8),
+          ),
+        ],
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -247,60 +274,62 @@ class _HomeContentState extends State<HomeContentPage> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              const Row(
+              Row(
                 children: [
-                  Icon(Icons.attach_money, color: Color(0xFFF26A3D)),
-                  SizedBox(width: 6),
+                  Container(
+                    width: 36,
+                    height: 36,
+                    decoration: BoxDecoration(
+                      color: MealioColors.primary.withValues(alpha: 0.10),
+                      shape: BoxShape.circle,
+                    ),
+                    child: const Icon(
+                      Icons.attach_money,
+                      color: MealioColors.primary,
+                      size: 18,
+                    ),
+                  ),
+                  const SizedBox(width: 10),
                   Text(
-                    "Pricing",
-                    style: TextStyle(
+                    'Pricing',
+                    style: textTheme.labelLarge?.copyWith(
                       fontWeight: FontWeight.bold,
-                      color: Color(0xFF64748B),
+                      color: MealioColors.textSecondary,
                     ),
                   ),
                 ],
               ),
               Text(
                 _formatRange(),
-                style: const TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 16,
+                style: textTheme.titleMedium?.copyWith(
+                  fontWeight: FontWeight.w800,
+                  color: MealioColors.textPrimary,
                 ),
               ),
             ],
           ),
-          SliderTheme(
-            data: SliderTheme.of(context).copyWith(
-              activeTrackColor: const Color(0xFFF26A3D),
-              inactiveTrackColor: const Color(0xFFE2E8F0),
-              thumbColor: const Color(0xFFF26A3D),
-              overlayColor:
-                  const Color(0xFFF26A3D).withValues(alpha: 0.2),
-              trackHeight: 6,
-            ),
-            child: RangeSlider(
-              values: priceRangeIndex,
-              min: 0,
-              max: priceOptions.length.toDouble(),
-              divisions: priceOptions.length,
-              onChanged: (values) {
-                setState(() {
-                  priceRangeIndex = RangeValues(
-                    values.start.roundToDouble(),
-                    values.end.roundToDouble(),
-                  );
-                });
-              },
-            ),
+          RangeSlider(
+            values: priceRangeIndex,
+            min: 0,
+            max: priceOptions.length.toDouble(),
+            divisions: priceOptions.length,
+            onChanged: (values) {
+              setState(() {
+                priceRangeIndex = RangeValues(
+                  values.start.roundToDouble(),
+                  values.end.roundToDouble(),
+                );
+              });
+            },
           ),
-          const Row(
+          Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text("Any", style: TextStyle(color: Color(0xFF94A3B8))),
-              Text("30k", style: TextStyle(color: Color(0xFF94A3B8))),
-              Text("50k", style: TextStyle(color: Color(0xFF94A3B8))),
-              Text("100k", style: TextStyle(color: Color(0xFF94A3B8))),
-              Text("300k+", style: TextStyle(color: Color(0xFF94A3B8))),
+            children: const [
+              Text('Any', style: TextStyle(color: MealioColors.textMuted)),
+              Text('30k', style: TextStyle(color: MealioColors.textMuted)),
+              Text('50k', style: TextStyle(color: MealioColors.textMuted)),
+              Text('100k', style: TextStyle(color: MealioColors.textMuted)),
+              Text('300k+', style: TextStyle(color: MealioColors.textMuted)),
             ],
           ),
         ],
@@ -308,4 +337,3 @@ class _HomeContentState extends State<HomeContentPage> {
     );
   }
 }
-
