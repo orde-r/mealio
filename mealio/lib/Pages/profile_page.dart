@@ -11,44 +11,39 @@ class ProfilePage extends StatefulWidget {
 }
 
 class _ProfilePageState extends State<ProfilePage> {
-
   int _selectedIndex = 2; // default di Home
-
-  final List<Widget> _pages = const [
-    FavoritePage(),
-    HomeContentPage(),
-    ProfileContentPage(),
-  ];
+  int _favoriteKey = 0;
 
   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
+      if (index == 0) {
+        _favoriteKey++;
+      }
     });
   }
 
   @override
   Widget build(BuildContext context) {
+    final pages = [
+      FavoritePage(key: ValueKey(_favoriteKey)),
+      const HomeContentPage(),
+      const ProfileContentPage(),
+    ];
+
     return Scaffold(
-
-      body: _pages[_selectedIndex],
-      
-
+      body: pages[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _selectedIndex,
         onTap: _onItemTapped,
-
-        selectedItemColor: const Color(0xFFF26A3D),
-        unselectedItemColor: const Color(0xFF94A3B8),
+        type: BottomNavigationBarType.fixed,
 
         items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.favorite_border),
             label: "Saved",
           ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: "Home",
-          ),
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
           BottomNavigationBarItem(
             icon: Icon(Icons.person_outline),
             label: "Profile",

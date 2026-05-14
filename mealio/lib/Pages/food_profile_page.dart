@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mealio/Pages/home_page.dart';
 import 'package:mealio/Services/user_service.dart';
+import 'package:mealio/theme/mealio_theme.dart';
 
 class FoodProfilePage extends StatefulWidget {
   final bool isOnboarding;
@@ -27,12 +28,12 @@ class _FoodProfileState extends State<FoodProfilePage> {
       final result = await UserService.getPreferences();
       if (!mounted) return;
 
-      final data = result["data"]["user"];
+      final data = result['data']['user'];
 
       setState(() {
-        halal = data["requiresHalal"] ?? false;
-        vegan = data["requiresVegan"] ?? false;
-        selected = List<String>.from(data["allergies"] ?? []);
+        halal = data['requiresHalal'] ?? false;
+        vegan = data['requiresVegan'] ?? false;
+        selected = List<String>.from(data['allergies'] ?? []);
       });
     } catch (e) {
       // silently fail on load
@@ -49,10 +50,10 @@ class _FoodProfileState extends State<FoodProfilePage> {
 
       if (!mounted) return;
 
-      if (result["statusCode"] == 200 || result["statusCode"] == 201) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(content: Text("Preferences Saved")),
-        );
+      if (result['statusCode'] == 200 || result['statusCode'] == 201) {
+        ScaffoldMessenger.of(
+          context,
+        ).showSnackBar(const SnackBar(content: Text('Preferences Saved')));
 
         if (widget.isOnboarding) {
           Navigator.pushAndRemoveUntil(
@@ -66,9 +67,9 @@ class _FoodProfileState extends State<FoodProfilePage> {
       }
     } catch (e) {
       if (!mounted) return;
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text("Connection Error")),
-      );
+      ScaffoldMessenger.of(
+        context,
+      ).showSnackBar(const SnackBar(content: Text('Connection Error')));
     }
   }
 
@@ -79,43 +80,50 @@ class _FoodProfileState extends State<FoodProfilePage> {
     required Color iconBg,
     required Color activeColor,
     required bool value,
-    required Function(bool) onChanged,
+    required ValueChanged<bool> onChanged,
   }) {
+    final textTheme = Theme.of(context).textTheme;
+
     return Container(
-      padding: const EdgeInsets.all(16),
-      margin: const EdgeInsets.only(bottom: 16),
+      padding: const EdgeInsets.all(18),
+      margin: const EdgeInsets.only(bottom: 14),
       decoration: BoxDecoration(
-        color: const Color(0xFFF1F5F9),
-        borderRadius: BorderRadius.circular(16),
+        color: MealioColors.surface,
+        borderRadius: BorderRadius.circular(20),
+        border: Border.all(color: MealioColors.border),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withValues(alpha: 0.04),
+            blurRadius: 20,
+            offset: const Offset(0, 8),
+          ),
+        ],
       ),
       child: Row(
         children: [
           Container(
-            width: 48,
-            height: 48,
-            decoration: BoxDecoration(
-              color: iconBg,
-              shape: BoxShape.circle,
-            ),
+            width: 50,
+            height: 50,
+            decoration: BoxDecoration(color: iconBg, shape: BoxShape.circle),
             child: Icon(icon, color: activeColor),
           ),
-          const SizedBox(width: 15),
+          const SizedBox(width: 14),
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
                   title,
-                  style: const TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 16,
+                  style: textTheme.titleMedium?.copyWith(
+                    fontWeight: FontWeight.w700,
+                    color: MealioColors.textPrimary,
                   ),
                 ),
+                const SizedBox(height: 2),
                 Text(
                   subtitle,
-                  style: const TextStyle(
-                    color: Color(0xFF64748B),
-                    fontSize: 13,
+                  style: textTheme.bodySmall?.copyWith(
+                    color: MealioColors.textSecondary,
                   ),
                 ),
               ],
@@ -124,7 +132,8 @@ class _FoodProfileState extends State<FoodProfilePage> {
           Switch(
             value: value,
             onChanged: onChanged,
-            activeTrackColor: activeColor,
+            activeThumbColor: activeColor,
+            activeTrackColor: activeColor.withValues(alpha: 0.35),
           ),
         ],
       ),
@@ -133,6 +142,7 @@ class _FoodProfileState extends State<FoodProfilePage> {
 
   Widget _buildChip(String label, IconData icon) {
     final isSelected = selected.contains(label);
+    final textTheme = Theme.of(context).textTheme;
 
     return GestureDetector(
       onTap: () {
@@ -147,13 +157,20 @@ class _FoodProfileState extends State<FoodProfilePage> {
       child: Container(
         padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
         decoration: BoxDecoration(
-          color: isSelected ? const Color(0xFFF26A3D) : Colors.transparent,
-          borderRadius: BorderRadius.circular(12),
+          color: isSelected ? MealioColors.primary : MealioColors.surface,
+          borderRadius: BorderRadius.circular(999),
           border: Border.all(
-            color: isSelected
-                ? const Color(0xFFF26A3D)
-                : const Color(0xFFE2E8F0),
+            color: isSelected ? MealioColors.primary : MealioColors.border,
           ),
+          boxShadow: isSelected
+              ? [
+                  BoxShadow(
+                    color: MealioColors.primary.withValues(alpha: 0.16),
+                    blurRadius: 16,
+                    offset: const Offset(0, 8),
+                  ),
+                ]
+              : [],
         ),
         child: Row(
           mainAxisSize: MainAxisSize.min,
@@ -161,14 +178,14 @@ class _FoodProfileState extends State<FoodProfilePage> {
             Icon(
               icon,
               size: 18,
-              color: isSelected ? Colors.white : const Color(0xFF64748B),
+              color: isSelected ? Colors.white : MealioColors.textSecondary,
             ),
             const SizedBox(width: 6),
             Text(
               label,
-              style: TextStyle(
-                color: isSelected ? Colors.white : const Color(0xFF64748B),
-                fontWeight: FontWeight.w500,
+              style: textTheme.bodyMedium?.copyWith(
+                color: isSelected ? Colors.white : MealioColors.textSecondary,
+                fontWeight: FontWeight.w600,
               ),
             ),
             if (isSelected) ...[
@@ -183,59 +200,52 @@ class _FoodProfileState extends State<FoodProfilePage> {
 
   @override
   Widget build(BuildContext context) {
+    final textTheme = Theme.of(context).textTheme;
+
     return Scaffold(
-      backgroundColor: Colors.white,
       appBar: AppBar(
         automaticallyImplyLeading: !widget.isOnboarding,
-        backgroundColor: Colors.white,
-        centerTitle: true,
-        title: const Text(
-          "Food Profile",
-          style: TextStyle(
-            fontSize: 20,
-            fontWeight: FontWeight.bold,
-            color: Colors.black,
-          ),
-        ),
       ),
       body: SafeArea(
         child: SingleChildScrollView(
-          padding: const EdgeInsets.symmetric(horizontal: 24),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              const SizedBox(height: 10),
-              Center(
-                child: Text(
-                  "Personalize your recommendations by setting your\ndietary requirements and restrictions.",
-                  textAlign: TextAlign.center,
-                  style: const TextStyle(
-                    fontSize: 18,
-                    height: 1.6,
-                    color: Color(0xFF64748B),
-                  ),
-                ),
-              ),
-              const SizedBox(height: 24),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+          padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 20),
+          child: Center(
+            child: ConstrainedBox(
+              constraints: const BoxConstraints(maxWidth: 560),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
-                  const Text(
-                    "Dietary Requirements",
-                    style: TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold,
-                      color: Color(0xFF64748B),
+                  Text(
+                    'Personalize your recommendations',
+                    textAlign: TextAlign.center,
+                    style: textTheme.headlineSmall?.copyWith(
+                      fontSize: 28,
+                      color: MealioColors.textPrimary,
                     ),
                   ),
-                  const SizedBox(height: 15),
+                  const SizedBox(height: 8),
+                  Text(
+                    'Set dietary requirements and allergies so Mealio can find the right matches for you.',
+                    textAlign: TextAlign.center,
+                    style: textTheme.bodyLarge?.copyWith(
+                      color: MealioColors.textSecondary,
+                    ),
+                  ),
+                  const SizedBox(height: 24),
+                  Text(
+                    'Dietary requirements',
+                    style: textTheme.titleLarge?.copyWith(
+                      color: MealioColors.textSecondary,
+                      fontWeight: FontWeight.w700,
+                    ),
+                  ),
+                  const SizedBox(height: 12),
                   _buildSwitchCard(
-                    title: "Halal Only",
-                    subtitle: "Strictly exclude non-halal items",
+                    title: 'Halal only',
+                    subtitle: 'Strictly exclude non-halal items',
                     icon: Icons.check_circle,
-                    iconBg: const Color(0xFFFFE5DC),
-                    activeColor: const Color(0xFFF26A3D),
+                    iconBg: MealioColors.primary.withValues(alpha: 0.12),
+                    activeColor: MealioColors.primary,
                     value: halal,
                     onChanged: (val) {
                       setState(() {
@@ -244,10 +254,10 @@ class _FoodProfileState extends State<FoodProfilePage> {
                     },
                   ),
                   _buildSwitchCard(
-                    title: "Vegan",
-                    subtitle: "Plant-based diet only",
+                    title: 'Vegan',
+                    subtitle: 'Plant-based diet only',
                     icon: Icons.eco,
-                    iconBg: const Color(0xFFE6F7EC),
+                    iconBg: Colors.green.withValues(alpha: 0.12),
                     activeColor: Colors.green,
                     value: vegan,
                     onChanged: (val) {
@@ -256,76 +266,51 @@ class _FoodProfileState extends State<FoodProfilePage> {
                       });
                     },
                   ),
-                ],
-              ),
-              const SizedBox(height: 20),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  const Text(
-                    "Allergies & Intolerances",
-                    style: TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold,
-                      color: Color(0xFF64748B),
-                    ),
-                  ),
-                  GestureDetector(
-                    onTap: () {
-                      setState(() {
-                        selected.clear();
-                      });
-                    },
-                    child: const Text(
-                      "Clear all",
-                      style: TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold,
-                        color: Color(0xFFF26A3D),
+                  const SizedBox(height: 12),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        'Allergies & intolerances',
+                        style: textTheme.titleLarge?.copyWith(
+                          color: MealioColors.textSecondary,
+                          fontWeight: FontWeight.w700,
+                        ),
                       ),
-                    ),
+                      TextButton(
+                        onPressed: () {
+                          setState(() {
+                            selected.clear();
+                          });
+                        },
+                        child: const Text('Clear all'),
+                      ),
+                    ],
                   ),
+                  const SizedBox(height: 14),
+                  Wrap(
+                    spacing: 10,
+                    runSpacing: 10,
+                    children: [
+                      _buildChip('Seafood', Icons.set_meal),
+                      _buildChip('Peanut', Icons.circle),
+                      _buildChip('Dairy', Icons.local_drink),
+                      _buildChip('Gluten', Icons.ramen_dining),
+                      _buildChip('Soy', Icons.eco),
+                      _buildChip('Eggs', Icons.egg),
+                      _buildChip('Sesame', Icons.grain),
+                      _buildChip('Wheat', Icons.grass),
+                    ],
+                  ),
+                  const SizedBox(height: 24),
+                  ElevatedButton(
+                    onPressed: savePreferences,
+                    child: const Text('Save Preferences'),
+                  ),
+                  const SizedBox(height: 32),
                 ],
               ),
-              const SizedBox(height: 20),
-              Wrap(
-                spacing: 10,
-                runSpacing: 10,
-                children: [
-                  _buildChip("Seafood", Icons.set_meal),
-                  _buildChip("Peanut", Icons.circle),
-                  _buildChip("Dairy", Icons.local_drink),
-                  _buildChip("Gluten", Icons.ramen_dining),
-                  _buildChip("Soy", Icons.eco),
-                  _buildChip("Eggs", Icons.egg),
-                  _buildChip("Sesame", Icons.grain),
-                  _buildChip("Wheat", Icons.grass),
-                ],
-              ),
-              const SizedBox(height: 24),
-              SizedBox(
-                width: double.infinity,
-                height: 58,
-                child: ElevatedButton(
-                  onPressed: savePreferences,
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: const Color(0xFFF26A3D),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(16),
-                    ),
-                  ),
-                  child: const Text(
-                    "Save Preferences",
-                    style: TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white,
-                    ),
-                  ),
-                ),
-              ),
-              const SizedBox(height: 32),
-            ],
+            ),
           ),
         ),
       ),

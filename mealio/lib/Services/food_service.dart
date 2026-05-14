@@ -6,14 +6,14 @@ class FoodService {
   static Future<Position> getCurrentPosition() async {
     try {
       final serviceEnabled = await Geolocator.isLocationServiceEnabled();
-      print('[FoodService] Location service enabled: $serviceEnabled');
+      // print('[FoodService] Location service enabled: $serviceEnabled');
       if (!serviceEnabled) {
-        print('[FoodService] Using fallback coordinates (GPS disabled)');
+        // print('[FoodService] Using fallback coordinates (GPS disabled)');
         return _fallbackPosition();
       }
 
       final hasPermission = await Geolocator.checkPermission();
-      print('[FoodService] Location permission: $hasPermission');
+      // print('[FoodService] Location permission: $hasPermission');
       if (hasPermission == LocationPermission.denied) {
         await Geolocator.requestPermission();
       }
@@ -25,17 +25,17 @@ class FoodService {
         ),
       ).timeout(const Duration(seconds: 5));
 
-      print('[FoodService] Got GPS: ${position.latitude}, ${position.longitude}');
+      // print('[FoodService] Got GPS: ${position.latitude}, ${position.longitude}');
 
       // Seed data is in Jakarta (-6.x); if GPS is outside Indonesia, fall back
       if (position.latitude > 0) {
-        print('[FoodService] GPS outside Indonesia, falling back to Jakarta');
+        // print('[FoodService] GPS outside Indonesia, falling back to Jakarta');
         return _fallbackPosition();
       }
       return position;
     } catch (e) {
-      print('[FoodService] GPS failed: $e');
-      print('[FoodService] Using fallback coordinates (Jakarta)');
+      // print('[FoodService] GPS failed: $e');
+      // print('[FoodService] Using fallback coordinates (Jakarta)');
       return _fallbackPosition();
     }
   }
@@ -77,12 +77,12 @@ class FoodService {
       body['maxStartingPrice'] = maxPrice * 1000;
     }
 
-    print('[FoodService] Request body: $body');
+    // print('[FoodService] Request body: $body');
 
     final result = await ApiClient.post('/api/food/recommend', body, auth: true);
 
-    print('[FoodService] Response status: ${result['statusCode']}');
-    print('[FoodService] Response data: ${result['data']}');
+    // print('[FoodService] Response status: ${result['statusCode']}');
+    // print('[FoodService] Response data: ${result['data']}');
 
     if (result['statusCode'] != 200) {
       final data = result['data'];
@@ -91,7 +91,7 @@ class FoodService {
     }
 
     final candidates = result['data']['candidates'];
-    print('[FoodService] Got ${candidates.length} candidates');
+    // print('[FoodService] Got ${candidates.length} candidates');
     return List<RestaurantModel>.from(
       candidates.map((x) => RestaurantModel.fromJson(x)),
     );
