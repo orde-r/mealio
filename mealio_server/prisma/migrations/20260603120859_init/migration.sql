@@ -1,6 +1,3 @@
--- CreateSchema
-CREATE SCHEMA IF NOT EXISTS "public";
-
 -- CreateTable
 CREATE TABLE "User" (
     "id" TEXT NOT NULL,
@@ -23,6 +20,7 @@ CREATE TABLE "Restaurant" (
     "address" TEXT NOT NULL,
     "latitude" DOUBLE PRECISION NOT NULL,
     "longitude" DOUBLE PRECISION NOT NULL,
+    "locationUrl" TEXT,
     "isHalal" BOOLEAN NOT NULL DEFAULT false,
     "isVegan" BOOLEAN NOT NULL DEFAULT false,
     "startingPrice" INTEGER NOT NULL DEFAULT 0,
@@ -48,6 +46,9 @@ CREATE TABLE "_UserFavorites" (
 CREATE UNIQUE INDEX "User_email_key" ON "User"("email");
 
 -- CreateIndex
+CREATE UNIQUE INDEX "Restaurant_name_address_key" ON "Restaurant"("name", "address");
+
+-- CreateIndex
 CREATE INDEX "_UserFavorites_B_index" ON "_UserFavorites"("B");
 
 -- AddForeignKey
@@ -55,4 +56,3 @@ ALTER TABLE "_UserFavorites" ADD CONSTRAINT "_UserFavorites_A_fkey" FOREIGN KEY 
 
 -- AddForeignKey
 ALTER TABLE "_UserFavorites" ADD CONSTRAINT "_UserFavorites_B_fkey" FOREIGN KEY ("B") REFERENCES "User"("id") ON DELETE CASCADE ON UPDATE CASCADE;
-

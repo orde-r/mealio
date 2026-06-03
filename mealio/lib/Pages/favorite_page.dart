@@ -36,11 +36,8 @@ class _FavoritePageState extends State<FavoritePage> {
       if (!mounted) return;
 
       if (result['statusCode'] == 200) {
-        final data = result['data'] as List<dynamic>? ?? [];
         setState(() {
-          restaurants = data
-              .map((j) => RestaurantModel.fromJson(j as Map<String, dynamic>))
-              .toList();
+          restaurants = FavoritesService.parseRestaurants(result);
           _isLoading = false;
         });
       } else {

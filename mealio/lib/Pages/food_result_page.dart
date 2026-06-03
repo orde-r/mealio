@@ -60,8 +60,9 @@ class _FoodResultState extends State<FoodResultPage> {
 
       final favResult = results[1] as Map<String, dynamic>;
       if (favResult['statusCode'] == 200) {
-        final favorites = favResult['data'] as List<dynamic>? ?? [];
-        favoritedIds.addAll(favorites.map((f) => f['id'].toString()));
+        favoritedIds
+          ..clear()
+          ..addAll(FavoritesService.parseRestaurantIds(favResult));
       }
 
       setState(() {
