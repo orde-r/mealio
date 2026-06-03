@@ -12,11 +12,19 @@ class HomeContentPage extends StatefulWidget {
 
 class _HomeContentState extends State<HomeContentPage> {
   final TextEditingController moodController = TextEditingController();
-  final List<int> priceOptions = [30, 50, 100, 300];
+  static const List<int> _radiusOptions = [1, 5, 10, 15];
+  static const List<int> _priceOptions = [30, 50, 100, 300];
 
   String userName = '';
-  double radius = 5;
+  double radiusIndex = 1;
   RangeValues priceRangeIndex = const RangeValues(0, 2);
+
+  int get _anyPriceIndex => _priceOptions.length;
+
+  int get _selectedRadius {
+    final index = radiusIndex.round().clamp(0, _radiusOptions.length - 1);
+    return _radiusOptions[index];
+  }
 
   @override
   void initState() {
@@ -37,7 +45,7 @@ class _HomeContentState extends State<HomeContentPage> {
       context,
       MaterialPageRoute(
         builder: (context) => FoodResultPage(
-          radius: radius,
+          radius: _selectedRadius.toDouble(),
           minPrice: _getMinPrice(),
           maxPrice: _getMaxPrice(),
           mood: moodController.text,
@@ -48,24 +56,53 @@ class _HomeContentState extends State<HomeContentPage> {
 
   int _getMinPrice() {
     final start = priceRangeIndex.start.toInt();
-    if (start == 0) return 0;
-    return priceOptions[start - 1];
+    if (start >= _anyPriceIndex) return 0;
+    return _priceOptions[start];
   }
 
   int _getMaxPrice() {
     final end = priceRangeIndex.end.toInt();
-    if (end == priceOptions.length) return 0;
-    return priceOptions[end];
+    if (end >= _anyPriceIndex) return 0;
+    return _priceOptions[end];
   }
 
-  String _formatRange() {
+  String _priceLabel(int index) {
+    if (index >= _anyPriceIndex) return 'Any';
+    return '${_priceOptions[index]}k';
+  }
+
+  String _formatPriceRange() {
     final start = priceRangeIndex.start.toInt();
     final end = priceRangeIndex.end.toInt();
 
-    if (start == 0 && end == priceOptions.length) return 'Any';
-    if (start == 0) return 'Under ${priceOptions[end]}k';
-    if (end == priceOptions.length) return '${priceOptions[start - 1]}k+';
-    return '${priceOptions[start - 1]}k - ${priceOptions[end]}k';
+    if (start == 0 && end == _anyPriceIndex) return 'Any';
+    if (start == end) return _priceLabel(start);
+    if (end == _anyPriceIndex) return '${_priceLabel(start)}+';
+    return '${_priceLabel(start)} - ${_priceLabel(end)}';
+  }
+
+  RangeValues _normalizePriceRange(RangeValues values) {
+    var start = values.start.round().clamp(0, _anyPriceIndex);
+    var end = values.end.round().clamp(0, _anyPriceIndex);
+
+    if (start == end && start != 0 && start != _anyPriceIndex) {
+      final previousStart = priceRangeIndex.start.toInt();
+      final previousEnd = priceRangeIndex.end.toInt();
+      final startMoved = start != previousStart;
+      final endMoved = end != previousEnd;
+
+      if (startMoved && !endMoved) {
+        start -= 1;
+      } else if (endMoved && !startMoved) {
+        end += 1;
+      } else if (end < _anyPriceIndex) {
+        end += 1;
+      } else {
+        start -= 1;
+      }
+    }
+
+    return RangeValues(start.toDouble(), end.toDouble());
   }
 
   @override
@@ -218,7 +255,7 @@ class _HomeContentState extends State<HomeContentPage> {
                 ],
               ),
               Text(
-                '${radius.toInt()} km',
+                '$_selectedRadius km',
                 style: textTheme.titleMedium?.copyWith(
                   fontWeight: FontWeight.w800,
                   color: MealioColors.textPrimary,
@@ -227,24 +264,27 @@ class _HomeContentState extends State<HomeContentPage> {
             ],
           ),
           Slider(
-            value: radius,
-            min: 1,
-            max: 15,
-            divisions: 3,
+            value: radiusIndex,
+            min: 0,
+            max: (_radiusOptions.length - 1).toDouble(),
+            divisions: _radiusOptions.length - 1,
+            label: '$_selectedRadius km',
             onChanged: (value) {
               setState(() {
-                radius = value;
+                radiusIndex = value.roundToDouble();
               });
             },
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: const [
-              Text('1 km', style: TextStyle(color: MealioColors.textMuted)),
-              Text('5 km', style: TextStyle(color: MealioColors.textMuted)),
-              Text('10 km', style: TextStyle(color: MealioColors.textMuted)),
-              Text('15 km', style: TextStyle(color: MealioColors.textMuted)),
-            ],
+            children: _radiusOptions
+                .map(
+                  (option) => Text(
+                    '$option km',
+                    style: const TextStyle(color: MealioColors.textMuted),
+                  ),
+                )
+                .toList(),
           ),
         ],
       ),
@@ -300,7 +340,7 @@ class _HomeContentState extends State<HomeContentPage> {
                 ],
               ),
               Text(
-                _formatRange(),
+                _formatPriceRange(),
                 style: textTheme.titleMedium?.copyWith(
                   fontWeight: FontWeight.w800,
                   color: MealioColors.textPrimary,
@@ -311,26 +351,27 @@ class _HomeContentState extends State<HomeContentPage> {
           RangeSlider(
             values: priceRangeIndex,
             min: 0,
-            max: priceOptions.length.toDouble(),
-            divisions: priceOptions.length,
+            max: _anyPriceIndex.toDouble(),
+            divisions: _anyPriceIndex,
+            labels: RangeLabels(
+              _priceLabel(priceRangeIndex.start.toInt()),
+              _priceLabel(priceRangeIndex.end.toInt()),
+            ),
             onChanged: (values) {
               setState(() {
-                priceRangeIndex = RangeValues(
-                  values.start.roundToDouble(),
-                  values.end.roundToDouble(),
-                );
+                priceRangeIndex = _normalizePriceRange(values);
               });
             },
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: const [
-              Text('Any', style: TextStyle(color: MealioColors.textMuted)),
-              Text('30k', style: TextStyle(color: MealioColors.textMuted)),
-              Text('50k', style: TextStyle(color: MealioColors.textMuted)),
-              Text('100k', style: TextStyle(color: MealioColors.textMuted)),
-              Text('300k+', style: TextStyle(color: MealioColors.textMuted)),
-            ],
+            children: List.generate(
+              _anyPriceIndex + 1,
+              (index) => Text(
+                _priceLabel(index),
+                style: const TextStyle(color: MealioColors.textMuted),
+              ),
+            ),
           ),
         ],
       ),
