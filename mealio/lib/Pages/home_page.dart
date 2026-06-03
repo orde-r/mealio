@@ -12,23 +12,27 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   int _selectedIndex = 1;
-
-  final List<Widget> _pages = [
-    const FavoritePage(),
-    const HomeContentPage(),
-    const ProfileContentPage(),
-  ];
+  int _favoriteKey = 0;
 
   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
+      if (index == 0) {
+        _favoriteKey++;
+      }
     });
   }
 
   @override
   Widget build(BuildContext context) {
+    final pages = [
+      FavoritePage(key: ValueKey(_favoriteKey)),
+      const HomeContentPage(),
+      const ProfileContentPage(),
+    ];
+
     return Scaffold(
-      body: IndexedStack(index: _selectedIndex, children: _pages),
+      body: IndexedStack(index: _selectedIndex, children: pages),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _selectedIndex,
         onTap: _onItemTapped,
